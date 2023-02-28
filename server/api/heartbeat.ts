@@ -1,0 +1,1 @@
+export default defineEventHandler(()=>({time:Date.now()}))
