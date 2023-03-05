@@ -9,7 +9,7 @@ export function allColleges(){
         let collegeData = {url_name: college, ...pick(['city','exam','institute','state'],current)}
         result.push(collegeData)
     }
-    return {result}
+    return [...result]
 }
 
 export async function collegeInfo(url_name){

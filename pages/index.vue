@@ -56,9 +56,9 @@ export default defineComponent({
       "
     >
       <div>
-        <v-no-ssr>
+        <client-only>
         <select-card :dialog="false" :demo="false"/>
-      </v-no-ssr>
+      </client-only>
       </div>
       <div
         class="

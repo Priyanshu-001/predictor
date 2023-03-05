@@ -3,7 +3,7 @@
     <v-card width="100%" max-width="850px" style="padding: 1rem">
       <v-row>
         <v-col cols="12" md="4">
-          <h2 class="text-2xl"><strong> All Colleges </strong></h2>
+          <h1 class="tw-text-5xl tw-font-medium tw-mt-auto tw-mb-auto">  All Colleges </h1>
         </v-col>
 
         <v-col cols="12" md="4" class="ml-auto">
@@ -15,23 +15,26 @@
           />
         </v-col>
         <v-col cols="12" md="3">
-          <v-select
-            dense
-            label="Filter Exam"
-            prepend-inner-icon="mdi-filter-variant"
-            v-model="filter"
-            :items="['Main', 'Advanced', 'ALL']"
-          />
+          <client-only>
+            <v-select
+              dense
+              label="Filter Exam"
+              prepend-inner-icon="mdi-filter-variant"
+              v-model="filter"
+              :items="['Main', 'Advanced', 'ALL']"
+            />
+        </client-only>
         </v-col>
       </v-row>
 
       <v-row class="tw-flex m-1 tw-justify-between">
         <!-- Skeleton loaders -->
-        <template v-if="!doneLoading"> Hello Boi </template>
+        <template v-if="pending"> Hello Boi </template>
         <!-- content -->
         <template v-else>
+          
           <college-item
-            v-for="(item, index) in all_colleges"
+            v-for="(item, index) in colleges"
             :item="item"
             :key="index"
           />
@@ -44,32 +47,28 @@
 <script>
 export default {
   name: "CoursesPage",
-  data: () => ({
-    doneLoading: false,
-    errLoading: false,
-    collegeList: [],
-    search: "",
-    filter: "ALL",
-  }),
-
-  methods: {
-    async getData() {
-      return ["Hello", "Bye"];
-    },
-  },
-  computed: {
-    colleges() {
-      if (!this.doneLoading) {
-        return [];
-      } else {
-        return this.collegeList.filter((x) => {
+  setup(){
+   
+    const search = ref('')
+    const filter = ref('ALL')
+    const {data:allColleges,pending} =  useFetch('/api/colleges')
+    const colleges = computed(()=>!pending.value ? allColleges.value.filter(college => {
           return (
-            x.institute.toLowerCase().includes(this.search.toLowerCase()) &&
-            (this.filter == "ALL" || x.exam == this.filter)
+            college.institute?.toLowerCase()?.includes(search.value.toLowerCase()) &&
+            (filter.value == "ALL" || college.exam == filter.value)
           );
-        });
-      }
-    },
+        }) : []
+        )
+    // const colleges = computed(()=>!pending.value? allColleges.value : [])
+    // const hello = computed(()=>!pending.value ? []:"ELo")
+    return {
+    
+      pending,
+      colleges,
+      search,
+      filter,
+     
+    }
   },
 };
 </script>

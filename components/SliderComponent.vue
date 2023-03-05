@@ -10,10 +10,10 @@
       {{ description }}
     </p>
     <v-slide-group show-arrows v-if="!icon && !img">
-      <v-slide-item v-for="n in 35" :key="n">
+      <!-- <v-slide-item v-for="n in 35" :key="n">
         <v-skeleton-loader class="tw-mx-5 tw-w-64" type="card">
         </v-skeleton-loader>
-      </v-slide-item>
+      </v-slide-item> -->
     </v-slide-group>
     <v-slide-group show-arrows v-else>
       <v-slide-item v-for="(item, index) in list" :key="index">

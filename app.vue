@@ -1,8 +1,3 @@
-<script lang="ts">
-export default {
-  setup() {},
-};
-</script>
 
 <template>
   <v-app>
@@ -13,6 +8,7 @@ export default {
       :hide-on-scroll="$isMobile()"
       dark
     >
+   
       <v-spacer v-if="$isMobile()" />
       <nuxt-link to="/">
         <h2
@@ -34,13 +30,12 @@ export default {
       <v-spacer />
 
       <template v-if="!$isMobile()">
-        <nuxt-link to="/Colleges" style="display: flex; align-items: center">
+        <nuxt-link to="/colleges" style="display: flex; align-items: center">
           Colleges
         </nuxt-link>
-        <nuxt-link to="/Courses"> Courses </nuxt-link>
+        <nuxt-link to="/courses"> Courses </nuxt-link>
       </template>
     </v-app-bar>
-
     <v-main>
       <NuxtPage />
     </v-main>
@@ -52,6 +47,9 @@ body {
 }
 #header {
   background: linear-gradient(to right, rgb(59, 130, 246), rgb(51, 97, 224));
+}
+a{
+  color: #1976d2;
 }
 
 #header a {
