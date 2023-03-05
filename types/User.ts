@@ -1,0 +1,4 @@
+interface userinfo{
+    rank: Number,
+    
+}
