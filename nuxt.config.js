@@ -6,7 +6,13 @@ export default defineNuxtConfig({
       routes: ['/', '/colleges']
     },
         },
+routeRules:{ 
 
+'/':{'static':true},
+
+'/colleges':{'static':true}
+
+},
 
 
 
