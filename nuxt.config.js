@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/', '/colleges']
     },
+        },
 
 
 
