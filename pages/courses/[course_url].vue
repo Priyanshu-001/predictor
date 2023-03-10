@@ -60,14 +60,14 @@
     const {data:cuttoffs,pending} = useFetch(`/api/courses/${course_url}`,{query:{...userInfo}})
     const unique = computed(()=>pending.value? []: ['ALL',...new Set(cuttoffs.value.map(item=>item.degree))] )
     const headers = [
-        {title:'Degree', key: 'degree'},
-        {title:'Institute', key:'institute'},
-        {title:'Duration(yrs)', key: 'duration'},
-        {title:'Exam',key:'exam'},
+        {title:'Degree', value: 'degree'},
+        {title:'Institute', value:'institute'},
+        {title:'Duration(yrs)', value: 'duration'},
+        {title:'Exam',value:'exam'},
         {title:'Open(2020)',key:'orank',sortable:true},
         {title:'Close(2020)',key:'crank',sortable:true},
-        {title:'State',key:'state'},
-        {title:'Quota', key:'quota'},
+        {title:'State',value:'state'},
+        {title:'Quota', value:'quota'},
 	]
     
 
