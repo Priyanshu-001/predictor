@@ -5,7 +5,7 @@ export default defineEventHandler(async event=>{
     console.log(url)
     try
     {
-        const result = await collegeCuttoffs(url,{'category':'OPEN','pwd':false,'pool':'Gender-Neutral'})
+        const result = await collegeCuttoffs(url,{'category':'OPEN','pwd':false,'pool':'Gender-Neutral',state:'Delhi',exam:'Main'})
         return result
     }
     catch(err:unknown)

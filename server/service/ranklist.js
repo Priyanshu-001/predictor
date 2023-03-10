@@ -10,19 +10,19 @@ export async function courseInfo(course_url,userdata){
     const curriedPick =(url_name)=> pick(['institute','state','exam'],{...info[url_name]})
     const curriedLimit = (obj)=> limit(obj, {pool,pwd})
     
-    
-    // console.log(curriedPick('Assam_University_Silchar'))
-    
     const {data} = await loader(category)
     
-    const result = data.filter(row=>row.courses.split(' ').join('_')===course_url)
+    let  result = data.filter(row=>row.courses.split(' ').join('_')===course_url)
                 .filter(curriedLimit)
    
     if(result.length === 0)
     {
         throw new ResouceNotFoundError(`${course_url} is not found`)
     }
-    return result.map(row=>({...row,...curriedPick[row.url_name]  }))
+    result =  result.map(row=>({...row,...curriedPick(row.url_name)}))
+   
+
+    return result
 
 }
 
@@ -32,7 +32,7 @@ export async function collegeCuttoffs(url_name,userdata){
     const opt = {pool,pwd}
     const {data} = await loader(category)
     const curriedLimit = (obj)=> limit(obj,opt)
-
+    console.log(curriedPick("Indian_Institute_of_Technology_Bombay"))
     const result = data.filter(row=>row.url_name===url_name).filter(curriedLimit)
 
     if(result.length === 0)

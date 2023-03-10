@@ -4,15 +4,15 @@ import { courseInfo } from "~~/server/service/ranklist";
 
 export default defineEventHandler(async event=>{
     const  {url} = event.context.params;
-    console.log(url)
-    
+  
+    const {category,pwd,pool} = event.context.userinfo
     try
     {
-        const result = await courseInfo(url,{'category':'OPEN','pwd':true,'pool':'Gender-Neutral'})
-        return {result}
+        const result = await courseInfo(url,{category,pwd,pool})
+        return [...result]
     }
     catch(err:unknown)
-    {   console.log(err)
+    {   
         
         if(err instanceof ResouceNotFoundError)
         {   
