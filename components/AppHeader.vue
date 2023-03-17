@@ -10,7 +10,7 @@
     >
    
      
-      <nuxt-link to="/" class="tw-mx-auto">
+      <nuxt-link to="/" class=" tw-grow md:tw-grow-0">
         <h2
           class="tw-text-sm tw-mt-1 tw-text-center heading tw-grow"
           aria-label="Predictor JEE header"
@@ -29,10 +29,10 @@
       <!-- <v-spacer /> -->
 
       
-        <nuxt-link to="/colleges" style="display: flex; align-items: center"  class="tw-hidden md:tw-inline">
+        <nuxt-link to="/colleges"   class="tw-hidden md:tw-inline">
           Colleges
         </nuxt-link>
-        <nuxt-link to="/courses" class=" tw-hidden md:tw-inline"> Courses </nuxt-link>
+        <nuxt-link to="/courses"  class=" tw-hidden md:tw-inline"> Courses </nuxt-link>
       
     </v-app-bar>
 </template>
