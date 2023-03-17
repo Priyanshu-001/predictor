@@ -3,35 +3,36 @@
       id="header"
       app
       :elevation="0"
-      :hide-on-scroll="$isMobile()"
+      hide-on-scroll
       dark
+     
+      
     >
    
-      <v-spacer v-if="$isMobile()" />
-      <nuxt-link to="/">
+     
+      <nuxt-link to="/" class="tw-mx-auto">
         <h2
-          class="tw-text-sm tw-mt-1 tw-text-center heading"
+          class="tw-text-sm tw-mt-1 tw-text-center heading tw-grow"
           aria-label="Predictor JEE header"
         >
           <span class="tw-text-5xl tw-font-bold tw-m-0 tw-p-0">Predictor</span>
           <span class="tw-text-5xl tw-font-extralight tw-m-0 tw-p-0">JEE</span>
           <span
-            class="tw-font-thin tw-text-xs tw-m-0 tw-p-0 tu"
-            v-if="!$isMobile()"
+            class="tw-font-thin tw-text-xs tw-m-0 tw-p-0 tu tw-hidden md:tw-inline"
             >beta
           </span>
-          <span class="tw-font-thin tw-m-0 tw-p-0 tw-align-top" v-else>
+          <span class="tw-font-thin tw-m-0 tw-p-0 tw-align-top   md:tw-hidden  ">
             β
           </span>
         </h2>
       </nuxt-link>
-      <v-spacer />
+      <!-- <v-spacer /> -->
 
-      <template v-if="!$isMobile()">
-        <nuxt-link to="/colleges" style="display: flex; align-items: center">
+      
+        <nuxt-link to="/colleges" style="display: flex; align-items: center"  class="tw-hidden md:tw-inline">
           Colleges
         </nuxt-link>
-        <nuxt-link to="/courses"> Courses </nuxt-link>
-      </template>
+        <nuxt-link to="/courses" class=" tw-hidden md:tw-inline"> Courses </nuxt-link>
+      
     </v-app-bar>
 </template>

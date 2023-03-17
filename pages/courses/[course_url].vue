@@ -74,8 +74,8 @@
         {title:'Institute', value:'institute'},
         {title:'Duration(yrs)', value: 'duration'},
         {title:'Exam',value:'exam'},
-        {title:'Open(2020)',value:'orank',sortable:true},
-        {title:'Close(2020)',value:'crank',sortable:true},
+        {title:'Open(2020)',key:'orank',sortable:true},
+        {title:'Close(2020)',key:'crank',sortable:true},
         {title:'State',value:'state'},
         {title:'Quota', value:'quota'},
 	]

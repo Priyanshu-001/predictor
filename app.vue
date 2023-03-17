@@ -8,7 +8,8 @@
     </v-main>
   </v-app>
 </template>
-<style>
+<style lang="scss">
+
 body {
   font-family: "Roboto";
 }
