@@ -4,7 +4,9 @@ export default defineNuxtConfig({
     experimental: { treeshakeClientOnly: false },  
     routeRules:{ 
       '/':{'static':true},
-      '/colleges':{'static':true}
+      '/colleges':{'static':true},
+      '/courses':{'static':true},
+      '/colleges/**':{'static':true},
     },
     css: ['~/assets/css/main.css','vuetify/lib/styles/main.sass','@mdi/font/css/materialdesignicons.min.css'],
     build: {
