@@ -40,14 +40,18 @@
 
         <section>
             <br>
-		<v-data-table 
-		:headers = "headers"
-		:items="cuttoffs" 
-		:loading="pending"
-		loading-text="Loading... Please wait"
-		class="elevation-3"
-		:search="search"
-		/>
+            <client-only>
+                <v-data-table
+                :headers = "headers"
+                :items="filtered_cuttoffs" 
+                :loading="pending"
+                loading-text="Loading... Please wait"
+                class="elevation-3"
+                :search="search"
+            
+                />
+            </client-only>
+     
         </section>
     </div>
 </template>
@@ -55,10 +59,16 @@
 <script setup>
     const {params:{course_url}} = useRoute()
     const userInfo = useUserInfo()
-    const filter=ref('')
+    const filter=ref('ALL')
     const search = ref('')
     const {data:cuttoffs,pending} = useFetch(`/api/courses/${course_url}`,{query:{...userInfo}})
+    
+    const filtered_cuttoffs = computed(()=>pending.value ? []: cuttoffs.value.filter(row=>
+                                        {
+                                           return row.institute?.toLowerCase()?.includes(search.value.toLowerCase() ) && (row.degree === filter.value || filter.value === 'ALL') 
+                                         } ) )
     const unique = computed(()=>pending.value? []: ['ALL',...new Set(cuttoffs.value.map(item=>item.degree))] )
+
     const headers = [
         {title:'Degree', value: 'degree'},
         {title:'Institute', value:'institute'},

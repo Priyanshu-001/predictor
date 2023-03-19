@@ -32,7 +32,6 @@ export async function collegeCuttoffs(url_name,userdata){
     const opt = {pool,pwd}
     const {data} = await loader(category)
     const curriedLimit = (obj)=> limit(obj,opt)
-    console.log(curriedPick("Indian_Institute_of_Technology_Bombay"))
     const result = data.filter(row=>row.url_name===url_name).filter(curriedLimit)
 
     if(result.length === 0)
@@ -43,9 +42,15 @@ export async function collegeCuttoffs(url_name,userdata){
 
 }
 
-export async function predict({rank,exam,category,pool, pwd, state },options={offset:0,pageLimit:15}){
+export async function predict({rank,exam,category,pool, pwd, state },options={_degree,_courses,_limit,_offset}){
 
-    const {offset,pageLimit} = options
+    const {_degree=[],_courses=[],_limit=50,_offset=0} = options
+    const allowedDegree = new Set(_degree)
+    const allowedCourses = new Set(_courses)
+
+    
+
+
     const opts = {exam,pool,pwd}
     const curriedLimit = (obj)=> limit(obj,opts)
 
@@ -55,17 +60,17 @@ export async function predict({rank,exam,category,pool, pwd, state },options={of
     .map(el=>({...el,...pick(['exam','state','city','institute'],{...info[el.url_name]} ) }))
                     .filter(curriedLimit)
                     .filter(row=>(row.quota === 'AI' || (row.quota === 'OS' && row.state !== state)  ||(row.quota === 'HS'  && row.state === state)) )
+                    .filter(row=>( allowedDegree.size === 0 || allowedDegree.has(row.degree) ) && ( allowedCourses.size === 0 || allowedCourses.has(row.courses) ) )
                     .filter(row=>row.crank>rank)
                     .sort((a,b)=>a.crank-b.crank)
                    
-    return result.splice(offset,offset+pageLimit) 
-            .map(el=>pick(['institute','state','city','courses','degree','duration','crank'],el))
+    return result.splice(_offset,_offset+_limit)
+            .map(el=>pick(['institute','state','city','courses','degree','duration','crank','url_name'],el))
 }
 
 export async function possibilities({rank,exam,category,pool, pwd, state }){
 
     const opts = {exam,pool,pwd}
-    console.log(opts)
     const curriedLimit = (obj)=> limit(obj,opts)
 
     const {data} = await loader(category)

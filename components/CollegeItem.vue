@@ -2,7 +2,7 @@
 	<v-card elevation="3" rounded class=" !tw-m-3 !tw-my-5 !tw-py-3 !tw-px-2 tw-flex tw-min-h-24 tw-w-full tw-flex-col"  >
 
     <div class="tw-my-2">
-      <nuxt-link :to="`colleges/${item.url_name}`">
+      <nuxt-link :to="`/colleges/${item.url_name}`">
      <p class="tw-font-semi-bold tw-text-4xl tw-mb-0 hover:tw-underline ">
       {{item.institute}}
     </p>

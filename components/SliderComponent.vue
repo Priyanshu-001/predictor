@@ -16,7 +16,7 @@
       </v-slide-item> -->
     </v-slide-group>
     <v-slide-group show-arrows v-else>
-      <v-slide-item v-for="(item, index) in list" :key="index">
+      <div v-for="(item, index) in list" :key="index">
         <nuxt-link :to="item.link">
           <div
             class="
@@ -60,7 +60,7 @@
             </h4>
           </div>
         </nuxt-link>
-      </v-slide-item>
+      </div>
     </v-slide-group>
   </v-container>
 </template>

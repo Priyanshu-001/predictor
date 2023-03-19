@@ -98,7 +98,7 @@ export default defineComponent({
           <br />
           NOTE:This is a student project, some entries might be wrong pls
           crosscheck with an offcial source.
-
+          <nuxt-link to="/predict">PREDICT</nuxt-link>
           <br />
         </p>
       </div>
