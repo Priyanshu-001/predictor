@@ -1,9 +1,11 @@
 <template>
-    <v-app-bar
+    <header
       id="header"
       app
       :elevation="0"
       hide-on-scroll
+      class="tw-w-full tw-flex tw-items-center tw-justify-between "
+
       dark
      
       
@@ -28,11 +30,12 @@
       </nuxt-link>
       <!-- <v-spacer /> -->
 
-      
+      <span>
         <nuxt-link to="/colleges"   class="tw-hidden md:tw-inline">
           Colleges
         </nuxt-link>
         <nuxt-link to="/courses"  class=" tw-hidden md:tw-inline"> Courses </nuxt-link>
+      </span>
       
-    </v-app-bar>
+    </header>
 </template>

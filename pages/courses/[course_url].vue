@@ -34,10 +34,29 @@
 			Showing <strong> 6th Round </strong> Cuttoff for 
 			<strong>{{userInfo.category}}</strong> category
 			<strong><template v-if="!userInfo.pwd">non-</template>PwD</strong>  student, searching for seats in <strong>{{userInfo.pool}} seat pool</strong> searching only in <strong> JOSAA colleges </strong> .
-            </p>
-            </v-row>
+           
+            
+            <a
+            href="#cuttoffs"
+            color="primary"
+            dark
+            variant="text"
+            @click.prevent.stop="dialog = true"
+            >
+           Open Dialog
+            </a>
+        </p>
+        </v-row>
+           
         </section>
+        <v-dialog
+            v-model="dialog"
+           
+            width="fit-content"
 
+            >
+            <select-card  dialog ></select-card>
+            </v-dialog>
         <section>
             <br>
             <client-only>
@@ -57,11 +76,17 @@
 </template>
 
 <script setup>
+    definePageMeta({
+  middleware: ["update-info"]
+  // or middleware: 'auth'
+})
+
     const {params:{course_url}} = useRoute()
     const userInfo = useUserInfo()
     const filter=ref('ALL')
     const search = ref('')
-    const {data:cuttoffs,pending} = useFetch(`/api/courses/${course_url}`,{query:{...userInfo}})
+    const dialog = ref(false)
+    const {data:cuttoffs,pending} = await useFetch(`/api/courses/${course_url}`,{query:{...userInfo}})
     
     const filtered_cuttoffs = computed(()=>pending.value ? []: cuttoffs.value.filter(row=>
                                         {

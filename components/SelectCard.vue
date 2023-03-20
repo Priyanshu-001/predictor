@@ -22,13 +22,15 @@
     <template v-if="!demo">
       <v-text-field
         color="primary"
-        class="tw-font-bold"
+      
         v-model.number="query.rank"
         label="Rank(Category)"
         type="number"
         min="1"
         max="169999"
         filled
+      class="!tw-font-bold"
+
       />
       <v-select
         id="exam"
@@ -37,9 +39,11 @@
         v-model="query.exam"
         label="Exam"
         :items="exams"
+        class="!tw-font-bold"
+
       />
     </template>
-    <label for="pool" class="mb-2">
+    <label for="pool" class="tw-mb-2">
       <h3 class="tw-text-xl">Seat Pool</h3>
     </label>
     <br />
@@ -65,7 +69,7 @@
       auto-select-first
       filled
       label="Select Home State"
-      class="mt-4"
+      class="!tw-font-bold tw-mt-4"
       v-model="query.state"
       :items="stateList"
     >
@@ -79,7 +83,8 @@
       v-model="query.category"
       :items="catList"
       default="OPEN"
-      class="mb-1"
+
+      class="!tw-font-bold"
     >
     </v-select>
     <v-checkbox class="mt-1" v-model="query.pwd" label="PWD status">
@@ -107,6 +112,8 @@
 
 
 <script >
+import { catList, examsList, stateList } from '~~/constants';
+
 export default {
   props: ["dialog", "demo"],
   setup() {
@@ -116,45 +123,9 @@ export default {
       state: "Delhi",
       category: "OPEN",
       pwd: false,
-      exam: "main",
+      exam: "Main",
     });
-    const exams = ["Main", "Advanced"];
-    const stateList = [
-      "Andhra Pradesh",
-      "Arunachal Pradesh",
-      "Assam",
-      "Bihar",
-      "Chhattisgarh",
-      "Daman and Diu",
-      "Delhi",
-      "Goa",
-      "Gujarat",
-      "Gujrat",
-      "Haryana",
-      "Himachal Pradesh",
-      "Jammu and Kashmir",
-      "Jharkhand",
-      "Karnataka",
-      "Kerala",
-      "Madhya Pradesh",
-      "Maharashtra",
-      "Manipur",
-      "Meghalaya",
-      "Mizoram",
-      "Nagaland",
-      "Odisha",
-      "Puducherry",
-      "Punjab",
-      "Rajasthan",
-      "Sikkim",
-      "Tamil Naidu",
-      "Telangana",
-      "Tripura",
-      "Uttar Pradesh",
-      "Uttarakhand",
-      "West Bengal",
-    ];
-    const catList = ["OBC-NCL", "EWS", "OPEN", "SC", "ST"];
+    const exams = examsList;
     const makeRequest = () => console.log(query.value);
 
     return {
