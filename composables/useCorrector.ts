@@ -1,9 +1,9 @@
 import { catList, examsList, poolList, stateList } from "~~/constants"
 
-function rankCorrector(rank: string) {
+function rankCorrector(rank: string):string {
     try {
         const r = Number(rank)
-        if (1 <= r && r <= 13e5)
+        if (1 <= r && r <= 16e5)
             return rank
         return '1'
     }
@@ -12,11 +12,11 @@ function rankCorrector(rank: string) {
     }
 }
 
-const catCorrector = (cat:string):string=>cat in catList ? cat: catList[0]
-const stateCorrector = (state: string):string=>state in stateList ? state : stateList[0]
+const catCorrector = (cat:string):string=>catList.includes(cat) ? cat: catList[0]
+const stateCorrector = (state: string):string=>stateList.includes(state) ? state : stateList[0]
 const pwdCorrector = (pwd:string):string=>pwd === 'true' ? 'true' : 'false'
-const poolCorrector = (pool:string):string=>pool in poolList ? pool: poolList[0]
-const examCorrector = (exam:string):string=>exam in examsList ? exam: examsList[0]  
+const poolCorrector = (pool:string):string=>poolList.includes(pool) ? pool: poolList[0]
+const examCorrector = (exam:string):string=>examsList.includes(exam) ? exam: examsList[0]  
 const correctors = {rank:rankCorrector,
     pool:poolCorrector,
     category:catCorrector,

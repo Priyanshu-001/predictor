@@ -1,15 +1,19 @@
-export default defineNuxtRouteMiddleware((to)=>{
-   
-    const pool = to.query.pool
-    const category = to.query.category
-    const pwd = to.query.pwd
-    console.log({pwd,category,pool})
+export default defineNuxtRouteMiddleware(to=>{
+    
+    let selection = ['pool','category','pwd']
+    console.log(to.name)
+    if(to.name === 'predict')
+        selection = ['rank','state','exam',...selection]
+    console.log(to.query)
+    const {rank,state,exam,pool,category,pwd} = to.query
+
     const userInfo = useUserInfo()
     const corrector = useCorrector()
-    const {correction,correctedObj} = corrector({pool,category,pwd},['pool','category','pwd'])
+    const {correction,correctedObj} = corrector({rank,pool,category,pwd,state,exam},selection)
+    userInfo.value = {...userInfo.value,...correctedObj}
     if(!correction)
         return;
-    userInfo.value = {...userInfo.value,...correctedObj}
+  
     return navigateTo({
         path:to.path,
         query:{

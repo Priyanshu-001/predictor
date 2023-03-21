@@ -80,13 +80,14 @@
   middleware: ["update-info"]
   // or middleware: 'auth'
 })
-
+    const route = useRoute()
+    console.log(route.path)
     const {params:{course_url}} = useRoute()
     const userInfo = useUserInfo()
     const filter=ref('ALL')
     const search = ref('')
     const dialog = ref(false)
-    const {data:cuttoffs,pending} = await useFetch(`/api/courses/${course_url}`,{query:{...userInfo}})
+    const {data:cuttoffs,pending} = await useFetch(`/api/courses/${course_url}`,{query:{...userInfo.value}})
     
     const filtered_cuttoffs = computed(()=>pending.value ? []: cuttoffs.value.filter(row=>
                                         {

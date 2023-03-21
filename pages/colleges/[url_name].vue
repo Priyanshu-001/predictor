@@ -54,6 +54,9 @@
 </section>
 </div></template>
 <script setup>
+    definePageMeta({
+    middleware: ["update-info"]
+    })
 
     const search = ref('')
     const filter = ref('ALL')

@@ -64,6 +64,10 @@
 </template>
 
 <script setup >
+    definePageMeta({
+    middleware: ["update-info"]
+    })
+
     const dialog = ref(false)
     const userInfo = useUserInfo()
 
