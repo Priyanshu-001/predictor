@@ -1,5 +1,7 @@
 export default defineNuxtRouteMiddleware(to=>{
     
+    if (process.server) return
+    
     let selection = ['pool','category','pwd']
     console.log(to.name)
     if(to.name === 'predict')
