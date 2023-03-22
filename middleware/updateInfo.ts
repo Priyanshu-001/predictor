@@ -20,7 +20,7 @@ export default defineNuxtRouteMiddleware(to=>{
         path:to.path,
         query:{
           ...to.query,
-//           ...correctedObj
+          ...correctedObj
 
         }
     })
