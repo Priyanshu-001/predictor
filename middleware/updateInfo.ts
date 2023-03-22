@@ -1,6 +1,6 @@
 export default defineNuxtRouteMiddleware(to=>{
     
-    if (process.server) return
+    
     
     let selection = ['pool','category','pwd']
     console.log(to.name)
