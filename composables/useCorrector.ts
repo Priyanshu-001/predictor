@@ -40,7 +40,9 @@ const correctors = {rank:rankCorrector,
         const fn:Function = correctors[prop as keyof typeof correctedObj]
         const newValue = fn(userInfo[prop])
         correctedObj = {...correctedObj,[prop]:newValue}
-        correction = (userInfo[prop] !== newValue) || correction
+//         correction = (userInfo[prop] !== newValue) || correction
+        if(userInfo[prop] != newValue)
+            correction = true
     }
 
     return {correctedObj,correction }
