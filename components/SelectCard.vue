@@ -12,7 +12,7 @@
     "
     style="padding: 1rem !important"
     elevation="20"
-    :class="!dialog ? ['tw--mb-12', 'fade-in', 'tw-m-3', 'tw-w-100'] : ''"
+    :class="!dialog ? ['tw--mb-12', 'tw-m-3', 'tw-w-100'] : ''"
   >
     <v-card-title>
       <h2 class="tw-text-4xl tw-font-extrabold tw-text-gray-800">
@@ -20,6 +20,7 @@
       </h2>
     </v-card-title>
     <template v-if="!demo">
+    
       <v-text-field
         color="primary"
       
@@ -32,16 +33,21 @@
       class="!tw-font-bold"
 
       />
+      <client-only>
       <v-select
         id="exam"
         auto-select-first
         filled
         v-model="query.exam"
         label="Exam"
-        :items="exams"
+        :items="examsList"
         class="!tw-font-bold"
 
       />
+      <template #fallback>
+        <div class="tw-h-14 tw-animate-pulse tw-my-3 tw-bg-slate-300 tw-rounded-xl" />
+      </template>
+    </client-only>
     </template>
     <label for="pool" class="tw-mb-2">
       <h3 class="tw-text-xl">Seat Pool</h3>
@@ -62,19 +68,22 @@
       <br />
       <br />
     </template>
-
-    <v-autocomplete
-      v-if="!demo"
-      id="state"
-      auto-select-first
-      filled
-      label="Select Home State"
-      class="!tw-font-bold tw-mt-4"
-      v-model="query.state"
-      :items="stateList"
-    >
-    </v-autocomplete>
-
+    <client-only>
+      <v-autocomplete
+        v-if="!demo"
+        id="state"
+        auto-select-first
+        filled
+        label="Select Home State"
+        class="!tw-font-bold tw-mt-4"
+        v-model="query.state"
+        :items="stateList"
+      />
+      <template #fallback>
+        <div class="tw-h-14 tw-animate-pulse tw-my-3 tw-bg-slate-300 tw-rounded-xl" />
+      </template>
+    </client-only>
+    <client-only>
     <v-select
       id="Category"
       auto-select-first
@@ -85,10 +94,12 @@
       default="OPEN"
 
       class="!tw-font-bold"
-    >
-    </v-select>
-    <v-checkbox class="mt-1" v-model="query.pwd" label="PWD status">
-    </v-checkbox>
+    />
+    <template #fallback>
+        <div class="tw-h-14 tw-animate-pulse tw-my-3 tw-bg-slate-300 tw-rounded-xl " />
+    </template>
+  </client-only>
+    <v-checkbox class="mt-1" v-model="query.pwd" label="PWD status"/>
 
     <v-card-actions class="tw--mt-2">
       <v-row>
@@ -120,17 +131,24 @@ export default {
     const query = ref({
       rank: 1,
       seatPool: 1,
-      state: "Delhi",
-      category: "OPEN",
+      state: stateList[0],
+      category:catList[0],
       pwd: false,
-      exam: "Main",
+      exam: examsList[0],
     });
-    const exams = examsList;
-    const makeRequest = () => console.log(query.value);
+    const makeRequest = () => {
+      const q = {...query.value, 
+        rank:query.value.rank.toString(), 
+        pool: query.value.seatPool===0? 'Female-Only':'Gender-Neutral',
+        pwd:query.value.pwd.toString()
+      }
+        navigateTo({path:'/predict', 
+                    query:{...q}})
+    } ;
 
     return {
       query,
-      exams,
+      examsList,
       stateList,
       catList,
       makeRequest,
