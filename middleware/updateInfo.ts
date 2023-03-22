@@ -10,6 +10,7 @@ export default defineNuxtRouteMiddleware(to=>{
 
     const corrector = useCorrector()
     const {correction,correctedObj} = corrector({rank,pool,category,pwd,state,exam},selection)
+    console.log({correction})
 //    userInfo.value = {...userInfo.value,...correctedObj}
     if(correction)
         return navigateTo({
