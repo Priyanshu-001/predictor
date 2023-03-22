@@ -3,15 +3,15 @@ export default defineNuxtRouteMiddleware(to=>{
     
     
     let selection = ['pool','category','pwd']
-    console.log(to.name)
+
     if(to.name === 'predict')
         selection = ['rank','state','exam',...selection]
     console.log(to.query)
     const {rank,state,exam,pool,category,pwd} = to.query
 
-//     const 
-//     const corrector = useCorrector()
-//     const {correction,correctedObj} = corrector({rank,pool,category,pwd,state,exam},selection)
+
+    const corrector = useCorrector()
+    const {correction,correctedObj} = corrector({rank,pool,category,pwd,state,exam},selection)
 //    userInfo.value = {...userInfo.value,...correctedObj}
     if(true)
         return abortNavigation();
