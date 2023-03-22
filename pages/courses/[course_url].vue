@@ -49,6 +49,7 @@
         </v-row>
            
         </section>
+        <client-only>
         <v-dialog
             v-model="dialog"
            
@@ -57,6 +58,7 @@
             >
             <select-card  dialog ></select-card>
             </v-dialog>
+        </client-only>
         <section>
             <br>
             <client-only>
