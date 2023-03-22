@@ -9,7 +9,7 @@ export default defineNuxtRouteMiddleware(to=>{
     console.log(to.query)
     const {rank,state,exam,pool,category,pwd} = to.query
 
-    const userInfo = useUserInfo()
+    
     const corrector = useCorrector()
     const {correction,correctedObj} = corrector({rank,pool,category,pwd,state,exam},selection)
    // userInfo.value = {...userInfo.value,...correctedObj}
