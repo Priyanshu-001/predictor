@@ -6,8 +6,8 @@ export default defineNuxtConfig({
       '/':{'static':true},
       '/colleges':{'static':true},
       '/courses':{'static':true},
-      '/colleges/**':{'static':true},
-      '/courses/**':{'static':true},
+     // '/colleges/**':{'static':true},
+    //  '/courses/**':{'static':true},
 
     },
     
