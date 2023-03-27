@@ -123,30 +123,48 @@
 
 
 <script >
-import { catList, examsList, stateList } from '~~/constants';
+import { catList, examsList,  stateList } from '~~/constants';
 
 export default {
-  props: ["dialog", "demo"],
+  props: {"dialog":{
+    type:Boolean,
+    default:false,
+  }, 
+  "demo":{
+    default: false,
+  },
+  "next":{
+    type:String,
+    defulat:'/predict'
+  }
+}
+  ,
   setup() {
-    const query = ref({
-      rank: 1,
-      seatPool: 1,
-      state: stateList[0],
-      category:catList[0],
-      pwd: false,
-      exam: examsList[0],
+    const userInfo = useUserInfo()
+    const createQuery = ()=>{
+      const {pwd, rank, state, category, exam, pool} = userInfo.value
+      return   ref({
+        rank: Number(rank),
+        seatPool: pool === 'Gender-Neutral' ? 1: 0,
+        state,
+        category,
+        pwd: pwd=='true',
+        exam
     });
+    }
+    const query  = createQuery()
     const makeRequest = () => {
       const q = {...query.value, 
         rank:query.value.rank.toString(), 
         pool: query.value.seatPool===0? 'Female-Only':'Gender-Neutral',
         pwd:query.value.pwd.toString()
       }
-        navigateTo({path:'/predict', 
+        navigateTo({path:next, 
                     query:{...q}})
     } ;
 
     return {
+      userInfo,
       query,
       examsList,
       stateList,

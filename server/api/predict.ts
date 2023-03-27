@@ -5,8 +5,8 @@ export default defineEventHandler(async event=>{
     // const userinfo ={rank:12,'category':'SC','pwd':false,'pool':'Gender-Neutral',state:'Delhi',exam:'Main'}
     
     const userinfo = event.context.userinfo
-    const _degree = createArray(getQuery(event)._degree || [])
-    const _courses = createArray(getQuery(event)._courses || [])
+    const _degree = createArray(getQuery(event).degrees || [])
+    const _courses = createArray(getQuery(event).courses || [])
     const _limit = (getQuery(event)._limit && Number(getQuery(event)._limit))  || 50
     const _offset =  (getQuery(event)._offset && Number(getQuery(event)._offset))  || 0
 
