@@ -100,7 +100,7 @@
     </template>
   </client-only>
     <v-checkbox class="mt-1" v-model="query.pwd" label="PWD status"/>
-
+    DEMO = {{ demo }}
     <v-card-actions class="tw--mt-2">
       <v-row>
         <v-btn block color="primary" variant="flat" @click="makeRequest">
@@ -116,30 +116,29 @@
         >
           <v-icon> mdi-close </v-icon> Cancel</v-btn
         >
+      
       </v-row>
     </v-card-actions>
   </v-card>
 </template>
 
 
-<script >
+<script setup>
 import { catList, examsList,  stateList } from '~~/constants';
 
-export default {
-  props: {"dialog":{
-    type:Boolean,
+   const {next, demo ,dialog} =  defineProps({
+      "dialog":{
+   
     default:false,
   }, 
   "demo":{
     default: false,
   },
   "next":{
-    type:String,
-    defulat:'/predict'
+    default:'/predict'
   }
-}
-  ,
-  setup() {
+
+    })
     const userInfo = useUserInfo()
     const createQuery = ()=>{
       const {pwd, rank, state, category, exam, pool} = userInfo.value
@@ -163,16 +162,8 @@ export default {
                     query:{...q}})
     } ;
 
-    return {
-      userInfo,
-      query,
-      examsList,
-      stateList,
-      catList,
-      makeRequest,
-    };
-  },
-};
+    
+
 </script>
 <style lang="css" scoped>
 c1 {
