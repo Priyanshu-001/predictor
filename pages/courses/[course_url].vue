@@ -43,7 +43,7 @@
             variant="text"
             @click.prevent.stop="dialog = true"
             >
-           Open Dialog
+           Edit details
             </a>
         </p>
         </v-row>
@@ -56,7 +56,7 @@
             width="fit-content"
 
             >
-            <select-card  dialog ></select-card>
+            <select-card  :dialog="true" :demo="true" :next="`/courses/${course_url}`" />
             </v-dialog>
         </client-only>
         <section>
@@ -69,6 +69,8 @@
                 loading-text="Loading... Please wait"
                 class="elevation-3"
                 :search="search"
+                dense
+                disable-pagination
             
                 />
             </client-only>
@@ -82,14 +84,14 @@
   middleware: ["update-info"]
   // or middleware: 'auth'
 })
-    const route = useRoute()
-    console.log(route.path)
+   
+    
     const {params:{course_url}} = useRoute()
     const userInfo = useUserInfo()
     const filter=ref('ALL')
     const search = ref('')
     const dialog = ref(false)
-    const {data:cuttoffs,pending} = await useFetch(`/api/courses/${course_url}`,{query:{...userInfo.value}})
+    const {data:cuttoffs,pending} = await useFetch(`/api/courses/${course_url}`,{query:userInfo})
     
     const filtered_cuttoffs = computed(()=>pending.value ? []: cuttoffs.value.filter(row=>
                                         {

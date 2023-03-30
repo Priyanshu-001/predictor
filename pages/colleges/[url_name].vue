@@ -38,7 +38,15 @@
 			Showing <strong>6th Round </strong> Cuttoff for 
 			<strong>{{userInfo.category}}</strong> category
 			<strong><template v-if="!userInfo.pwd">non-</template>PwD</strong>  student, searching for seats in <strong>{{userInfo.seatPool}} seat pool</strong>.
-			
+            <a
+            href="#cuttoffs"
+            color="primary"
+            dark
+            variant="text"
+            @click.prevent.stop="dialog = true"
+            >
+           Edit details
+            </a>
     </div>
     <br>
     <client-only>
@@ -51,13 +59,23 @@
 		:search="search"
 		/>
     </client-only>
+    <client-only>
+        <v-dialog
+            v-model="dialog"
+           
+            width="fit-content"
+
+            >
+            <select-card  :dialog="true" :demo="true" :next="`/courses/${url_name}`" />
+            </v-dialog>
+        </client-only>
 </section>
 </div></template>
 <script setup>
     definePageMeta({
     middleware: ["update-info"]
     })
-
+    const dialog = ref(false)
     const search = ref('')
     const filter = ref('ALL')
     const headers = [
@@ -70,11 +88,12 @@
 			]
 
     const {params:{url_name}} = useRoute()
-    const {data:college_info} = useFetch(`/api/colleges/${url_name}`)
 
     const userInfo = useUserInfo()
 
-    const {data:cuttoffs,pending} = useFetch(`/api/colleges/${url_name}/cuttoff`)
+    const {data:college_info} = useFetch(`/api/colleges/${url_name}`)
+
+    const {data:cuttoffs,pending} = useFetch(`/api/colleges/${url_name}/cuttoff`,{query:userInfo})
     const filtered_data = computed(()=>pending.value ? []: cuttoffs.value.filter(row=>
                                         {
                                            return row.courses?.toLowerCase()?.includes(search.value.toLowerCase() ) && (row.degree === filter.value || filter.value === 'ALL') 

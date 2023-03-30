@@ -10,7 +10,7 @@
     </client-only>
 
     <p  class="tw-text-2xl">
-        {{ courses }}
+       
      Serching for top colleges achievable with 
      <strong> {{userInfo.category}} Rank {{userInfo.rank}} </strong>
     </p>
@@ -38,7 +38,7 @@
             </v-col>
             <v-col cols="11" sm="8">
                 <div>
-                    {{ userInfo }}
+                    
                     <p v-if="metaDataPending" class="text-2xl">
                         Found around <strong> {{ metaData?.count}} results</strong> in our db.
                     </p>
