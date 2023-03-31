@@ -55,13 +55,14 @@
     <br />
     <v-row class="flex flex-wrap">
       <v-btn-toggle id="pool" color="primary" v-model="query.seatPool">
-        <v-btn class="sm:mx-2" text>
+        <v-btn class="sm:tw-mx-2" text>
           <v-icon> mdi-gender-female </v-icon> Female only
         </v-btn>
 
-        <v-btn class="sm:mx-2" text>
+        <v-btn class="sm:tw-mx-2" text>
           <v-icon> mdi-gender-male-female </v-icon> Gender Neutral
         </v-btn>
+
       </v-btn-toggle>
     </v-row>
     <template v-if="demo">
@@ -100,7 +101,7 @@
     </template>
   </client-only>
     <v-checkbox class="mt-1" v-model="query.pwd" label="PWD status"/>
-    DEMO = {{ demo }}
+   
     <v-card-actions class="tw--mt-2">
       <v-row>
         <v-btn block color="primary" variant="flat" @click="makeRequest">

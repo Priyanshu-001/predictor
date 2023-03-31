@@ -1,7 +1,7 @@
 <template>
     <v-card z-index="10000" 
     id="filterCard" 
-     class="p-3 justify-center flex flex-col text-gray-700 font-semibold rounded-7xl  " 
+     class="!tw-pa-3 justify-center flex flex-col text-gray-700 font-semibold rounded-7xl  " 
      elevation="10" :class="!dialog ? ['ml-auto','mr-auto','w-100']: '' "
      
      >
