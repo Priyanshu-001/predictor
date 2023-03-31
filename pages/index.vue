@@ -96,6 +96,7 @@ export default defineComponent({
           <strong class="font-weight-bold">2020 cuttoffs</strong>
           <em> for free </em>.
           <br />
+         
           NOTE:This is a student project, some entries might be wrong pls
           crosscheck with an offcial source.
           <nuxt-link to="/predict">PREDICT</nuxt-link>

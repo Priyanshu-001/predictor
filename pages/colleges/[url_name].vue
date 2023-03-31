@@ -62,11 +62,10 @@
     <client-only>
         <v-dialog
             v-model="dialog"
-           
             width="fit-content"
-
             >
-            <select-card  :dialog="true" :demo="true" :next="`/courses/${url_name}`" />
+
+            <select-card  :dialog="true" :demo="true" :next="`/colleges/${url_name}`" />
             </v-dialog>
         </client-only>
 </section>
@@ -91,7 +90,9 @@
 
     const userInfo = useUserInfo()
 
-    const {data:college_info} = useFetch(`/api/colleges/${url_name}`)
+    const {data:college_info,error} = useFetch(`/api/colleges/${url_name}`)
+    if(error.value)
+        throw createError({statusCode:404,statusMessage:error.value.message, fatal:true})
 
     const {data:cuttoffs,pending} = useFetch(`/api/colleges/${url_name}/cuttoff`,{query:userInfo})
     const filtered_data = computed(()=>pending.value ? []: cuttoffs.value.filter(row=>

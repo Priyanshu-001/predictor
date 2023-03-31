@@ -60,6 +60,7 @@
             </v-dialog>
         </client-only>
         <section>
+           error =  {{ error }}
             <br>
             <client-only>
                 <v-data-table
@@ -91,8 +92,9 @@
     const filter=ref('ALL')
     const search = ref('')
     const dialog = ref(false)
-    const {data:cuttoffs,pending} = await useFetch(`/api/courses/${course_url}`,{query:userInfo})
-    
+    const {data:cuttoffs,pending,error} = await useFetch(`/api/courses/${course_url}`,{query:userInfo})
+    if(error.value)
+        throw createError({statusCode:404,statusMessage:error.value.message, fatal:true})
     const filtered_cuttoffs = computed(()=>pending.value ? []: cuttoffs.value.filter(row=>
                                         {
                                            return row.institute?.toLowerCase()?.includes(search.value.toLowerCase() ) && (row.degree === filter.value || filter.value === 'ALL') 

@@ -39,9 +39,10 @@
             <v-col cols="11" sm="8">
                 <div>
                     
-                    <p v-if="metaDataPending" class="text-2xl">
+                    <div v-if="!metaDataPending" class="text-2xl">
                         Found around <strong> {{ metaData?.count}} results</strong> in our db.
-                    </p>
+                        <ExamsInfoBanner :exam="userInfo.exam" :degrees="metaData.degree" />
+                    </div>
                     <!-- TODO: add skeleton for meta-para -->
                     <template v-if="!pending"> 
                         <predict-item v-for="(college,index) in data" 
