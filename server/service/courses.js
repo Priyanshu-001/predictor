@@ -13,4 +13,7 @@ export function allCourses(){
     return [...result]
 
 }
+export function courseExists(url_name){
+    return url_name in data;
+}
 
