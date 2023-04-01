@@ -1,11 +1,12 @@
 <template>
     <course-info-card :course = "course_url" />
     <div class="mt-4 mx-3">
-        <section id="cuttoff" class="tw-p-8">
+        <section id="cuttoff" class="tw-px-8">
             <v-row>
 	            <v-col md="3" cols="12">
 		            <h2> Cuttoff</h2>
                 </v-col>
+               
             <v-spacer/>
                 <v-col md="6" cols="12">
                     <v-row>
@@ -30,10 +31,12 @@
                     </v-row>
                 </v-col>
                 <br/>
-                <p> 
+            </v-row>
+                <exams-info-banner :degrees="unique"  ></exams-info-banner>
+                <p class="tw-mt-3"> 
 			Showing <strong> 6th Round </strong> Cuttoff for 
 			<strong>{{userInfo.category}}</strong> category
-			<strong><template v-if="!userInfo.pwd">non-</template>PwD</strong>  student, searching for seats in <strong>{{userInfo.pool}} seat pool</strong> searching only in <strong> JOSAA colleges </strong> .
+			<strong> {{ userInfo.pwd == 'false' ? 'non-':'' }}PwD</strong>   student, searching for seats in <strong>{{userInfo.pool}} seat pool</strong> searching only in <strong> JOSAA colleges </strong> .
            
             
             <a
@@ -46,21 +49,12 @@
            Edit details
             </a>
         </p>
-        </v-row>
+       
            
         </section>
-        <client-only>
-        <v-dialog
-            v-model="dialog"
-           
-            width="fit-content"
-
-            >
-            <select-card  :dialog="true" :demo="true" :next="`/courses/${course_url}`" />
-            </v-dialog>
-        </client-only>
+        
         <section>
-           error =  {{ error }}
+           
             <br>
             <client-only>
                 <v-data-table
@@ -77,6 +71,16 @@
             </client-only>
      
         </section>
+        <client-only>
+        <v-dialog
+            v-model="dialog"
+           
+            width="fit-content"
+
+            >
+            <select-card  :dialog="true" :demo="true" :next="`/courses/${course_url}`"  @close="dialog=false"/>
+            </v-dialog>
+        </client-only>
     </div>
 </template>
 

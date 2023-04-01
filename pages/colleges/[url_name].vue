@@ -5,6 +5,7 @@
 	    <v-col md="3" cols="12">
 		    <h2> Cuttoff </h2>
         </v-col>
+       
         <v-spacer/>
         <v-col md="6" cols="12">
             <v-row>
@@ -31,22 +32,28 @@
 	</v-row>
     <br/>
     <div v-if="pending"> ....loading </div>
-    <div v-else>
-        <strong>{{college_info.institute}}</strong> admits 
-			through <strong> JEE-{{college_info.exam}} </strong> for its 
-			<strong>Engneering Courses</strong>. 
-			Showing <strong>6th Round </strong> Cuttoff for 
-			<strong>{{userInfo.category}}</strong> category
-			<strong><template v-if="!userInfo.pwd">non-</template>PwD</strong>  student, searching for seats in <strong>{{userInfo.seatPool}} seat pool</strong>.
-            <a
-            href="#cuttoffs"
-            color="primary"
-            dark
-            variant="text"
-            @click.prevent.stop="dialog = true"
-            >
-           Edit details
-            </a>
+    <div v-else class="tw-mx-3">
+       
+            <ExamsInfoBanner :exam ="college_info?.exam" :degrees="unique" :conditional="false" />
+       
+        <div class="tw-mt-4">
+            <p>
+            <strong>{{college_info.institute}} </strong> admits through <strong> JEE-{{college_info.exam}} </strong> for its 
+                <strong>Engneering Courses</strong>. 
+                Showing <strong>6th Round </strong> Cuttoff for 
+                <strong>{{userInfo.category}}</strong> category 
+                <strong> {{ userInfo.pwd == 'false' ? 'non-':'' }}PwD</strong>  student, searching for seats in <strong>{{userInfo.pool}} seat pool</strong>.
+                <a
+                href="#cuttoffs"
+                color="primary"
+                dark
+                variant="text"
+                @click.prevent.stop="dialog = true"
+                >
+            Edit details
+                </a>
+            </p>
+        </div>
     </div>
     <br>
     <client-only>
@@ -65,7 +72,7 @@
             width="fit-content"
             >
 
-            <select-card  :dialog="true" :demo="true" :next="`/colleges/${url_name}`" />
+            <select-card  :dialog="true" :demo="true" :next="`/colleges/${url_name}`" @close="dialog=false" />
             </v-dialog>
         </client-only>
 </section>
@@ -90,11 +97,11 @@
 
     const userInfo = useUserInfo()
 
-    const {data:college_info,error} = useFetch(`/api/colleges/${url_name}`)
-    if(error.value)
+    const {data:college_info,error} = await useLazyFetch(`/api/colleges/${url_name}`)
+    if(error.value?.statusCode === 404)
         throw createError({statusCode:404,statusMessage:error.value.message, fatal:true})
 
-    const {data:cuttoffs,pending} = useFetch(`/api/colleges/${url_name}/cuttoff`,{query:userInfo})
+    const {data:cuttoffs,pending} = await useLazyFetch(`/api/colleges/${url_name}/cuttoff`,{query:userInfo})
     const filtered_data = computed(()=>pending.value ? []: cuttoffs.value.filter(row=>
                                         {
                                            return row.courses?.toLowerCase()?.includes(search.value.toLowerCase() ) && (row.degree === filter.value || filter.value === 'ALL') 

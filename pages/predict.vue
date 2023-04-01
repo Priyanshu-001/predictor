@@ -70,7 +70,7 @@
             v-model="dialog"
             width="fit-content"
             >
-                <select-card  dialog demo ></select-card>
+                <select-card  dialog demo @close="dialog=false"></select-card>
             </v-dialog>
         </LazyClientOnly>
     </v-container>

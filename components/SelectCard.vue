@@ -113,7 +113,7 @@
           text
           block
           color="error"
-          @click="close"
+          @click="emit('close')"
         >
           <v-icon> mdi-close </v-icon> Cancel</v-btn
         >
@@ -126,7 +126,7 @@
 
 <script setup>
 import { catList, examsList,  stateList } from '~~/constants';
-
+const emit = defineEmits(['close'])
    const {next, demo ,dialog} =  defineProps({
       "dialog":{
    
@@ -145,7 +145,7 @@ import { catList, examsList,  stateList } from '~~/constants';
       const {pwd, rank, state, category, exam, pool} = userInfo.value
       return   ref({
         rank: Number(rank),
-        seatPool: pool === 'Gender-Neutral' ? 1: 0,
+        seatPool: (pool === 'Gender-Neutral' ? 1: 0),
         state,
         category,
         pwd: pwd=='true',
@@ -156,11 +156,12 @@ import { catList, examsList,  stateList } from '~~/constants';
     const makeRequest = () => {
       const q = {...query.value, 
         rank:query.value.rank.toString(), 
-        pool: query.value.seatPool===0? 'Female-Only':'Gender-Neutral',
+        pool: query.value.seatPool===0  ? 'Female-Only':'Gender-Neutral',
         pwd:query.value.pwd.toString()
       }
         navigateTo({path:next, 
                     query:{...q}})
+        emit('close')
     } ;
 
     
