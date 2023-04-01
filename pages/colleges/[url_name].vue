@@ -78,6 +78,7 @@
 </section>
 </div></template>
 <script setup>
+    
     definePageMeta({
     middleware: ["update-info"]
     })
@@ -108,6 +109,9 @@
                                          } ) )
     const unique = computed(()=>pending.value? []: ['ALL',...new Set(cuttoffs.value.map(item=>item.degree))] )
     
-
     
+    useSeoMeta({
+        title:()=>`${college_info.value?.institute} cuttoff ` ,
+        description:()=>`View cuttoff of ${ college_info.value?.institute} courses in JOSAA colleges like IITs/NITs/IIITS etc`
+   })
 </script>

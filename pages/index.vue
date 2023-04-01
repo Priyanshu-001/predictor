@@ -3,6 +3,17 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   setup() {
+    useHead({
+      title: 'Predictor JEE - Free JOSAA college predictor',
+      meta:[
+        {
+          name:'description',content:'Free JOSAA College predictor based on 2020 ranks, no signup required',
+        },
+        {
+          name:'keywords', content:'Free, JOSAA College Predictor, JEE cuttoffs, IIT/NIT/IIIT cuttoffs'
+        }
+      ]
+    })
     const course = [
       {
         name: "Mechanical engineering",
@@ -78,7 +89,7 @@ export default defineComponent({
             md:tw-text-left
           "
         >
-          JOSSA College Predictor
+          JOSAA College Predictor
         </h2>
         <p
           class="
@@ -91,7 +102,7 @@ export default defineComponent({
             tw-mr-8
           "
         >
-          With PredictorJEE web app you can browse JOSSA colleges, courses and
+          With PredictorJEE web app you can browse JOSAA colleges, courses and
           predict some of the college you might be getting into as per the
           <strong class="font-weight-bold">2020 cuttoffs</strong>
           <em> for free </em>.

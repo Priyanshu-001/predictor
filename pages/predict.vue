@@ -93,5 +93,8 @@
     const queryBuilder =   useQueryBuilder()
     const predictUrl = computed(()=>queryBuilder('/api/predict',{courses,degrees}))
     const  {data,pending}  =   useLazyFetch(()=>predictUrl.value ,{query:userInfo}) 
- 
+    useSeoMeta({
+    title:()=>`Searching for colleges for rank ${userInfo.value.rank} ${userInfo.value.category} category` ,
+    description:()=>`Searching for colleges for rank ${userInfo.value.rank} ${userInfo.value.category} category`
+   })
 </script>

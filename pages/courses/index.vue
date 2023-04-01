@@ -27,11 +27,13 @@
 </template>
 
 <script setup>
-    const {data:allCourses,pending} = useFetch('/api/courses')
+    const {data:allCourses,pending} = await useFetch('/api/courses')
     const search = ref('')
     const courses = computed(()=>pending.value ? [] : allCourses.value.filter(course=>course.courses?.toLowerCase().includes(search.value.toLowerCase())))
     
 
-
+	useHead({
+		title:'All Courses'
+	})
 
 </script>
