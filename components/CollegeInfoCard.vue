@@ -3,7 +3,7 @@
         <v-card class="tw-w-full fade-in tw--mb-6" v-if="!!college">
             <v-card-title>
                 <v-spacer/>
-                 <h1 class=" text-2xl text-blue-500 font-semibold text-center"> {{college.institute}} </h1>
+                 <h1 class=" text-2xl text-blue-500 font-semibold text-center tw-whitespace-normal"> {{college.institute}} </h1>
                 <v-spacer/>
             </v-card-title>
             <v-card-subtitle>

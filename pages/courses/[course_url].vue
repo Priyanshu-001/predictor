@@ -1,11 +1,12 @@
 <template>
     <course-info-card :course = "course_url" />
     <div class="mt-4 mx-3">
-        <section id="cuttoff" class="tw-p-8">
+        <section id="cuttoff" class="tw-px-8">
             <v-row>
 	            <v-col md="3" cols="12">
 		            <h2> Cuttoff</h2>
                 </v-col>
+               
             <v-spacer/>
                 <v-col md="6" cols="12">
                     <v-row>
@@ -30,10 +31,12 @@
                     </v-row>
                 </v-col>
                 <br/>
-                <p> 
+            </v-row>
+                <exams-info-banner :degrees="unique"  ></exams-info-banner>
+                <p class="tw-mt-3"> 
 			Showing <strong> 6th Round </strong> Cuttoff for 
 			<strong>{{userInfo.category}}</strong> category
-			<strong><template v-if="!userInfo.pwd">non-</template>PwD</strong>  student, searching for seats in <strong>{{userInfo.pool}} seat pool</strong> searching only in <strong> JOSAA colleges </strong> .
+			<strong> {{ userInfo.pwd == 'false' ? 'non-':'' }}PwD</strong>   student, searching for seats in <strong>{{userInfo.pool}} seat pool</strong> searching only in <strong> JOSAA colleges </strong> .
            
             
             <a
@@ -43,21 +46,15 @@
             variant="text"
             @click.prevent.stop="dialog = true"
             >
-           Open Dialog
+           Edit details
             </a>
         </p>
-        </v-row>
+       
            
         </section>
-        <v-dialog
-            v-model="dialog"
-           
-            width="fit-content"
-
-            >
-            <select-card  dialog ></select-card>
-            </v-dialog>
+        
         <section>
+           
             <br>
             <client-only>
                 <v-data-table
@@ -67,11 +64,23 @@
                 loading-text="Loading... Please wait"
                 class="elevation-3"
                 :search="search"
+                dense
+                disable-pagination
             
                 />
             </client-only>
      
         </section>
+        <client-only>
+        <v-dialog
+            v-model="dialog"
+           
+            width="fit-content"
+
+            >
+            <select-card  :dialog="true" :demo="true" :next="`/courses/${course_url}`"  @close="dialog=false"/>
+            </v-dialog>
+        </client-only>
     </div>
 </template>
 
@@ -80,15 +89,16 @@
   middleware: ["update-info"]
   // or middleware: 'auth'
 })
-    const route = useRoute()
-    console.log(route.path)
+   
+    
     const {params:{course_url}} = useRoute()
     const userInfo = useUserInfo()
     const filter=ref('ALL')
     const search = ref('')
     const dialog = ref(false)
-    const {data:cuttoffs,pending} = await useFetch(`/api/courses/${course_url}`,{query:{...userInfo.value}})
-    
+    const {data:cuttoffs,pending,error} = await useFetch(`/api/courses/${course_url}`,{query:userInfo})
+    if(error.value)
+        throw createError({statusCode:404,statusMessage:error.value.message, fatal:true})
     const filtered_cuttoffs = computed(()=>pending.value ? []: cuttoffs.value.filter(row=>
                                         {
                                            return row.institute?.toLowerCase()?.includes(search.value.toLowerCase() ) && (row.degree === filter.value || filter.value === 'ALL') 

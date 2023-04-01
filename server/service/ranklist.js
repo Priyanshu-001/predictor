@@ -4,6 +4,7 @@ import { limit } from '../helpers/limit';
 import * as info from '../datastore/json/info.json'; 
 import { loader } from '../datastore/json/cuttoffs';
 import { ResouceNotFoundError } from '../Error/NotFound';
+import { courseExists } from './courses';
 
 export async function courseInfo(course_url,userdata){
     const {category,pool, pwd } = userdata
@@ -12,13 +13,12 @@ export async function courseInfo(course_url,userdata){
     
     const {data} = await loader(category)
     
+    if(! courseExists(course_url))
+        return new ResouceNotFoundError(`${course_url} is not found`)
+
     let  result = data.filter(row=>row.courses.split(' ').join('_')===course_url)
                 .filter(curriedLimit)
    
-    if(result.length === 0)
-    {
-        throw new ResouceNotFoundError(`${course_url} is not found`)
-    }
     result =  result.map(row=>({...row,...curriedPick(row.url_name)}))
    
 
@@ -33,14 +33,15 @@ export async function collegeCuttoffs(url_name,userdata){
     const {data} = await loader(category)
     const curriedLimit = (obj)=> limit(obj,opt)
     const result = data.filter(row=>row.url_name===url_name).filter(curriedLimit)
-
-    if(result.length === 0)
-    {
-        throw new ResouceNotFoundError(`${url_name} is not found for following ${JSON.stringify({category,pool,pwd})}`)
-    }
-    return result.map(row=>({...row,...curriedPick[row.url_name]  }))
+    
+    // if(result.length === 0)
+    // {
+    //     throw new ResouceNotFoundError(`${url_name} is not found for following ${JSON.stringify({category,pool,pwd})}`)
+    // }
+    return result.map(row=>({...row,...curriedPick[row.url_name]  })).map(row=>({...row,institute:url_name.split('_').join(' ')}))
 
 }
+
 
 export async function predict({rank,exam,category,pool, pwd, state },options={_degree,_courses,_limit,_offset}){
 
