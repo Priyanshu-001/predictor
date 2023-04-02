@@ -16,8 +16,8 @@
       </v-slide-item> -->
     </v-slide-group>
     <v-slide-group show-arrows v-else>
-      <v-slide-item v-for="(item, index) in list" :key="index">
-        <router-link :to="item.link">
+      <div v-for="(item, index) in list" :key="index">
+        <nuxt-link :to="item.link">
           <div
             class="
               tw-mx-5 tw-w-64 tw-h-64 tw-flex tw-flex-col tw-justify-between
@@ -35,7 +35,7 @@
                 tw-justify-center tw-text-center tw-items-center tw-bg-gray-100
               "
             >
-              <v-icon size="80px" style="width: 100px">
+              <v-icon size="80px" style="width: 100px" class="tw-text-gray-800">
                 {{ item.icon }}
               </v-icon>
 
@@ -59,8 +59,8 @@
               {{ item.name }}
             </h4>
           </div>
-        </router-link>
-      </v-slide-item>
+        </nuxt-link>
+      </div>
     </v-slide-group>
   </v-container>
 </template>

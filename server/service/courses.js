@@ -1,9 +1,5 @@
 import * as data from '../datastore/json/courses.json';
-import { pick } from '../helpers/pick';
-import { limit } from '../helpers/limit';
-import * as info from '../datastore/json/info.json'; 
-import { loader } from '../datastore/json/cuttoffs';
-import { ResouceNotFoundError } from '../Error/NotFound';
+import { pick } from '../helpers/pick';;
 
 export function allCourses(){
     const result = []
@@ -14,7 +10,10 @@ export function allCourses(){
         let courseData = {link: course, ...pick(['icon','courses'],{...current[0]})}
         result.push(courseData)
     }
-    return {result}
+    return [...result]
 
+}
+export function courseExists(url_name){
+    return url_name in data;
 }
 
