@@ -23,5 +23,7 @@ Pls Report bug if uou find on and all the best for your exam and beyond.
 
 
 <script setup>
-const hello = "Hello";
+useSeoMeta({
+  title:'About page'
+})
 </script>
