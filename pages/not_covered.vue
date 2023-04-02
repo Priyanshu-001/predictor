@@ -8,6 +8,7 @@
 		<missed />
 
 		<p> There might be many more colleges where you can get in please research before taking a desicion. This is is in beta and contantly improving thanks and all the best for your search.</p>
+		</div>
 
 
 </template>
