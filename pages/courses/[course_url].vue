@@ -37,6 +37,7 @@
 			Showing <strong> 6th Round </strong> Cuttoff for 
 			<strong>{{userInfo.category}}</strong> category
 			<strong> {{ userInfo.pwd == 'false' ? 'non-':'' }}PwD</strong>   student, searching for seats in <strong>{{userInfo.pool}} seat pool</strong> searching only in <strong> JOSAA colleges </strong> .
+            Ranks shown are category ranks.
            
             
             <a

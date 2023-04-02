@@ -40,7 +40,7 @@
                 <div>
                     
                     <div v-if="!metaDataPending" class="text-2xl">
-                        Found around <strong> {{ metaData?.count}} results</strong> in our db.
+                        Found around <strong> {{ metaData?.count}} results</strong> in our db. Ranks shown are category ranks.
                         <ExamsInfoBanner :exam="userInfo.exam" :degrees="metaData.degree" />
                     </div>
                     <!-- TODO: add skeleton for meta-para -->
