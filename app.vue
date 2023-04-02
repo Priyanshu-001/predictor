@@ -42,4 +42,11 @@ h2 {
   /*font-size: 1ch;*/
 }
 </style>
-
+<!-- <meta name="google-site-verification" content="0vUqLgFa5Al8aoXBQmlqJAdplRQuxeOrblv821fYDr8" /> -->
+<script setup>
+  useHead({
+    meta:[
+      {name:'google-site-verification', content:'0vUqLgFa5Al8aoXBQmlqJAdplRQuxeOrblv821fYDr8'}
+    ]
+    })
+</script>
