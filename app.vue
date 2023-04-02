@@ -6,6 +6,7 @@
     <v-main>
       <NuxtPage />
     </v-main>
+    <app-footer/>
   </v-app>
 </template>
 <style lang="scss">
