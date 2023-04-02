@@ -62,7 +62,7 @@
                     </nuxt-link>
                 </p>
         		<p> There might be many more colleges where you can get in please research before taking a desicion. 
-                    This is is in beta and contantly improving thanks and all the best for your search.
+                    This webapp is in beta and contantly improving thanks for you support and all the best for your search.
                 </p>
 
                 </div>
@@ -97,8 +97,10 @@
     const queryBuilder =   useQueryBuilder()
     const predictUrl = computed(()=>queryBuilder('/api/predict',{courses,degrees}))
     const  {data,pending}  =   useLazyFetch(()=>predictUrl.value ,{query:userInfo}) 
+
     useSeoMeta({
     title:()=>`Searching for colleges for rank ${userInfo.value.rank} ${userInfo.value.category} category` ,
     description:()=>`Searching for colleges for rank ${userInfo.value.rank} ${userInfo.value.category} category`
    })
+
 </script>

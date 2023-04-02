@@ -116,8 +116,10 @@
         {title:'Quota', value:'quota'},
 	]
     
+
     useSeoMeta({
     title:()=>`${course_url.split('_').join(' ')} cuttoffs in JOSAA colleges in our DB` ,
     description:()=>`View cuttoff of ${course_url.split('_').join(' ')} courses in JOSAA colleges like IITs/NITs/IIITS etc`
    })
 </script>
+
