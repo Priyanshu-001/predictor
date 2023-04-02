@@ -48,7 +48,10 @@
 export default {
   name: "CoursesPage",
   setup(){
-   
+    useHead({
+		title:'All Colleges in DB'
+	})
+
     const search = ref('')
     const filter = ref('ALL')
     const {data:allColleges,pending} =  useFetch('/api/colleges')

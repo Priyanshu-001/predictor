@@ -4,6 +4,7 @@
         <nuxt-link :to="{path:`/colleges/${result.url_name}`, query:{pool,category,pwd}}"><h2 class="tw-text-blue-700 tw-font-bold tw-text-xl tw-mb-0 hover:tw-underline">{{result.institute}}</h2>  </nuxt-link>
             <span class="tw-text-gray-500 tw-text-md tw-font-bold"> {{result.city}}, {{result.state}}
                 <span v-if="result.quota == 'HS' " class="tw-text-white tw-text-sm tw-p-1 tw-bg-blue-800">Home State</span>
+              
             </span>
             <div class="my-2">
                 <p class="tw-font-light tw-text-4xl tw-mb-0">{{result.courses}}</p>

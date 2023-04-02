@@ -9,11 +9,15 @@
                         </template>
 
                         <template v-if="exam=='Advanced' || conditional">
-                            <br/> <br/> <h3><strong> For IITs </strong> </h3>
-                            For B.Planning  you have qualify jee main paper 1, JEE Advanced and then qualify AAT. Allotment is done based on JEE-Advanced rank.
+
+                            <br/>  <h3><strong> For IITs </strong> </h3>
+                            For B.Arch you have qualify jee main paper 1, JEE Advanced and then qualify AAT. Allotment is done based on JEE-Advanced rank.
                             <br>
                             Engneering courses in IIT are also alloted based on JEE-Advanced rank.
                         </template>
+                        <br/>
+                        Please check with an official source to be sure, thanks
+
 
                         </v-alert>
 </template>

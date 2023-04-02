@@ -43,6 +43,7 @@
                 Showing <strong>6th Round </strong> Cuttoff for 
                 <strong>{{userInfo.category}}</strong> category 
                 <strong> {{ userInfo.pwd == 'false' ? 'non-':'' }}PwD</strong>  student, searching for seats in <strong>{{userInfo.pool}} seat pool</strong>.
+                Ranks shown are category ranks.
                 <a
                 href="#cuttoffs"
                 color="primary"
@@ -78,6 +79,7 @@
 </section>
 </div></template>
 <script setup>
+    
     definePageMeta({
     middleware: ["update-info"]
     })
@@ -108,6 +110,9 @@
                                          } ) )
     const unique = computed(()=>pending.value? []: ['ALL',...new Set(cuttoffs.value.map(item=>item.degree))] )
     
-
     
+    useSeoMeta({
+        title:()=>`${college_info.value?.institute} cuttoff ` ,
+        description:()=>`View cuttoff of ${ college_info.value?.institute} courses in JOSAA colleges like IITs/NITs/IIITS etc`
+   })
 </script>

@@ -58,7 +58,7 @@ export async function predict({rank,exam,category,pool, pwd, state },options={_d
     const {data} = await loader(category)
 
     const result = data
-    .map(el=>({...el,...pick(['exam','state','city','institute'],{...info[el.url_name]} ) }))
+    .map(el=>({...el,...pick(['exam','state','city','institute','quota'],{...info[el.url_name]} ) }))
                     .filter(curriedLimit)
                     .filter(row=>(row.quota === 'AI' || (row.quota === 'OS' && row.state !== state)  ||(row.quota === 'HS'  && row.state === state)) )
                     .filter(row=>( allowedDegree.size === 0 || allowedDegree.has(row.degree) ) && ( allowedCourses.size === 0 || allowedCourses.has(row.courses) ) )
@@ -66,7 +66,7 @@ export async function predict({rank,exam,category,pool, pwd, state },options={_d
                     .sort((a,b)=>a.crank-b.crank)
                    
     return result.splice(_offset,_offset+_limit)
-            .map(el=>pick(['institute','state','city','courses','degree','duration','crank','url_name'],el))
+            .map(el=>pick(['institute','state','city','courses','degree','duration','crank','url_name','quota'],el))
 }
 
 export async function possibilities({rank,exam,category,pool, pwd, state }){

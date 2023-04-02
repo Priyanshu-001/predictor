@@ -40,7 +40,7 @@
                 <div>
                     
                     <div v-if="!metaDataPending" class="text-2xl">
-                        Found around <strong> {{ metaData?.count}} results</strong> in our db.
+                        Found around <strong> {{ metaData?.count}} results</strong> in our db. Ranks shown are category ranks.
                         <ExamsInfoBanner :exam="userInfo.exam" :degrees="metaData.degree" />
                     </div>
                     <!-- TODO: add skeleton for meta-para -->
@@ -61,6 +61,10 @@
                         <strong> listed here.</strong>
                     </nuxt-link>
                 </p>
+        		<p> There might be many more colleges where you can get in please research before taking a desicion. 
+                    This webapp is in beta and contantly improving thanks for you support and all the best for your search.
+                </p>
+
                 </div>
             </v-col>
            
@@ -93,5 +97,10 @@
     const queryBuilder =   useQueryBuilder()
     const predictUrl = computed(()=>queryBuilder('/api/predict',{courses,degrees}))
     const  {data,pending}  =   useLazyFetch(()=>predictUrl.value ,{query:userInfo}) 
- 
+
+    useSeoMeta({
+    title:()=>`Searching for colleges for rank ${userInfo.value.rank} ${userInfo.value.category} category` ,
+    description:()=>`Searching for colleges for rank ${userInfo.value.rank} ${userInfo.value.category} category`
+   })
+
 </script>
