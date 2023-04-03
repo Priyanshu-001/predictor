@@ -29,7 +29,7 @@
 
       <v-row class="tw-flex m-1 tw-justify-between">
         <!-- Skeleton loaders -->
-        <template v-if="pending"> Hello Boi </template>
+        <template v-if="pending"> <v-spacer/> ....loading <v-spacer/></template>
         <!-- content -->
         <template v-else>
           
