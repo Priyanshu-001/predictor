@@ -3,6 +3,7 @@
     <h1 class="tw-text-4xl tw-p-5 tw-font-bold">About</h1>
     <div class="flex tw-w-100 md:tw-w-3/4 tw-p-5">
 
+
       <v-card class="col-7 !tw-p-4">
         <v-card-content>
          <p> 
@@ -18,6 +19,7 @@ I won't offer any advice, but I'm confident that no matter the outcome, you'll t
 <br/>
 <br/>
 Pls send errors ,suggestion at jeecollegepredictor[at]gmail.com and all the best for your exam and beyond.
+
 
         </p>
         </v-card-content>

@@ -1,6 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
+    nitro: {
+    prerender: {
+      routes: ['/', '/colleges']
+    },
+        },
+routeRules:{ 
+
+'/':{'static':true},
+
+'/colleges':{'static':true}
+
+},
+
+
+
+
     experimental: { treeshakeClientOnly: false },  
     routeRules:{ 
       '/':{'static':true},

@@ -60,7 +60,9 @@ export async function predict({rank,exam,category,pool, pwd, state },options={_d
     const result = data
     .map(el=>({...el,...pick(['exam','state','city','institute','quota'],{...info[el.url_name]} ) }))
                     .filter(curriedLimit)
+
                     .filter(row=>(row.quota === 'AI' || (row.quota === 'OS' && row.state !== state)  ||(row.quota === 'HS'  && row.state.toLowerCase().split().join() === state.toLowerCase().split().join())) )
+
                     .filter(row=>( allowedDegree.size === 0 || allowedDegree.has(row.degree) ) && ( allowedCourses.size === 0 || allowedCourses.has(row.courses) ) )
                     .filter(row=>row.crank>rank)
                     .sort((a,b)=>a.crank-b.crank)
