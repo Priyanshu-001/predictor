@@ -3,7 +3,7 @@ import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
     nitro: {
     prerender: {
-      routes: ['/', '/colleges'.'/courses']
+      routes: ['/', '/colleges','/courses']
     },
         },
 
