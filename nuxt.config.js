@@ -3,19 +3,9 @@ import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
     nitro: {
     prerender: {
-      routes: ['/', '/colleges']
+      routes: ['/', '/colleges'.'/courses']
     },
         },
-routeRules:{ 
-
-'/':{'static':true},
-
-'/colleges':{'static':true}
-
-},
-
-
-
 
     experimental: { treeshakeClientOnly: false },  
     routeRules:{ 
