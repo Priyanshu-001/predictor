@@ -10,7 +10,7 @@ export default defineComponent({
           name:'description',content:'Free JOSAA College predictor based on 2020 ranks, no signup required',
         },
         {
-          name:'keywords', content:'Free, JOSAA College Predictor, JEE cuttoffs, IIT/NIT/IIIT cuttoffs'
+          name:'keywords', content:'Free JOSAA College Predictor, JEE cutoffs, IIT/NIT/IIIT cuttoffs, IIT cutoff, IIT cutoff 2020, IIT college predictor'
         }
       ]
     })

@@ -112,7 +112,7 @@
     
     
     useSeoMeta({
-        title:()=>`${college_info.value?.institute} cuttoff ` ,
-        description:()=>`View cuttoff of ${ college_info.value?.institute} courses in JOSAA colleges like IITs/NITs/IIITS etc`
+        title:()=>`${college_info.value?.institute} cutoff 2020 ` ,
+        description:()=>`View cutoff of ${ college_info.value?.institute} cutoff`
    })
 </script>
