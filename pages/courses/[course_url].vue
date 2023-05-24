@@ -4,7 +4,7 @@
         <section id="cuttoff" class="tw-px-8">
             <v-row>
 	            <v-col md="3" cols="12">
-		            <h2> Cuttoff</h2>
+		            <h2> Cutoff </h2>
                 </v-col>
                
             <v-spacer/>
@@ -34,7 +34,7 @@
             </v-row>
                 <exams-info-banner :degrees="unique"  ></exams-info-banner>
                 <p class="tw-mt-3"> 
-			Showing <strong> 6th Round </strong> Cuttoff for 
+			Showing <strong> 6th Round </strong> Cutoff for 
 			<strong>{{userInfo.category}}</strong> category
 			<strong> {{ userInfo.pwd == 'false' ? 'non-':'' }}PwD</strong>   student, searching for seats in <strong>{{userInfo.pool}} seat pool</strong> searching only in <strong> JOSAA colleges </strong> .
             Ranks shown are category ranks.
