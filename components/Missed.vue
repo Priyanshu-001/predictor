@@ -30,7 +30,7 @@ export default{
 			everything:[{
 				name:'NSUT Delhi',
 				counselling: 'JAC Delhi',
-				link: 'https://jacdelhi.nic.in/'
+				link: 'https://jacdelhi.admissions.nic.in/'
 			},
 			{
 				name: 'BITS Pilani',
@@ -40,7 +40,7 @@ export default{
 			{
 				name: 'IIIT Delhi',
 				counselling: 'JAC Delhi',
-				link: 'https://jacdelhi.nic.in'
+				link: 'https://jacdelhi.admissions.nic.in/'
 			},
 
 			{
@@ -66,26 +66,37 @@ export default{
 			{
 				name: 'DTU',
 				counselling: 'JAC Delhi',
-				link:'https://jacdelhi.nic.in'
+				link:'https://jacdelhi.admissions.nic.in/'
 
 			},
 			{
 				name:'MAIT',
 				counselling: 'IPU',
-				link: 'https://ipu.ac.in/'
+				link: 'http://www.ipu.ac.in/admission2024main.php'
 
 			},
 			{
 				name:'GTBIT',
 				counselling: 'IPU',
-				link: 'https://ipu.ac.in/'
+				link: 'http://www.ipu.ac.in/admission2024main.php'
 
+			},
+			{
+				name:'MSIT',
+				counselling: 'IPU',
+				link: 'http://www.ipu.ac.in/admission2024main.php'
 			},
 			{
 				name:'VIT',
 				counselling:'VITEEE',
 				link:'https://viteee.vit.ac.in/',
-			}
+			},
+			{
+				name:'Manipal Institue of Technology',
+				counselling:'Manipal',
+				link:'https://www.manipal.edu/mit.html',
+
+			}, 
 			]
 	}),
 }
