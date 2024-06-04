@@ -25,7 +25,7 @@
         color="primary"
       
         v-model.number="query.rank"
-        label="Rank(Category)"
+        label="Category Rank (crl if general)"
         type="number"
         min="1"
         max="169999"
