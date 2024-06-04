@@ -92,7 +92,7 @@
     const dialog = ref(false)
     const userInfo = useUserInfo()
     let route = useRoute()
-    const {data:metaData,pending:metaDataPending} = await useLazyFetch('/api/possibilities',
+    const {data:metaData,pending:metaDataPending} =  useLazyFetch('/api/possibilities',
                                                     {query:userInfo},)
     const queryBuilder =   useQueryBuilder()
     const predictUrl = computed(()=>queryBuilder('/api/predict',{courses,degrees}))
