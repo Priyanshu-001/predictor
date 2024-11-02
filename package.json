@@ -9,7 +9,8 @@
   },
   "devDependencies": {
     "@mdi/font": "^7.1.96",
-    "@nuxt/devtools": "^0.2.5",
+    "@nuxt/devtools": "^1.6.0",
+    "@nuxt/ui": "^2.18.7",
     "@nuxtjs/google-fonts": "^2.0.0",
     "autoprefixer": "^10.4.13",
     "nuxt": "^3.0.0",
