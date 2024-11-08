@@ -1,7 +1,7 @@
 <template>
-	<div class="tw-w-full tw-mt-3  tw-flex tw-flex-col tw-align-items-center md:tw-flex-row md:tw-w-screen  tw-justify-around">
+	<div class="w-full mt-3  flex flex-col align-items-center md:flex-row md:w-screen  justify-around">
 		<v-btn v-for="link in links" :disabled="link.soon" :key="link.name" depressed text exact :to="`${link.name}`" 
-		color="primary" elevation="2"  class="ultra-soon tw-my-2 tw-drop-showdow-md"> 
+		color="primary" elevation="2"  class="ultra-soon my-2 drop-showdow-md"> 
 			<span>
 				<v-icon>{{link.icon}}</v-icon>
 				{{link.display}} 

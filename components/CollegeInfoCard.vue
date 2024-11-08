@@ -1,21 +1,21 @@
 <template>
-    <div class="tw-bg-gradient-to-br tw-text-white tw-from-blue-500 tw-to-blue-700  tw-rounded-4 tw-p-3 tw-grid tw-place-items-center">
-        <v-card class="tw-w-full fade-in tw--mb-6" v-if="!!college">
+    <div class="bg-gradient-to-br text-white from-blue-500 to-blue-700  rounded-4 p-3 grid place-items-center">
+        <v-card class="w-full fade-in -mb-6" v-if="!!college">
             <v-card-title>
                 <v-spacer/>
-                 <h1 class=" text-2xl text-blue-500 font-semibold text-center tw-whitespace-normal"> {{college.institute}} </h1>
+                 <h1 class=" text-2xl text-blue-500 font-semibold text-center whitespace-normal"> {{college.institute}} </h1>
                 <v-spacer/>
             </v-card-title>
             <v-card-subtitle>
                 <v-spacer/>
-                <p class="tw-text-gray-500 tw-text-md tw-text-center tw-font-semibold"> 
+                <p class="text-gray-500 text-md text-center font-semibold"> 
                     <v-icon> mdi-map-marker-outline </v-icon>   
                     {{college.city}}, {{college.state}} </p>
                 <v-spacer/>
             </v-card-subtitle>
             <v-card-text>
-                <div class="tw-w-full tw-flex tw-justify-evenly tw-mb-3 md:tw-justify-center ">
-                    <v-chip  color="primary"  v-for="(item,key) in ranking" :key="key" class="md:tw-mx-3">
+                <div class="w-full flex justify-evenly mb-3 md:justify-center ">
+                    <v-chip  color="primary"  v-for="(item,key) in ranking" :key="key" class="md:mx-3">
                         <v-avatar left  class="blue darken-4">
                         <v-icon color="yellow">
                             mdi-medal
@@ -25,17 +25,17 @@
     
                     </v-chip>
                 </div>
-                <div class="tw-w-full tw-flex tw-flex-col  md:tw-flex-row tw-items-center md:tw-items-end md:tw-content-end  md:tw-px-8 tw-my-2 tw-pt-3 tw-justify-center">
-                    <div class="tw-flex-3 " style="margin-top:1ch;">
-                    <a :href="college.link" class="tw-w-full" target="_blank">
+                <div class="w-full flex flex-col  md:flex-row items-center md:items-end md:content-end  md:px-8 my-2 pt-3 justify-center">
+                    <div class="flex-3 " style="margin-top:1ch;">
+                    <a :href="college.link" class="w-full" target="_blank">
                             <v-btn color="primary"   outlined> <v-icon left >mdi-web </v-icon> Visit Website  </v-btn>
                     </a>
                 </div>
-                    <div class="tw-w-min tw-flex tw-flex-col tw-max-w-max tw-m-0 tw-mt-2 tw-p-0  md:tw-m-0 md:tw-ml-5">
-                        <label for="more-reviews" class="tw-m-0 tw-p-0 tw-text-gray-800 tw-text-center" style="margin:0px">Read more info on:</label>
-                    <div id="more-reviews" class="btns tw-flex tw-flex-row  tw-justify-space-around tw-align-center">
-                        <v-btn class="tw-my-0 tw-mx-2 " color="primary" :href='college.r1' target="_external"> Shiksha.com </v-btn>
-                        <v-btn class="tw-my-0 tw-mx-2" color="primary" :href='college.r2' > Collegedunia </v-btn>
+                    <div class="w-min flex flex-col max-w-max m-0 mt-2 p-0  md:m-0 md:ml-5">
+                        <label for="more-reviews" class="m-0 p-0 text-gray-800 text-center" style="margin:0px">Read more info on:</label>
+                    <div id="more-reviews" class="btns flex flex-row  justify-space-around align-center">
+                        <v-btn class="my-0 mx-2 " color="primary" :href='college.r1' target="_external"> Shiksha.com </v-btn>
+                        <v-btn class="my-0 mx-2" color="primary" :href='college.r2' > Collegedunia </v-btn>
     
                     </div>
                     </div>

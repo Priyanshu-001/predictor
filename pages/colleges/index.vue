@@ -3,7 +3,7 @@
     <v-card width="100%" max-width="850px" style="padding: 1rem">
       <v-row>
         <v-col cols="12" md="4">
-          <h1 class="tw-text-5xl tw-font-medium tw-mt-auto tw-mb-auto">  All Colleges </h1>
+          <h1 class="text-5xl font-medium mt-auto mb-auto">  All Colleges </h1>
         </v-col>
 
         <v-col cols="12" md="4" class="ml-auto">
@@ -27,7 +27,7 @@
         </v-col>
       </v-row>
 
-      <v-row class="tw-flex m-1 tw-justify-between">
+      <v-row class="flex m-1 justify-between">
         <!-- Skeleton loaders -->
         <template v-if="pending"> <v-spacer/> ....loading <v-spacer/></template>
         <!-- content -->

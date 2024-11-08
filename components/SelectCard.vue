@@ -2,20 +2,20 @@
   <v-card
     id="c1"
     class="
-      tw-p-4
-      tw-justify-center
-      tw-flex
-      tw-flex-col
-      tw-text-gray-700
-      tw-font-semibold
-      tw-rounded-7xl
+      p-4
+      justify-center
+      flex
+      flex-col
+      text-gray-700
+      font-semibold
+      rounded-7xl
     "
     style="padding: 1rem !important"
     elevation="20"
-    :class="!dialog ? ['tw--mb-12', 'tw-m-3', 'tw-w-100'] : ''"
+    :class="!dialog ? ['-mb-12', 'm-3', 'w-100'] : ''"
   >
     <v-card-title>
-      <h2 class="tw-text-4xl tw-font-extrabold tw-text-gray-800">
+      <h2 class="text-4xl font-extrabold text-gray-800">
         Enter details
       </h2>
     </v-card-title>
@@ -30,36 +30,46 @@
         min="1"
         max="169999"
         filled
-      class="!tw-font-bold"
+      class="!font-bold"
 
       />
-      <client-only>
       <v-select
-        id="exam"
-        auto-select-first
-        filled
-        v-model="query.exam"
-        label="Exam"
-        :items="examsList"
-        class="!tw-font-bold"
+          id="exam"
+          auto-select-first
+          filled
+          v-model="query.exam"
+          label="Exam"
+          :items="examsList"
+          class="!font-bold"
 
-      />
-      <template #fallback>
-        <div class="tw-h-14 tw-animate-pulse tw-my-3 tw-bg-slate-300 tw-rounded-xl" />
-      </template>
-    </client-only>
+        />
+      <client-only>
+        <v-select
+          id="exam"
+          auto-select-first
+          filled
+          v-model="query.exam"
+          label="Exam"
+          :items="examsList"
+          class="!font-bold"
+
+        />
+        <template #fallback>
+          <div class="h-14 animate-pulse my-3 bg-slate-300 rounded-xl" />
+        </template>
+      </client-only>
     </template>
-    <label for="pool" class="tw-mb-2">
-      <h3 class="tw-text-xl">Seat Pool</h3>
+    <label for="pool" class="mb-2">
+      <h3 class="text-xl">Seat Pool</h3>
     </label>
     <br />
     <v-row class="flex flex-wrap">
       <v-btn-toggle id="pool" color="primary" v-model="query.seatPool">
-        <v-btn class="sm:tw-mx-2" text>
+        <v-btn class="sm:mx-2" text>
           <v-icon> mdi-gender-female </v-icon> Female only
         </v-btn>
 
-        <v-btn class="sm:tw-mx-2" text>
+        <v-btn class="sm:mx-2" text>
           <v-icon> mdi-gender-male-female </v-icon> Gender Neutral
         </v-btn>
 
@@ -76,12 +86,12 @@
         auto-select-first
         filled
         label="Select Home State"
-        class="!tw-font-bold tw-mt-4"
+        class="!font-bold mt-4"
         v-model="query.state"
         :items="stateList"
       />
       <template #fallback>
-        <div class="tw-h-14 tw-animate-pulse tw-my-3 tw-bg-slate-300 tw-rounded-xl" />
+        <div class="h-14 animate-pulse my-3 bg-slate-300 rounded-xl" />
       </template>
     </client-only>
     <client-only>
@@ -94,15 +104,15 @@
       :items="catList"
       default="OPEN"
 
-      class="!tw-font-bold"
+      class="!font-bold"
     />
     <template #fallback>
-        <div class="tw-h-14 tw-animate-pulse tw-my-3 tw-bg-slate-300 tw-rounded-xl " />
+        <div class="h-14 animate-pulse my-3 bg-slate-300 rounded-xl " />
     </template>
   </client-only>
     <v-checkbox class="mt-1" v-model="query.pwd" label="PWD status"/>
    
-    <v-card-actions class="tw--mt-2">
+    <v-card-actions class="-mt-2">
       <v-row>
         <v-btn block color="primary" variant="flat" @click="makeRequest">
           <v-icon>mdi-magnify</v-icon> Search

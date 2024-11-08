@@ -4,7 +4,7 @@
       app
       :elevation="0"
       hide-on-scroll
-      class="tw-w-full tw-flex tw-items-center tw-justify-between "
+      class="w-full flex items-center justify-between "
 
       dark
      
@@ -12,18 +12,18 @@
     >
    
      
-      <nuxt-link to="/" class=" tw-grow md:tw-grow-0">
+      <nuxt-link to="/" class=" grow md:grow-0">
         <h2
-          class="tw-text-sm tw-mt-1 tw-text-center heading tw-grow"
+          class="text-sm mt-1 text-center heading grow"
           aria-label="Predictor JEE header"
         >
-          <span class="tw-text-5xl tw-font-bold tw-m-0 tw-p-0">Predictor</span>
-          <span class="tw-text-5xl tw-font-extralight tw-m-0 tw-p-0">JEE</span>
+          <span class="text-5xl font-bold m-0 p-0">Predictor</span>
+          <span class="text-5xl font-extralight m-0 p-0">JEE</span>
           <span
-            class="tw-font-thin tw-text-xs tw-m-0 tw-p-0 tu tw-hidden md:tw-inline"
+            class="font-thin text-xs m-0 p-0 tu hidden md:inline"
             >beta
           </span>
-          <span class="tw-font-thin tw-m-0 tw-p-0 tw-align-top   md:tw-hidden  ">
+          <span class="font-thin m-0 p-0 align-top   md:hidden  ">
             β
           </span>
         </h2>
@@ -31,10 +31,10 @@
       <!-- <v-spacer /> -->
 
       <span>
-        <nuxt-link to="/colleges"   class="tw-hidden md:tw-inline">
+        <nuxt-link to="/colleges"   class="hidden md:inline">
           Colleges
         </nuxt-link>
-        <nuxt-link to="/courses"  class=" tw-hidden md:tw-inline"> Courses </nuxt-link>
+        <nuxt-link to="/courses"  class=" hidden md:inline"> Courses </nuxt-link>
       </span>
       
     </header>

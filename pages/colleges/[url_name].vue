@@ -1,6 +1,6 @@
 <template><div>
     <college-info-card :college="college_info"/>
-    <section class="tw-m-2 tw-mt-5">
+    <section class="m-2 mt-5">
     <v-row>
 	    <v-col md="3" cols="12">
 		    <h2> Cuttoff </h2>
@@ -32,11 +32,11 @@
 	</v-row>
     <br/>
     <div v-if="pending"> ....loading </div>
-    <div v-else class="tw-mx-3">
+    <div v-else class="mx-3">
        
             <ExamsInfoBanner :exam ="college_info?.exam" :degrees="unique" :conditional="false" />
        
-        <div class="tw-mt-4">
+        <div class="mt-4">
             <p>
             <strong>{{college_info.institute}} </strong> admits through <strong> JEE-{{college_info.exam}} </strong> for its 
                 <strong>Engneering Courses</strong>. 

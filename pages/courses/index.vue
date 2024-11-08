@@ -10,7 +10,7 @@
 		<v-text-field v-model="search" prepend-inner-icon="mdi-magnify" label="search" dense />
 	</v-col>
 	</v-row>
-	<v-row class="tw-flex m-1 tw-justify-around" >
+	<v-row class="flex m-1 justify-around" >
 		<!-- Skeleton loaders -->
 	<template v-if="pending">
 		....loading

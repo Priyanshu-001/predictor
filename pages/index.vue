@@ -57,13 +57,13 @@ export default defineComponent({
   <div>
     <div
       class="
-        tw-bg-gradient-to-br
-        tw-from-blue-500
-        tw-to-blue-700
-        tw-flex
-        tw-flex-col-reverse
-        md:tw-flex-row-reverse md:tw-px-2
-        tw-justify-between
+        bg-gradient-to-br
+        from-blue-500
+        to-blue-700
+        flex
+        flex-col-reverse
+        md:flex-row-reverse md:px-2
+        justify-between
       "
     >
       <div>
@@ -73,33 +73,33 @@ export default defineComponent({
       </div>
       <div
         class="
-          tw-m-4
-          tw-p-4
-          tw-mb-6
-          tw-max-w-4xl
-          tw-flex
-          tw-flex-col
-          tw-justify-center
-          tw-text-center
+          m-4
+          p-4
+          mb-6
+          max-w-4xl
+          flex
+          flex-col
+          justify-center
+          text-center
         "
       >
         <h2
           class="
-            tw-text-7xl tw-font-extrabold tw-text-white tw-text-center
-            md:tw-text-left
+            text-7xl font-extrabold text-white text-center
+            md:text-left
           "
         >
           JOSAA College Predictor
         </h2>
         <p
           class="
-            tw-text-white
-            tw-font-medium
-            tw-text-2xl
-            tw-flex-3
-            tw-max-w-prose
-            tw-mt-4
-            tw-mr-8
+            text-white
+            font-medium
+            text-2xl
+            flex-3
+            max-w-prose
+            mt-4
+            mr-8
           "
         >
           With PredictorJEE web app you can browse JOSAA colleges, courses and

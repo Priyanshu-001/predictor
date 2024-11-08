@@ -1,7 +1,7 @@
 <template>
     <course-info-card :course = "course_url" />
     <div class="mt-4 mx-3">
-        <section id="cuttoff" class="tw-px-8">
+        <section id="cuttoff" class="px-8">
             <v-row>
 	            <v-col md="3" cols="12">
 		            <h2> Cutoff </h2>
@@ -20,7 +20,7 @@
                         <v-col cols="12" md="4">
                             <client-only>
                                 <v-select 
-                                class="tw-ml-1"
+                                class="ml-1"
                                 label="Filter Degree"
                                 prepend-inner-icon="mdi-filter-variant"
                                 v-model="filter"
@@ -33,7 +33,7 @@
                 <br/>
             </v-row>
                 <exams-info-banner :degrees="unique"  ></exams-info-banner>
-                <p class="tw-mt-3"> 
+                <p class="mt-3"> 
 			Showing <strong> 6th Round </strong> Cutoff for 
 			<strong>{{userInfo.category}}</strong> category
 			<strong> {{ userInfo.pwd == 'false' ? 'non-':'' }}PwD</strong>   student, searching for seats in <strong>{{userInfo.pool}} seat pool</strong> searching only in <strong> JOSAA colleges </strong> .
