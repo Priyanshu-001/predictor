@@ -42,15 +42,18 @@ export default defineNuxtConfig({
         plugins: {
           tailwindcss: {},
           autoprefixer: {},
+          tailwindcss: { config: './tailwind.config.js' },        // With prefix
         },
       },
     typescript: {
         shim: false
       },
-      modules:[async (options, nuxt) => {
-        nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
-          vuetify()
-        ))
+      modules:[
+        '@nuxt/ui',
+        async (options, nuxt) => {
+          nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
+            vuetify()
+          ))
       }],
 
 })
