@@ -11,6 +11,7 @@ export default defineComponent({
         },
         {
           name:'keywords', content:'Free JOSAA College Predictor, JEE cutoffs, IIT/NIT/IIIT cuttoffs, IIT cutoff, IIT cutoff 2020, IIT college predictor'
+          name:'keywords', content:'Free JOSAA College Predictor, JEE cutoffs, IIT/NIT/IIIT cutoffs, IIT cutoff, IIT cutoff 2020, IIT college predictor'
         }
       ]
     })
@@ -62,7 +63,7 @@ export default defineComponent({
         to-blue-700
         flex
         flex-col-reverse
-        md:flex-row-reverse md:px-2
+        md:flex-row-reverse 
         justify-between
       "
     >
