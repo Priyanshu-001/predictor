@@ -9,24 +9,31 @@
         <v-spacer/>
         <v-col md="6" cols="12">
             <v-row>
-                <v-col cols="12" md="8" >
-                    <v-text-field
-                        label="Search Courses"
-                        prepend-inner-icon="mdi-school"
-                        v-model="search"
-                        />
+                <v-col cols="12" md="6" >
+                   
+                        <label-wrapper label="Search Courses" label-for="seatPool"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
+                            <template v-slot="{ id }">
+                                    <UInput 
+                                    variant="outline" 
+                                    placeholder="Start typing to search" 
+                                    icon="i-heroicons-magnifying-glass-20-solid" 
+                                    v-model="search"
+                                    :id="id"/>
+                            </template>
+                    </label-wrapper>
                 </v-col>
-                <v-col cols="12" md="4">
-                    <ClientOnly>
-                        <v-select 
-                        class="ml-1"
-                        label="Filter Degree"
-                        prepend-inner-icon="mdi-filter-variant"
-                        v-model="filter"
-                        :items="unique"
-                        />
-                    </ClientOnly>
-	            </v-col>
+                <v-col>
+                    <label-wrapper label="Filter Degree" label-for="seatPool"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
+                            <template v-slot="{ id }">
+                                    <USelectMenu  
+                                    placeholder="No filter applied" 
+                                    icon="i-heroicons-adjustments-vertical-solid"
+                                    v-model="filter"
+                                    :options="unique"
+                                    />
+                            </template>
+                    </label-wrapper>
+                    </v-col>
 	        </v-row>
 	    </v-col>
 	</v-row>
@@ -57,16 +64,12 @@
         </div>
     </div>
     <br>
-    <client-only>
-		<v-data-table 
-		:headers = "headers"
-		:items="filtered_data" 
-		:loading="pending"
-		loading-text="Loading... Please wait"
-		class="elevation-3"
-		:search="search"
-		/>
-    </client-only>
+    <CutoffTable 
+    :items-per-page="10"
+    :data="filtered_data"
+    :headers="newHeader"
+    class="elevation-3"
+    />
     <client-only>
         <v-dialog
             v-model="dialog"
@@ -86,14 +89,14 @@
     const dialog = ref(false)
     const search = ref('')
     const filter = ref('ALL')
-    const headers = [
-			{title:'Degree', value: 'degree'},
-			{title:'Course', value:'courses'},
-			{title:'Duration(yrs)', value: 'duration'},
-			{title:'Open(2020)',key:'orank',sortable:true},
-			{title:'Close(2020)',key:'crank', sortable:true}, 
-			{title:'quota', value:'quota'},
-			]
+            const newHeader = [
+			{label:'Degree', key: 'degree'},
+			{label:'Course', key:'courses'},
+			{label:'Duration(yrs)', key: 'duration'},
+			{label:'Open(2020)',key:'orank',sortable:true},
+			{label:'Close(2020)',key:'crank', sortable:true}, 
+			{label:'quota', key:'quota'},
+			]         
 
     const {params:{url_name}} = useRoute()
 

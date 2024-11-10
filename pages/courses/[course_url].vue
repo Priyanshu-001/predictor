@@ -10,24 +10,32 @@
             <v-spacer/>
                 <v-col md="6" cols="12">
                     <v-row>
-                        <v-col cols="12" md="8" >
-                            <v-text-field
-			                label="Search Institutes"
-			                prepend-inner-icon="mdi-bank"
-			                v-model="search"
-			                />
-                        </v-col>
-                        <v-col cols="12" md="4">
-                            <client-only>
-                                <v-select 
-                                class="ml-1"
-                                label="Filter Degree"
-                                prepend-inner-icon="mdi-filter-variant"
-                                v-model="filter"
-                                :items="unique"
-                                />
-                            </client-only>
-                        </v-col>
+                        <v-col cols="12" md="6" >
+                   
+                        <label-wrapper label="Search Courses" label-for="seatPool"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
+                            <template v-slot="{ id }">
+                                    <UInput 
+                                    variant="outline" 
+                                    placeholder="Start typing to search" 
+                                    icon="i-heroicons-magnifying-glass-20-solid" 
+                                    v-model="search"
+                                    :id="id"/>
+                            </template>
+                    </label-wrapper>
+                </v-col>
+                <v-col>
+                    <label-wrapper label="Filter Degree" label-for="seatPool"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
+                            <template v-slot="{ id }">
+                                    <USelectMenu  
+                                    :id="id"
+                                    placeholder="No filter applied" 
+                                    icon="i-heroicons-adjustments-vertical-solid"
+                                    v-model="filter"
+                                    :options="unique"
+                                    />
+                            </template>
+                    </label-wrapper>
+                    </v-col>
                     </v-row>
                 </v-col>
                 <br/>
@@ -56,21 +64,7 @@
         
         <section>
            
-            <br>
-            <client-only>
-                <v-data-table
-                :headers = "headers"
-                :items="filtered_cuttoffs" 
-                :loading="pending"
-                loading-text="Loading... Please wait"
-                class="elevation-3"
-                :search="search"
-                dense
-                disable-pagination
-            
-                />
-            </client-only>
-     
+                <CutoffTable :headers="newHeader" :data="filtered_cuttoffs" />
         </section>
         <client-only>
         <v-dialog
@@ -115,6 +109,16 @@
         {title:'Close(2020)',key:'crank',sortable:true},
         {title:'State',value:'state'},
         {title:'Quota', value:'quota'},
+	]
+    const newHeader = [
+        {label:'Degree', key: 'degree'},
+        {label:'Institute', key:'institute'},
+        {label:'Duration(yrs)', key: 'duration'},
+        {label:'Exam',key:'exam'},
+        {label:'Open(2020)',key:'orank',sortable:true},
+        {label:'Close(2020)',key:'crank',sortable:true},
+        {label:'State',key:'state'},
+        {label:'Quota', key:'quota'},
 	]
     
 

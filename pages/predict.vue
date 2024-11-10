@@ -2,12 +2,11 @@
 <div class="m-0 bg-gray-50" >
     <div class="bg-gradient-to-br p-6 pt-12 
     text-white from-blue-500 to-blue-700 flex flex-col-reverse md:flex-row-reverse justify-between ">
-    <client-only>
+   
         <v-btn @click="dialog=true">
             <v-icon> mdi-pencil </v-icon>
             Edit Details
         </v-btn>
-    </client-only>
 
     <p  class="text-2xl">
        
