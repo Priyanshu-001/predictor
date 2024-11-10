@@ -1,42 +1,49 @@
 <template><div>
     <college-info-card :college="college_info"/>
-    <section class="tw-m-2 tw-mt-5">
+    <section class="m-2 mt-5">
     <v-row>
 	    <v-col md="3" cols="12">
-		    <h2> Cuttoff </h2>
+		    <h2> Cutoff </h2>
         </v-col>
        
         <v-spacer/>
         <v-col md="6" cols="12">
             <v-row>
-                <v-col cols="12" md="8" >
-                    <v-text-field
-                        label="Search Courses"
-                        prepend-inner-icon="mdi-school"
-                        v-model="search"
-                        />
+                <v-col cols="12" md="6" >
+                   
+                        <label-wrapper label="Search Courses" label-for="searchCourses"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
+                            <template v-slot="{ id }">
+                                    <UInput 
+                                    variant="outline" 
+                                    placeholder="Start typing to search" 
+                                    icon="i-heroicons-magnifying-glass-20-solid" 
+                                    v-model="search"
+                                    :id="id"/>
+                            </template>
+                    </label-wrapper>
                 </v-col>
-                <v-col cols="12" md="4">
-                    <ClientOnly>
-                        <v-select 
-                        class="ml-1"
-                        label="Filter Degree"
-                        prepend-inner-icon="mdi-filter-variant"
-                        v-model="filter"
-                        :items="unique"
-                        />
-                    </ClientOnly>
-	            </v-col>
+                <v-col>
+                    <label-wrapper label="Filter Degree" label-for="filterDegree"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
+                            <template v-slot="{ id }">
+                                    <USelect
+                                    :id="id"
+                                    icon="i-heroicons-adjustments-vertical-solid"
+                                    v-model="filter"
+                                    :options="unique"
+                                    />
+                            </template>
+                    </label-wrapper>
+                    </v-col>
 	        </v-row>
 	    </v-col>
 	</v-row>
     <br/>
     <div v-if="pending"> ....loading </div>
-    <div v-else class="tw-mx-3">
+    <div v-else class="mx-3">
        
             <ExamsInfoBanner :exam ="college_info?.exam" :degrees="unique" :conditional="false" />
        
-        <div class="tw-mt-4">
+        <div class="mt-4">
             <p>
             <strong>{{college_info.institute}} </strong> admits through <strong> JEE-{{college_info.exam}} </strong> for its 
                 <strong>Engneering Courses</strong>. 
@@ -57,16 +64,13 @@
         </div>
     </div>
     <br>
-    <client-only>
-		<v-data-table 
-		:headers = "headers"
-		:items="filtered_data" 
-		:loading="pending"
-		loading-text="Loading... Please wait"
-		class="elevation-3"
-		:search="search"
-		/>
-    </client-only>
+    <CutoffTable 
+    :items-per-page="10"
+    :data="filtered_data"
+    :headers="newHeader"
+    class="elevation-3"
+    :loading="pending"
+    />
     <client-only>
         <v-dialog
             v-model="dialog"
@@ -86,14 +90,14 @@
     const dialog = ref(false)
     const search = ref('')
     const filter = ref('ALL')
-    const headers = [
-			{title:'Degree', value: 'degree'},
-			{title:'Course', value:'courses'},
-			{title:'Duration(yrs)', value: 'duration'},
-			{title:'Open(2020)',key:'orank',sortable:true},
-			{title:'Close(2020)',key:'crank', sortable:true}, 
-			{title:'quota', value:'quota'},
-			]
+            const newHeader = [
+			{label:'Degree', key: 'degree'},
+			{label:'Course', key:'courses'},
+			{label:'Duration(yrs)', key: 'duration'},
+			{label:'Open(2020)',key:'orank',sortable:true},
+			{label:'Close(2020)',key:'crank', sortable:true}, 
+			{label:'quota', key:'quota'},
+			]         
 
     const {params:{url_name}} = useRoute()
 

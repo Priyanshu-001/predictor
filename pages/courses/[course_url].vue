@@ -1,7 +1,7 @@
 <template>
     <course-info-card :course = "course_url" />
     <div class="mt-4 mx-3">
-        <section id="cuttoff" class="tw-px-8">
+        <section id="cuttoff" class="px-8">
             <v-row>
 	            <v-col md="3" cols="12">
 		            <h2> Cutoff </h2>
@@ -10,30 +10,38 @@
             <v-spacer/>
                 <v-col md="6" cols="12">
                     <v-row>
-                        <v-col cols="12" md="8" >
-                            <v-text-field
-			                label="Search Institutes"
-			                prepend-inner-icon="mdi-bank"
-			                v-model="search"
-			                />
-                        </v-col>
-                        <v-col cols="12" md="4">
-                            <client-only>
-                                <v-select 
-                                class="tw-ml-1"
-                                label="Filter Degree"
-                                prepend-inner-icon="mdi-filter-variant"
-                                v-model="filter"
-                                :items="unique"
-                                />
-                            </client-only>
-                        </v-col>
+                        <v-col cols="12" md="6" >
+                   
+                        <label-wrapper label="Search Courses" label-for="searcCourses"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
+                            <template v-slot="{ id }">
+                                    <UInput 
+                                    variant="outline" 
+                                    placeholder="Start typing to search" 
+                                    icon="i-heroicons-magnifying-glass-20-solid" 
+                                    v-model="search"
+                                    :id="id"/>
+                            </template>
+                    </label-wrapper>
+                </v-col>
+                <v-col>
+                    <label-wrapper label="Filter Degree" label-for="filterDegree"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
+                            <template v-slot="{ id }">
+                                    <USelect
+                                    :id="id"
+                                    placeholder="No filter applied" 
+                                    icon="i-heroicons-adjustments-vertical-solid"
+                                    v-model="filter"
+                                    :options="unique"
+                                    />
+                            </template>
+                    </label-wrapper>
+                    </v-col>
                     </v-row>
                 </v-col>
                 <br/>
             </v-row>
                 <exams-info-banner :degrees="unique"  ></exams-info-banner>
-                <p class="tw-mt-3"> 
+                <p class="mt-3"> 
 			Showing <strong> 6th Round </strong> Cutoff for 
 			<strong>{{userInfo.category}}</strong> category
 			<strong> {{ userInfo.pwd == 'false' ? 'non-':'' }}PwD</strong>   student, searching for seats in <strong>{{userInfo.pool}} seat pool</strong> searching only in <strong> JOSAA colleges </strong> .
@@ -56,21 +64,7 @@
         
         <section>
            
-            <br>
-            <client-only>
-                <v-data-table
-                :headers = "headers"
-                :items="filtered_cuttoffs" 
-                :loading="pending"
-                loading-text="Loading... Please wait"
-                class="elevation-3"
-                :search="search"
-                dense
-                disable-pagination
-            
-                />
-            </client-only>
-     
+                <CutoffTable :headers="newHeader" :data="filtered_cuttoffs" :loading="pending"  :items-per-page="10" class="elevation-3"/>
         </section>
         <client-only>
         <v-dialog
@@ -97,7 +91,7 @@
     const filter=ref('ALL')
     const search = ref('')
     const dialog = ref(false)
-    const {data:cuttoffs,pending,error} = await useFetch(`/api/courses/${course_url}`,{query:userInfo})
+    const {data:cuttoffs,pending,error} = await useLazyFetch(`/api/courses/${course_url}`,{query:userInfo})
     if(error.value)
         throw createError({statusCode:404,statusMessage:error.value.message, fatal:true})
     const filtered_cuttoffs = computed(()=>pending.value ? []: cuttoffs.value.filter(row=>
@@ -115,6 +109,16 @@
         {title:'Close(2020)',key:'crank',sortable:true},
         {title:'State',value:'state'},
         {title:'Quota', value:'quota'},
+	]
+    const newHeader = [
+        {label:'Degree', key: 'degree'},
+        {label:'Institute', key:'institute'},
+        {label:'Duration(yrs)', key: 'duration'},
+        {label:'Exam',key:'exam'},
+        {label:'Open(2020)',key:'orank',sortable:true},
+        {label:'Close(2020)',key:'crank',sortable:true},
+        {label:'State',key:'state'},
+        {label:'Quota', key:'quota'},
 	]
     
 

@@ -1,5 +1,5 @@
 <template>
-	<div class="tw-bg-gradient-to-br tw-text-white tw-from-blue-500 tw-to-blue-700 tw-p-3">
+	<div class="bg-gradient-to-br text-white from-blue-500 to-blue-700 p-3">
 
 		<h1 class="text-4xl  font-bold text-center "> {{name}} </h1>
 	</div>

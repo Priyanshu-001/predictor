@@ -1,15 +1,14 @@
 <template>
-<div class="tw-m-0 tw-bg-gray-50" >
-    <div class="tw-bg-gradient-to-br tw-p-6 tw-pt-12 
-    tw-text-white tw-from-blue-500 tw-to-blue-700 tw-flex tw-flex-col-reverse md:tw-flex-row-reverse tw-justify-between ">
-    <client-only>
+<div class="m-0 bg-gray-50" >
+    <div class="bg-gradient-to-br p-6 pt-12 
+    text-white from-blue-500 to-blue-700 flex flex-col-reverse md:flex-row-reverse justify-between ">
+   
         <v-btn @click="dialog=true">
             <v-icon> mdi-pencil </v-icon>
             Edit Details
         </v-btn>
-    </client-only>
 
-    <p  class="tw-text-2xl">
+    <p  class="text-2xl">
        
      Serching for top colleges achievable with 
      <strong> {{userInfo.category}} Rank {{userInfo.rank}} </strong>
@@ -52,7 +51,7 @@
                     </template>
                     <!-- TODO: skeleton loaders -->
 
-                    <p class="tw-text-xl tw-font-medium">
+                    <p class="text-xl font-medium">
                        
                     You may be getting into many colleges not present in our db. Colleges covered in db are listed  
                     <nuxt-link to ="/colleges"> here. </nuxt-link>

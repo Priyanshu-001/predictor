@@ -1,13 +1,14 @@
 <template>
   <div class="about">
-    <h1 class="tw-text-4xl tw-p-5 tw-font-bold">About</h1>
-    <div class="flex tw-w-100 md:tw-w-3/4 tw-p-5">
+    <h1 class="text-4xl p-5 font-bold">About</h1>
+    <div class="flex w-100 md:w-3/4 p-5">
 
 
-      <v-card class="col-7 !tw-p-4">
+      <v-card class="col-7 !p-4">
         <v-card-content>
          <p> 
 Hi, thanks for visiting. This is a nuxt3 + vuetify + tailwind project. Database is a JSON file earlier it was a PSQL db ¯\_(ツ)_/¯ (good decison imo).
+</p>
 <br/>
 <br/>
 <h3><b>Background</b></h3>
@@ -18,11 +19,10 @@ Life after JEE is bit more open ended and there will be more opportunities that 
 I won't offer any advice, but I'm confident that no matter the outcome, you'll take pride in the effort you put into preparing for JEE. And remember, life after the exam will be full of interesting opportunities that you may not even be aware of yet
 <br/>
 <br/>
+<p>
 Pls send errors ,suggestion at jeecollegepredictor[at]gmail.com and all the best for your exam and beyond.
-
-
-        </p>
-        </v-card-content>
+</p>        
+  </v-card-content>
       </v-card>
     </div>
   </div>

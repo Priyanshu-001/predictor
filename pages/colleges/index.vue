@@ -3,41 +3,38 @@
     <v-card width="100%" max-width="850px" style="padding: 1rem">
       <v-row>
         <v-col cols="12" md="4">
-          <h1 class="tw-text-5xl tw-font-medium tw-mt-auto tw-mb-auto">  All Colleges </h1>
+          <h1 class="text-5xl font-medium mt-auto mb-auto"> All Colleges </h1>
         </v-col>
 
         <v-col cols="12" md="4" class="ml-auto">
-          <v-text-field
-            v-model="search"
-            prepend-inner-icon="mdi-magnify"
-            label="search"
-            dense
-          />
+          <label-wrapper label="Search Colleges" label-for="searchCOllege" label-classes="font-bold text-slate-600"
+            class="bg-zinc-100 hover:bg-zinc-200 p-1 border">
+            <template v-slot="{ id }">
+              <UInput variant="outline" placeholder="Start typing to search"
+                icon="i-heroicons-magnifying-glass-20-solid" v-model="search" :id="id" />
+            </template>
+          </label-wrapper>
         </v-col>
         <v-col cols="12" md="3">
-          <client-only>
-            <v-select
-              dense
-              label="Filter Exam"
-              prepend-inner-icon="mdi-filter-variant"
-              v-model="filter"
-              :items="['Main', 'Advanced', 'ALL']"
-            />
-        </client-only>
+
+          <label-wrapper label="Filter by Exam" label-for="filterExam" label-classes="font-bold text-slate-600"
+            class="bg-zinc-100 hover:bg-zinc-200 p-1 border">
+            <template v-slot="{ id }">
+              <USelect :id="id" icon="i-heroicons-adjustments-vertical-solid" v-model="filter"
+                :options="['Main', 'Advanced', 'ALL']" />
+            </template>
+          </label-wrapper>
+
         </v-col>
       </v-row>
 
-      <v-row class="tw-flex m-1 tw-justify-between">
+      <v-row class="flex m-1 justify-between">
         <!-- Skeleton loaders -->
-        <template v-if="pending"> <v-spacer/> ....loading <v-spacer/></template>
+        <template v-if="pending"> <v-spacer /> ....loading <v-spacer /></template>
         <!-- content -->
         <template v-else>
-          
-          <college-item
-            v-for="(item, index) in colleges"
-            :item="item"
-            :key="index"
-          />
+
+          <college-item v-for="(item, index) in colleges" :item="item" :key="index" />
         </template>
       </v-row>
     </v-card>
@@ -47,34 +44,33 @@
 <script>
 export default {
   name: "CoursesPage",
-  setup(){
+  setup() {
     useHead({
-		title:'All Colleges in DB'
-	})
+      title: 'All Colleges in DB'
+    })
 
     const search = ref('')
     const filter = ref('ALL')
-    const {data:allColleges,pending} =  useFetch('/api/colleges')
-    const colleges = computed(()=>!pending.value ? allColleges.value.filter(college => {
-          return (
-            college.institute?.toLowerCase()?.includes(search.value.toLowerCase()) &&
-            (filter.value == "ALL" || college.exam == filter.value)
-          );
-        }) : []
-        )
+    const { data: allColleges, pending } = useFetch('/api/colleges')
+    const colleges = computed(() => !pending.value ? allColleges.value.filter(college => {
+      return (
+        college.institute?.toLowerCase()?.includes(search.value.toLowerCase()) &&
+        (filter.value == "ALL" || college.exam == filter.value)
+      );
+    }) : []
+    )
     // const colleges = computed(()=>!pending.value? allColleges.value : [])
     // const hello = computed(()=>!pending.value ? []:"ELo")
     return {
-    
+
       pending,
       colleges,
       search,
       filter,
-     
+
     }
   },
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
+  colorMode:{
+    preference: 'light'
+  },
     nitro: {
     prerender: {
       routes: ['/', '/colleges','/courses']
@@ -42,15 +45,18 @@ export default defineNuxtConfig({
         plugins: {
           tailwindcss: {},
           autoprefixer: {},
+          tailwindcss: { config: './tailwind.config.js' },        // With prefix
         },
       },
     typescript: {
         shim: false
       },
-      modules:[async (options, nuxt) => {
-        nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
-          vuetify()
-        ))
+      modules:[
+        '@nuxt/ui',
+        async (options, nuxt) => {
+          nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
+            vuetify()
+          ))
       }],
 
 })

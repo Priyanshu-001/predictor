@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  prefix:'tw-',
+  prefix:'',
   content: ["./components/**/*.{js,vue,ts}",
   "./layouts/**/*.vue",
   "./pages/**/*.vue",

@@ -1,17 +1,17 @@
 <template>
-  <v-container class="tw-mt-6">
-    <h3 class="tw-font-bold tw-text-3xl">
+  <v-container class="mt-6">
+    <h3 class="font-bold text-3xl">
       {{ title }}
       <v-btn v-if="!!allLink" variant="text" color="primary" :to="allLink">
         View all
       </v-btn>
     </h3>
-    <p class="tw-text-gray-400 tw-text-xl tw-font-medium">
+    <p class="text-gray-400 text-xl font-medium">
       {{ description }}
     </p>
     <v-slide-group show-arrows v-if="!icon && !img">
       <!-- <v-slide-item v-for="n in 35" :key="n">
-        <v-skeleton-loader class="tw-mx-5 tw-w-64" type="card">
+        <v-skeleton-loader class="mx-5 w-64" type="card">
         </v-skeleton-loader>
       </v-slide-item> -->
     </v-slide-group>
@@ -20,22 +20,22 @@
         <nuxt-link :to="item.link">
           <div
             class="
-              tw-mx-5 tw-w-64 tw-h-64 tw-flex tw-flex-col tw-justify-between
+              mx-5 w-64 h-64 flex flex-col justify-between
             "
           >
             <div
               class="
-                tw-w-full
-                tw-h-56
-                tw-flex
-                tw-transition
-                tw-duration-50
-                tw-ease-in-out
-                hover:tw-shadow-lg
-                tw-justify-center tw-text-center tw-items-center tw-bg-gray-100
+                w-full
+                h-56
+                flex
+                transition
+                duration-50
+                ease-in-out
+                hover:shadow-lg
+                justify-center text-center items-center bg-gray-100
               "
             >
-              <v-icon size="80px" style="width: 100px" class="tw-text-gray-800">
+              <v-icon size="80px" style="width: 100px" class="text-gray-800">
                 {{ item.icon }}
               </v-icon>
 
@@ -54,7 +54,7 @@
                 word-wrap: break-word;
                 display: inline-block;
               "
-              class="tw-text-gray-400 tw-text-lg tw-font-medium tw-mt-4"
+              class="text-gray-400 text-lg font-medium mt-4"
             >
               {{ item.name }}
             </h4>
