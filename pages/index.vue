@@ -23,7 +23,7 @@ export default defineComponent({
       },
       {
         name: "Computer Science",
-        icon: "mdi-desktop-mac-dashboard",
+        icon: "mdi-desktop-classic",
         link: "courses/Computer_Science_and_Engineering",
       },
       {
