@@ -64,7 +64,7 @@
         
         <section>
            
-                <CutoffTable :headers="newHeader" :data="filtered_cuttoffs" />
+                <CutoffTable :headers="newHeader" :data="filtered_cuttoffs" :loading="pending"  :items-per-page="10" class="elevation-3"/>
         </section>
         <client-only>
         <v-dialog
@@ -91,7 +91,7 @@
     const filter=ref('ALL')
     const search = ref('')
     const dialog = ref(false)
-    const {data:cuttoffs,pending,error} = await useFetch(`/api/courses/${course_url}`,{query:userInfo})
+    const {data:cuttoffs,pending,error} = await useLazyFetch(`/api/courses/${course_url}`,{query:userInfo})
     if(error.value)
         throw createError({statusCode:404,statusMessage:error.value.message, fatal:true})
     const filtered_cuttoffs = computed(()=>pending.value ? []: cuttoffs.value.filter(row=>
