@@ -25,8 +25,8 @@
                 <v-col>
                     <label-wrapper label="Filter Degree" label-for="seatPool"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
                             <template v-slot="{ id }">
-                                    <USelect  
-                                    placeholder="No filter applied" 
+                                    <USelect
+                                    :id="id"
                                     icon="i-heroicons-adjustments-vertical-solid"
                                     v-model="filter"
                                     :options="unique"
@@ -69,6 +69,7 @@
     :data="filtered_data"
     :headers="newHeader"
     class="elevation-3"
+    :loading="pending"
     />
     <client-only>
         <v-dialog
