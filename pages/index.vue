@@ -64,6 +64,7 @@ export default defineComponent({
         flex
         flex-col-reverse
         md:flex-row-reverse 
+        md:px-2
         justify-between
       "
     >
