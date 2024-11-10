@@ -12,7 +12,7 @@
                     <v-row>
                         <v-col cols="12" md="6" >
                    
-                        <label-wrapper label="Search Courses" label-for="seatPool"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
+                        <label-wrapper label="Search Courses" label-for="searcCourses"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
                             <template v-slot="{ id }">
                                     <UInput 
                                     variant="outline" 
@@ -24,7 +24,7 @@
                     </label-wrapper>
                 </v-col>
                 <v-col>
-                    <label-wrapper label="Filter Degree" label-for="seatPool"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
+                    <label-wrapper label="Filter Degree" label-for="filterDegree"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
                             <template v-slot="{ id }">
                                     <USelect
                                     :id="id"

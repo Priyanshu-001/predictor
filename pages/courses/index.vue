@@ -7,7 +7,13 @@
 		<h2 class="text-2xl"> <strong> All Courses  </strong> </h2>
 	</v-col>
 	<v-col cols="12" md="5" class="ml-auto">
-		<v-text-field v-model="search" prepend-inner-icon="mdi-magnify" label="search" dense />
+		<label-wrapper label="Search Courses" label-for="searchCourses" label-classes="font-bold text-slate-600"
+            class="bg-zinc-100 hover:bg-zinc-200 p-1 border">
+            <template v-slot="{ id }">
+              <UInput variant="outline" placeholder="Start typing to search"
+                icon="i-heroicons-magnifying-glass-20-solid" v-model="search" :id="id" />
+            </template>
+          </label-wrapper>
 	</v-col>
 	</v-row>
 	<v-row class="flex m-1 justify-around" >
