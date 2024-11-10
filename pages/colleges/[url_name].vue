@@ -3,7 +3,7 @@
     <section class="m-2 mt-5">
     <v-row>
 	    <v-col md="3" cols="12">
-		    <h2> Cuttoff </h2>
+		    <h2> Cutoff </h2>
         </v-col>
        
         <v-spacer/>
@@ -25,7 +25,7 @@
                 <v-col>
                     <label-wrapper label="Filter Degree" label-for="seatPool"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
                             <template v-slot="{ id }">
-                                    <USelectMenu  
+                                    <USelect  
                                     placeholder="No filter applied" 
                                     icon="i-heroicons-adjustments-vertical-solid"
                                     v-model="filter"

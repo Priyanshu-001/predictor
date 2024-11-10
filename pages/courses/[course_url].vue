@@ -26,7 +26,7 @@
                 <v-col>
                     <label-wrapper label="Filter Degree" label-for="seatPool"  label-classes="font-bold text-slate-600" class="bg-zinc-100 hover:bg-zinc-200 p-1 border" >
                             <template v-slot="{ id }">
-                                    <USelectMenu  
+                                    <USelect
                                     :id="id"
                                     placeholder="No filter applied" 
                                     icon="i-heroicons-adjustments-vertical-solid"
