@@ -7,7 +7,7 @@
       text-gray-700
       font-semibold
       rounded-7xl
-    " style="padding: 1rem !important" elevation="20" :class="!dialog ? ['-mb-12', 'm-3', 'w-100'] : ''">
+    " style="padding: 1rem !important" elevation="20" :class="!dialog ? ['-mb-12', 'm-3'] : ''">
     <v-card-title>
       <h2 class="text-4xl font-extrabold text-gray-800">
         Enter details
@@ -17,7 +17,7 @@
 
       <label-wrapper label="Category Rank (crl if general)" label-for="rank" class="my-2" label-classes="py-2">
         <template v-slot="{ id }">
-          <UInput type="number" class="font-bold" v-model.number="query.rank" placeholder="Rank" :id="id"/>
+          <UInput type="number" class="font-bold" v-model.number="query.rank" placeholder="Rank" :id="id" />
         </template>
       </label-wrapper>
 
@@ -30,25 +30,24 @@
     </template>
     <label-wrapper label="Seat Pool" label-for="seatPool" class="my-2">
       <template v-slot="{ id }">
-       <UTabs v-model="query.seatPool" :items="seatPoolInfoArray" :id="id" />
+        <UTabs v-model="query.seatPool" :items="seatPoolInfoArray" :id="id" />
       </template>
     </label-wrapper>
 
 
-    <LabelWrapper label="Select Home state" label-for="state"  v-if="!demo">
+    <LabelWrapper label="Select Home state" label-for="state" v-if="!demo">
       <template v-slot="{ id }">
-      <USelect id="state" class="font-bold mt-1" v-model="query.state" :options="stateList" :id="id"/>
+        <USelect id="state" class="font-bold mt-1" v-model="query.state" :options="stateList" :id="id" />
       </template>
     </LabelWrapper>
 
     <LabelWrapper label="Category" label-for="category">
       <template v-slot="{ id }">
-        <USelect id="category" class="font-bold mt-1" v-model="query.category" :options="catList" :id="id"/>
+        <USelect id="category" class="font-bold mt-1" v-model="query.category" :options="catList" :id="id" />
       </template>
     </LabelWrapper>
 
     <v-checkbox class="mt-1" v-model="query.pwd" label="PWD status" />
-   
     <v-card-actions class="-mt-2">
       <v-row>
         <v-btn block color="primary" variant="flat" @click="makeRequest">
