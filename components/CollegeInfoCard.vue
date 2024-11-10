@@ -1,6 +1,6 @@
 <template>
     <div class="bg-gradient-to-br text-white from-blue-500 to-blue-700  rounded-4 p-3 grid place-items-center">
-        <v-card class="w-full fade-in -mb-6" v-if="!!college">
+        <v-card class="w-full  -mb-6" v-if="!!college">
             <v-card-title>
                 <v-spacer/>
                  <h1 class=" text-2xl text-blue-500 font-semibold text-center whitespace-normal"> {{college.institute}} </h1>
