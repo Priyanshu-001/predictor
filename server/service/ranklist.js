@@ -1,7 +1,7 @@
 // import * as data from '../datastore/json/courses.json';
 import { pick } from '../helpers/pick';
 import { limit } from '../helpers/limit';
-import * as info from '../datastore/json/info.json'; 
+import info from '../datastore/json/info.json'; 
 import { loader } from '../datastore/json/cuttoffs';
 import { ResouceNotFoundError } from '../Error/NotFound';
 import { courseExists } from './courses';
@@ -49,26 +49,28 @@ export async function predict({rank,exam,category,pool, pwd, state },options={_d
     const allowedDegree = new Set(_degree)
     const allowedCourses = new Set(_courses)
 
-    
-
-
     const opts = {exam,pool,pwd}
     const curriedLimit = (obj)=> limit(obj,opts)
 
     const {data} = await loader(category)
 
     const result = data
-    .map(el=>({...el,...pick(['exam','state','city','institute','quota'],{...info[el.url_name]} ) }))
+    .filter(el=>!!getCollegeInfo(el)) //TODO: check if can be removed
+    .map(el=>({...el,...pick(['exam','state','city','institute','quota'],getCollegeInfo(el) ) }))
                     .filter(curriedLimit)
-
                     .filter(row=>(row.quota === 'AI' || (row.quota === 'OS' && row.state !== state)  ||(row.quota === 'HS'  && row.state.toLowerCase().split().join() === state.toLowerCase().split().join())) )
-
                     .filter(row=>( allowedDegree.size === 0 || allowedDegree.has(row.degree) ) && ( allowedCourses.size === 0 || allowedCourses.has(row.courses) ) )
                     .filter(row=>row.crank>rank)
                     .sort((a,b)=>a.crank-b.crank)
                    
     return result.splice(_offset,_offset+_limit)
             .map(el=>pick(['institute','state','city','courses','degree','duration','crank','url_name','quota'],el))
+}
+
+function getCollegeInfo(el) {
+    if(el.url_name in info) {
+        return info[el.url_name][0] ; //TODO: fix when structure fine
+    }
 }
 
 export async function possibilities({rank,exam,category,pool, pwd, state }){
@@ -79,7 +81,8 @@ export async function possibilities({rank,exam,category,pool, pwd, state }){
     const {data} = await loader(category)
 
     const result = data
-    .map(el=>({...el,...pick(['exam','state','city','institute'],{...info[el.url_name]} ) }))
+    .filter(getCollegeInfo)
+    .map(el=>({...el,...pick(['exam','state','city','institute'],getCollegeInfo(el) ) }))
                     .filter(curriedLimit)
                     .filter(row=>(row.quota === 'AI' || (row.quota === 'OS' && row.state !== state)  ||(row.quota === 'HS'  && row.state === state)) )
                     .filter(row=>row.crank>rank)

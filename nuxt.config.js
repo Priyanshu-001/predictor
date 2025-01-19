@@ -4,22 +4,15 @@ export default defineNuxtConfig({
   colorMode:{
     preference: 'light'
   },
+  target: 'server',
     nitro: {
     prerender: {
       routes: ['/', '/colleges','/courses']
     },
         },
-
-    experimental: { treeshakeClientOnly: false },  
-    routeRules:{ 
-      '/':{'static':true},
-      '/colleges':{'static':true},
-      '/courses':{'static':true},
-     // '/colleges/**':{'static':true},
-    //  '/courses/**':{'static':true},
-
+    generate: {
+      routes: ['/', '/colleges', "/courses"], // Only these routes will be pre-rendered
     },
-    
 
 
     css: ['~/assets/css/main.css','vuetify/lib/styles/main.sass','@mdi/font/css/materialdesignicons.min.css'],
