@@ -51,5 +51,8 @@ export default defineNuxtConfig({
             vuetify()
           ))
       }],
+icon: {
+    iconsSource: 'iconify', // Forces Nuxt Icon to use Iconify's CDN
+  },
 
 })
