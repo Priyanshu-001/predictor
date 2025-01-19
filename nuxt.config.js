@@ -5,14 +5,7 @@ export default defineNuxtConfig({
     preference: 'light'
   },
   target: 'server',
-    nitro: {
-    prerender: {
-      routes: ['/', '/colleges','/courses']
-    },
-        },
-    generate: {
-      routes: ['/', '/colleges', "/courses"], // Only these routes will be pre-rendered
-    },
+    
 
 
     css: ['~/assets/css/main.css','vuetify/lib/styles/main.sass','@mdi/font/css/materialdesignicons.min.css'],
