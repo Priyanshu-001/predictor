@@ -32,7 +32,7 @@ export default defineNuxtConfig({
         plugins: {
           tailwindcss: {},
           autoprefixer: {},
-          tailwindcss: { config: './tailwind.config.js' },        // With prefix
+  
         },
       },
     typescript: {
@@ -47,6 +47,6 @@ export default defineNuxtConfig({
       }],
       icon: {
         // Set to false to disable local bundle mode
-        mode: 'remote' 
+        serverBundle: 'remote' 
       }
 })
