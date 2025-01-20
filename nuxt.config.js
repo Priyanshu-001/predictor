@@ -47,6 +47,6 @@ export default defineNuxtConfig({
       }],
       icon: {
         // Set to false to disable local bundle mode
-        mode: 'server' 
+        mode: 'remote' 
       }
 })
