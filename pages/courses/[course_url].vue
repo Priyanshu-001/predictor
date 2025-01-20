@@ -94,22 +94,13 @@
     const {data:cuttoffs,pending,error} = await useLazyFetch(`/api/courses/${course_url}`,{query:userInfo})
     if(error.value)
         throw createError({statusCode:404,statusMessage:error.value.message, fatal:true})
-    const filtered_cuttoffs = computed(()=>pending.value ? []: cuttoffs.value.filter(row=>
+    const filtered_cuttoffs = computed(()=> cuttoffs?.value.filter(row=>
                                         {
-                                           return row.institute?.toLowerCase()?.includes(search.value.toLowerCase() ) && (row.degree === filter.value || filter.value === 'ALL') 
+                                           return row.url_name?.toLowerCase()?.includes(search.value?.toLowerCase()?.replace(" ","_") ) && (row.degree === filter.value || filter.value === 'ALL') 
                                          } ) )
+    console.log(cuttoffs?.value)                                     
     const unique = computed(()=>pending.value? []: ['ALL',...new Set(cuttoffs.value.map(item=>item.degree))] )
 
-    const headers = [
-        {title:'Degree', value: 'degree'},
-        {title:'Institute', value:'institute'},
-        {title:'Duration(yrs)', value: 'duration'},
-        {title:'Exam',value:'exam'},
-        {title:'Open(2020)',key:'orank',sortable:true},
-        {title:'Close(2020)',key:'crank',sortable:true},
-        {title:'State',value:'state'},
-        {title:'Quota', value:'quota'},
-	]
     const newHeader = [
         {label:'Degree', key: 'degree'},
         {label:'Institute', key:'institute'},

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 const {data, itemsPerPage} = defineProps(["data", "headers", "class", "itemsPerPage", "loading"]);
+console.log({data})
 const page = ref(1)
 const pageCount = itemsPerPage || 5;
 

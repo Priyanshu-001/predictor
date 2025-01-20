@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
+  sourcemap: false,
   colorMode:{
     preference: 'light'
   },
@@ -44,8 +45,8 @@ export default defineNuxtConfig({
             vuetify()
           ))
       }],
-icon: {
-    iconsSource: 'iconify', // Forces Nuxt Icon to use Iconify's CDN
-  },
-
+      icon: {
+        // Set to false to disable local bundle mode
+        mode: 'server' 
+      }
 })
