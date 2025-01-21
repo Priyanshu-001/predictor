@@ -2,51 +2,54 @@
 import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   sourcemap: false,
-  colorMode:{
+  colorMode: {
     preference: 'light'
   },
   target: 'server',
-    
+  css: ['~/assets/css/main.css', 'vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
+  build: {
+    transpile: ['vuetify', '@nuxt/postcss8'],
+    extractCSS: true,
+    analyze: true,
+  },
+  vite: {
+    define: {
+      'process.env.DEBUG': false,
+    },
+  },
 
-
-    css: ['~/assets/css/main.css','vuetify/lib/styles/main.sass','@mdi/font/css/materialdesignicons.min.css'],
-    build: {
-      transpile: ['vuetify','@nuxtjs/google-fonts','@nuxt/postcss8'],
-      extractCSS:true,
-      analyze: true,
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
 
     },
-    googleFonts:{
-      families: {
-        // a simple name
-        Roboto: true,
-      }
+  },
+  typescript: {
+    shim: false
+  },
+  modules: [
+    '@nuxtjs/google-fonts',
+    '@nuxt/ui',
+    async (options, nuxt) => {
+      nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
+        vuetify()
+      ))
     },
-    vite: {
-      define: {
-        'process.env.DEBUG': false,
-      },
+
+  ],
+  googleFonts: {
+    families: {
+      Roboto: [100, 300, 400, 500, 700, 900]
     },
-   
-    postcss: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-  
-        },
-      },
-    typescript: {
-        shim: false
-      },
-      modules:[
-        '@nuxt/ui',
-        async (options, nuxt) => {
-          nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
-            vuetify()
-          ))
-      }],
-      icon: {
-        // Set to false to disable local bundle mode
-        serverBundle: 'remote' 
-      }
+    display: 'swap',
+    prefetch: true,
+    preload: true,
+  },
+  icon: {
+    // Set to false to disable local bundle mode
+     serverBundle: {
+      externalizeIconsJson: true,
+    }
+  }
 })
