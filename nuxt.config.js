@@ -1,62 +1,53 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
-  colorMode:{
+  sourcemap: process.env.NODE_ENV === 'development',
+  colorMode: {
     preference: 'light'
   },
-    nitro: {
-    prerender: {
-      routes: ['/', '/colleges','/courses']
+  target: 'server',
+  css: ['~/assets/css/main.css', 'vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
+  build: {
+    transpile: ['vuetify', '@nuxt/postcss8'],
+    extractCSS: true,
+    analyze: true,
+  },
+  vite: {
+    define: {
+      'process.env.DEBUG': false,
     },
-        },
+  },
 
-    experimental: { treeshakeClientOnly: false },  
-    routeRules:{ 
-      '/':{'static':true},
-      '/colleges':{'static':true},
-      '/courses':{'static':true},
-     // '/colleges/**':{'static':true},
-    //  '/courses/**':{'static':true},
-
-    },
-    
-
-
-    css: ['~/assets/css/main.css','vuetify/lib/styles/main.sass','@mdi/font/css/materialdesignicons.min.css'],
-    build: {
-      transpile: ['vuetify','@nuxtjs/google-fonts','@nuxt/postcss8'],
-      extractCSS:true,
-      analyze: true,
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
 
     },
-    googleFonts:{
-      families: {
-        // a simple name
-        Roboto: true,
-      }
+  },
+  typescript: {
+    shim: false
+  },
+  modules: [
+    '@nuxtjs/google-fonts',
+    '@nuxt/ui',
+    '@nuxt/icon',
+    async (options, nuxt) => {
+      nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
+        vuetify()
+      ))
     },
-    vite: {
-      define: {
-        'process.env.DEBUG': false,
-      },
-    },
-   
-    postcss: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-          tailwindcss: { config: './tailwind.config.js' },        // With prefix
-        },
-      },
-    typescript: {
-        shim: false
-      },
-      modules:[
-        '@nuxt/ui',
-        async (options, nuxt) => {
-          nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
-            vuetify()
-          ))
-      }],
 
+  ],
+  googleFonts: {
+    families: {
+      Roboto: [100, 300, 400, 500, 700, 900]
+    },
+    display: 'swap',
+    prefetch: true,
+    preload: true,
+  },
+  icon: {
+    serverBundle: 'remote' 
+  }
 })

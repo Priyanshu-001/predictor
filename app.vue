@@ -1,7 +1,6 @@
 
 <template>
   <v-app>
-    
     <app-header />
     <v-main>
       <NuxtPage />

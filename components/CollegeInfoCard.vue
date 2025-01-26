@@ -14,7 +14,7 @@
                 <v-spacer/>
             </v-card-subtitle>
             <v-card-text>
-                <div class="w-full flex justify-evenly mb-3 md:justify-center ">
+                <!-- <div class="w-full flex justify-evenly mb-3 md:justify-center ">
                     <v-chip  color="primary"  v-for="(item,key) in ranking" :key="key" class="md:mx-3">
                         <v-avatar left  class="blue darken-4">
                         <v-icon color="yellow">
@@ -24,21 +24,21 @@
                         {{key.toUpperCase()}} : {{item}}
     
                     </v-chip>
-                </div>
+                </div> -->
                 <div class="w-full flex flex-col  md:flex-row items-center md:items-end md:content-end  md:px-8 my-2 pt-3 justify-center">
                     <div class="flex-3 " style="margin-top:1ch;">
                     <a :href="college.link" class="w-full" target="_blank">
                             <v-btn color="primary"   outlined> <v-icon left >mdi-web </v-icon> Visit Website  </v-btn>
                     </a>
                 </div>
-                    <div class="w-min flex flex-col max-w-max m-0 mt-2 p-0  md:m-0 md:ml-5">
+                    <!-- <div class="w-min flex flex-col max-w-max m-0 mt-2 p-0  md:m-0 md:ml-5">
                         <label for="more-reviews" class="m-0 p-0 text-gray-800 text-center" style="margin:0px">Read more info on:</label>
                     <div id="more-reviews" class="btns flex flex-row  justify-space-around align-center">
                         <v-btn class="my-0 mx-2 " color="primary" :href='college.r1' target="_external"> Shiksha.com </v-btn>
                         <v-btn class="my-0 mx-2" color="primary" :href='college.r2' > Collegedunia </v-btn>
     
                     </div>
-                    </div>
+                    </div> -->
                 </div>
             </v-card-text>
         <!-- <a :href="`https://www.google.com/maps/dir/?destination=${college.institute}`" target="location"> -->

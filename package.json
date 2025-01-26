@@ -8,19 +8,23 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@iconify-json/fluent-emoji": "^1.2.2",
+    "@iconify-json/mdi": "^1.2.2",
     "@mdi/font": "^7.1.96",
     "@nuxt/devtools": "^1.6.0",
     "@nuxt/ui": "^2.18.7",
-    "@nuxtjs/google-fonts": "^2.0.0",
     "autoprefixer": "^10.4.13",
     "nuxt": "^3.0.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
-    "mobile-detect": "^1.4.5",
+    "@nuxtjs/google-fonts": "^3.2.0",
     "sass": "^1.57.1",
     "vite-plugin-vuetify": "^2.0.2",
     "vuetify": "^3.1.1"
+  },
+  "engines": {
+    "node": "22"
   }
 }

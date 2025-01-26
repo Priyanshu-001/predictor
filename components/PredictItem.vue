@@ -10,7 +10,7 @@
                 <p class="font-light text-4xl mb-0">{{result.courses}}</p>
                 <span class="text-gray-500 text-md font-bold -mt-1"> {{result.duration}} years {{result.degree}}</span>
             </div>
-            <p class="font-light text-2xl mt-1"> Closing Rank (2020): {{result.crank}}</p>
+            <p class="font-light text-2xl mt-1"> Closing Rank (2024): {{result.crank}}</p>
        
     </v-card>
 </template>
