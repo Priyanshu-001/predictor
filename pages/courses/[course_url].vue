@@ -42,7 +42,7 @@
             </v-row>
                 <exams-info-banner :degrees="unique"  ></exams-info-banner>
                 <p class="mt-3"> 
-			Showing <strong> 6th Round </strong> Cutoff for 
+			Showing <strong> 5th Round </strong> Cutoff for 
 			<strong>{{userInfo.category}}</strong> category
 			<strong> {{ userInfo.pwd == 'false' ? 'non-':'' }}PwD</strong>   student, searching for seats in <strong>{{userInfo.pool}} seat pool</strong> searching only in <strong> JOSAA colleges </strong> .
             Ranks shown are category ranks.
@@ -64,14 +64,12 @@
         
         <section>
            
-                <CutoffTable :headers="newHeader" :data="filtered_cuttoffs" :loading="pending"  :items-per-page="10" class="elevation-3"/>
+                <CutoffTable :headers="newHeader" :data="filtered_cuttoffs" :loading=" status !== 'success' "  :items-per-page="10" class="elevation-3"/>
         </section>
         <client-only>
         <v-dialog
             v-model="dialog"
-           
             width="fit-content"
-
             >
             <select-card  :dialog="true" :demo="true" :next="`/courses/${course_url}`"  @close="dialog=false"/>
             </v-dialog>
@@ -91,23 +89,23 @@
     const filter=ref('ALL')
     const search = ref('')
     const dialog = ref(false)
-    const {data:cuttoffs,pending,error} = await useLazyFetch(`/api/courses/${course_url}`,{query:userInfo})
+    const {data:cuttoffs,status,error} = await useLazyFetch(`/api/courses/${course_url}`,{query:userInfo})
     if(error.value)
         throw createError({statusCode:404,statusMessage:error.value.message, fatal:true})
-    const filtered_cuttoffs = computed(()=> cuttoffs?.value.filter(row=>
+    const filtered_cuttoffs = computed(()=> status.value == 'success' &&  cuttoffs?.value?.filter(row=>
                                         {
                                            return row.url_name?.toLowerCase()?.includes(search.value?.toLowerCase()?.replace(" ","_") ) && (row.degree === filter.value || filter.value === 'ALL') 
-                                         } ) )
-    console.log(cuttoffs?.value)                                     
-    const unique = computed(()=>pending.value? []: ['ALL',...new Set(cuttoffs.value.map(item=>item.degree))] )
+                                         } ) )       
+
+    const unique = computed(()=>status?.value=='pending' ? []: ['ALL',...new Set(cuttoffs.value.map(item=>item.degree))] )
 
     const newHeader = [
         {label:'Degree', key: 'degree'},
         {label:'Institute', key:'institute'},
         {label:'Duration(yrs)', key: 'duration'},
         {label:'Exam',key:'exam'},
-        {label:'Open(2020)',key:'orank',sortable:true},
-        {label:'Close(2020)',key:'crank',sortable:true},
+        {label:'Open(2024)',key:'orank',sortable:true},
+        {label:'Close(2024)',key:'crank',sortable:true},
         {label:'State',key:'state'},
         {label:'Quota', key:'quota'},
 	]

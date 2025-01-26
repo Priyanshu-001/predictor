@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
-  sourcemap: false,
+  sourcemap: process.env.NODE_ENV === 'development',
   colorMode: {
     preference: 'light'
   },
@@ -31,6 +31,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/google-fonts',
     '@nuxt/ui',
+    '@nuxt/icon',
     async (options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
         vuetify()
@@ -47,9 +48,30 @@ export default defineNuxtConfig({
     preload: true,
   },
   icon: {
-    // Set to false to disable local bundle mode
-     serverBundle: {
-      externalizeIconsJson: true,
-    }
+    collections: [
+      {
+        prefix: 'fluent-emoji',
+        icons: [
+          "bridge-at-night",
+          "desktop-computer",
+          "electric-plug",
+          "satellite-antenna",
+          "atom-symbol",
+          "gear",
+          "crystal-ball",
+          "airplane-departure",
+          "input-numbers",
+          "man-scientist",
+          "money-with-wings",
+          "graduation-cap",
+          "palm-tree",
+          "factory",
+          "dna",
+          "tractor",
+          "tokyo-tower",
+          "robot"
+        ]
+      }
+    ]
   }
 })

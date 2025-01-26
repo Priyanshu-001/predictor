@@ -98,7 +98,7 @@
     const  {data,pending}  =   useLazyFetch(()=>predictUrl.value ,{query:userInfo}) 
 
     useSeoMeta({
-    title:()=>`Searching for colleges for rank ${userInfo.value.rank} ${userInfo.value.category} category year 2020` ,
+    title:()=>`colleges under rank ${userInfo.value.rank} ${userInfo.value.category} category year 2024, latest cutoff` ,
     description:()=>`Searching for JOSSA colleges under rank ${userInfo.value.rank} ${userInfo.value.category} category`
    })
 

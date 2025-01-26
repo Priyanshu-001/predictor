@@ -5,7 +5,6 @@ export function allColleges(){
     const result = []
     for(let [college,[current]] of Object.entries(data)){  
         let collegeData = {url_name: college, ...pick(['city','exam','institute','state'],current)}
-        console.warn({collegeData, current})
         result.push(collegeData)
     }
     return result

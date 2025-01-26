@@ -1,19 +1,54 @@
 <script lang="ts">
 import { defineComponent } from "vue";
+import colleges from "~/server/api/colleges";
 
 export default defineComponent({
   setup() {
     useHead({
-      title: 'Predictor JEE - Free JOSAA college predictor',
+      title: 'Predictor JEE - Free JOSAA college predictor 2024 latest data',
       meta:[
         {
-          name:'description',content:'Free JOSAA College predictor based on 2020 ranks, no signup required',
+          name:'description',content:'Free JOSAA College predictor based on 2024 ranks, no signup required',
         },
         {
-          name:'keywords', content:'Free JOSAA College Predictor, JEE cutoffs, IIT/NIT/IIIT cutoffs, IIT cutoff, IIT cutoff 2020, IIT college predictor'
+          name:'keywords', content:'Free JOSAA College Predictor, JEE cutoffs, IIT/NIT/IIIT cutoffs, IIT cutoff, IIT cutoff 2024, IIT college predictor'
         }
       ]
     })
+    const colleges = [
+    {
+        name: "NIT Durgapur",
+        img: "/college_icons/NIT_DURGAPUR.png",
+        link: "colleges/National_Institute_of_Technology_Durgapur",
+      },
+     {
+        name: "IIT Kanpur",
+        img: "/college_icons/IIT_KANPUR.png",
+        link: "colleges/Indian_Institute_of_Technology_Kanpur",
+     }, 
+     {
+      name: "NIT Hamirpur",
+        img: "/college_icons/NIT_HAMIRPUR.png",
+        link: "colleges/National_Institute_of_Technology_Hamirpur",
+     },
+     {
+        name: "IIT Madras",
+        img: "/college_icons/IIT_Madras.png",
+        link: "colleges/Indian_Institute_of_Technology_Madras",
+     },
+     {
+        
+        name: "NIT Tirchy",
+        img: "/college_icons/NIT_TIRCHY.png",
+        link: "colleges/National_Institute_of_Technology_Tiruchirappalli",
+     },
+     {
+        
+        name: "IIT Delhi",
+        img: "/college_icons/IIT_DELHI.png",
+        link: "colleges/Indian_Institute_of_Technology_Delhi",
+     }
+    ]
     const course = [
       {
         name: "Mechanical engineering",
@@ -48,6 +83,7 @@ export default defineComponent({
     ];
     return {
       course,
+      colleges
     };
   },
 });
@@ -95,7 +131,7 @@ export default defineComponent({
         <p
           class="
             text-white
-            font-medium
+            
             text-2xl
             flex-3
             max-w-prose
@@ -103,21 +139,28 @@ export default defineComponent({
             mr-8
           "
         >
-          With PredictorJEE web app you can browse JOSAA colleges, courses and
-          predict some of the college you might be getting into as per the
-          <strong class="font-weight-bold">2020 cuttoffs</strong>
-          <em> for free </em>.
+          Check latest(2024) cutoffs for IIT, NIT and some IIITs. Predict what college you will be getting on basis of
+          <strong class="font-weight-bold">2024 cuttoffs</strong>
+          <em> for free, no signup needed</em>.
           <br />
 
           <u>
-          NOTE:This is a student project, some entries might be wrong pls
+         Please also 
           crosscheck with an offcial source.</u>
-
-          <nuxt-link to="/predict">PREDICT</nuxt-link>
           <br />
         </p>
       </div>
     </div>
+    <v-container>
+      <sliderComponent
+        title="Discover Colleges"
+        description="Discover colleges"
+        img
+        allLink="/colleges"
+        :list="colleges"
+      />
+    </v-container>
+    
     <v-container>
       <sliderComponent
         title="Discover Courses"
@@ -127,6 +170,9 @@ export default defineComponent({
         :list="course"
       />
     </v-container>
+
+   
+
   </div>
 </template>
 <style >

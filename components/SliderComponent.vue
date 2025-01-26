@@ -26,7 +26,7 @@
             <div
               class="
                 w-full
-                h-56
+                h-48
                 flex
                 transition
                 duration-50
@@ -35,14 +35,22 @@
                 justify-center text-center items-center bg-gray-100
               "
             >
-              <v-icon size="80px" style="width: 100px" class="text-gray-800">
+              <v-icon
+              v-if="icon"
+               size="80px" style="width: 100px" class="text-gray-800">
                 {{ item.icon }}
               </v-icon>
 
               <img
+                
                 v-if="img"
                 :src="item.img"
-                style="width=100%; height:  auto;"
+                style="width:auto; 
+                height:  auto; 
+                 object-fit: contain;
+                 max-height: 100%;
+                 max-width: 100%;
+                 "
               />
             </div>
             <h4
@@ -53,6 +61,7 @@
                 overflow-wrap: anywhere;
                 word-wrap: break-word;
                 display: inline-block;
+                text-align: center;
               "
               class="text-gray-400 text-lg font-medium mt-4"
             >

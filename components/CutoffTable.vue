@@ -1,12 +1,11 @@
 <script setup lang="ts">
 
-const {data, itemsPerPage} = defineProps(["data", "headers", "class", "itemsPerPage", "loading"]);
-console.log({data})
+const {data, itemsPerPage, loading} = defineProps(["data", "headers", "class", "itemsPerPage", "loading"]);
 const page = ref(1)
 const pageCount = itemsPerPage || 5;
 
 const rows = computed(() => {
-  return data.slice((page.value - 1) * pageCount, (page.value) * pageCount)
+  return !loading && data?.slice((page.value - 1) * pageCount, (page.value) * pageCount)
 })
 </script>
 

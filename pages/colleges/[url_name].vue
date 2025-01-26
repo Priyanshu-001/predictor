@@ -47,7 +47,7 @@
             <p>
             <strong>{{college_info.institute}} </strong> admits through <strong> JEE-{{college_info.exam}} </strong> for its 
                 <strong>Engneering Courses</strong>. 
-                Showing <strong>6th Round </strong> Cuttoff for 
+                Showing <strong>5th Round </strong> Cuttoff for 
                 <strong>{{userInfo.category}}</strong> category 
                 <strong> {{ userInfo.pwd == 'false' ? 'non-':'' }}PwD</strong>  student, searching for seats in <strong>{{userInfo.pool}} seat pool</strong>.
                 Ranks shown are category ranks.
@@ -94,8 +94,8 @@
 			{label:'Degree', key: 'degree'},
 			{label:'Course', key:'courses'},
 			{label:'Duration(yrs)', key: 'duration'},
-			{label:'Open(2020)',key:'orank',sortable:true},
-			{label:'Close(2020)',key:'crank', sortable:true}, 
+			{label:'Open(2024)',key:'orank',sortable:true},
+			{label:'Close(2024)',key:'crank', sortable:true}, 
 			{label:'quota', key:'quota'},
 			]         
 
@@ -116,7 +116,7 @@
     
     
     useSeoMeta({
-        title:()=>`${college_info.value?.institute} cutoff 2020 ` ,
-        description:()=>`View cutoff of ${ college_info.value?.institute} cutoff`
+        title:()=> (college_info.value?.nick_names[0] ? `${college_info.value?.nick_names[0]} | ` : '' ) + `${college_info.value?.institute}  latest cutoff 2024 ` ,
+        description:()=>`View cutoff for ${ college_info.value?.institute} cutoff`
    })
 </script>

@@ -8,7 +8,7 @@ import { courseExists } from './courses';
 
 export async function courseInfo(course_url,userdata){
     const {category,pool, pwd } = userdata
-    const curriedPick =(url_name)=> pick(['institute','state','exam'],{...info[url_name]})
+    const curriedPick =(url_name)=> pick(['institute','state','exam'],{...info[url_name][0]})
     const curriedLimit = (obj)=> limit(obj, {pool,pwd})
     
     const {data} = await loader(category)
@@ -16,11 +16,11 @@ export async function courseInfo(course_url,userdata){
     if(! courseExists(course_url))
         return new ResouceNotFoundError(`${course_url} is not found`)
 
-    let  result = data.filter(row=>row.courses.split(' ').join('_')===course_url)
+    let  result = data.filter(row=>row.course_url_name===course_url)
                 .filter(curriedLimit)
    
     result =  result.map(row=>({...row,...curriedPick(row.url_name)}))
-   
+   console.log("HIITE BOI")
 
     return result
 
@@ -38,7 +38,7 @@ export async function collegeCuttoffs(url_name,userdata){
     // {
     //     throw new ResouceNotFoundError(`${url_name} is not found for following ${JSON.stringify({category,pool,pwd})}`)
     // }
-    return result.map(row=>({...row,...curriedPick[row.url_name]  })).map(row=>({...row,institute:url_name.split('_').join(' ')}))
+    return result.map(row=>({...row,...curriedPick[row.url_name]  }))
 
 }
 
