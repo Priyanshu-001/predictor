@@ -48,29 +48,6 @@ export default defineNuxtConfig({
     preload: true,
   },
   icon: {
-    clientBundle: {
-      // list of icons to include in the client bundle
-      icons: [
-        "fluent-emoji:bridge-at-night",
-        "fluent-emoji:desktop-computer",
-        "fluent-emoji:electric-plug",
-        "fluent-emoji:satellite-antenna",
-        "fluent-emoji:atom-symbol",
-        "fluent-emoji:gear",
-        "fluent-emoji:crystal-ball",
-        "fluent-emoji:airplane-departure",
-        "fluent-emoji:input-numbers",
-        "fluent-emoji:man-scientist",
-        "fluent-emoji:money-with-wings",
-        "fluent-emoji:graduation-cap",
-        "fluent-emoji:palm-tree",
-        "fluent-emoji:factory",
-        "fluent-emoji:dna",
-        "fluent-emoji:tractor",
-        "fluent-emoji:tokyo-tower",
-        "fluent-emoji:robot"
-      ],
-      sizeLimitKb: 400,
-    }
+    serverBundle: 'remote' 
   }
 })
