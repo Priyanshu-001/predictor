@@ -7,7 +7,7 @@ export const stateList =[
     'Chhattisgarh',     'Daman and Diu',
     'Delhi',            'Goa',
     'Gujarat',          'Haryana',
-    'Himachal Pradesh', 'Jammu and Kashmir',
+    'Himachal Pradesh', 'Jammu & Kashmir',
     'Jharkhand',        'Karnataka',
     'Kerala',           'Madhya Pradesh',
     'Maharashtra',      'Manipur',
