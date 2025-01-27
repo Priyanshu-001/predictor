@@ -19,6 +19,7 @@
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
+    "@iconify-json/openmoji": "^1.1.37",
     "@nuxtjs/google-fonts": "^3.2.0",
     "sass": "^1.57.1",
     "vite-plugin-vuetify": "^2.0.2",

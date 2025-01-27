@@ -48,6 +48,28 @@ export default defineNuxtConfig({
     preload: true,
   },
   icon: {
-   serverBundle: 'remote'
+   serverBundle: 'remote',
+clientBundle: {
+      icons: [
+        "openmoji:bridge-at-night",
+        "openmoji:desktop-computer",
+        "openmoji:charge-plug",
+        "openmoji:satellite",
+        "openmoji:atom-symbol",
+        "openmoji:gear",
+        "openmoji:crystal-ball",
+        "openmoji:airplane",
+        "openmoji:input-numbers",
+        "openmoji:test-tube",
+        "openmoji:money-bag",
+        "openmoji:graduation-cap",
+        "openmoji:deciduous-tree",
+        "openmoji:factory",
+        "openmoji:dna",
+        "openmoji:tractor",
+        "openmoji:eiffel-tower",
+        "openmoji:robot"
+    ]
+    }
   }
 })
