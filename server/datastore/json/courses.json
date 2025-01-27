@@ -4,19 +4,19 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:bridge-at-night"
+      "colorIcon": "openmoji:bridge-at-night"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:bridge",
-      "colorIcon": "fluent-emoji:bridge-at-night"
+      "colorIcon": "openmoji:bridge-at-night"
     },
     {
       "degree": "Integrated B. Tech. and M. Tech. (Dual Degree)",
       "duration": 5,
       "icon": "mdi:bridge",
-      "colorIcon": "fluent-emoji:bridge-at-night"
+      "colorIcon": "openmoji:bridge-at-night"
     }
   ],
   "Computer_Science_and_Engineering": [
@@ -24,19 +24,19 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     },
     {
       "degree": "Integrated B. Tech. and M. Tech. (Dual Degree)",
       "duration": 5,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Electrical_Engineering": [
@@ -44,19 +44,19 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:power-plug-outline",
-      "colorIcon": "fluent-emoji:electric-plug"
+      "colorIcon": "openmoji:charge-plug"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:power-plug-outline",
-      "colorIcon": "fluent-emoji:electric-plug"
+      "colorIcon": "openmoji:charge-plug"
     },
     {
       "degree": "Integrated B. Tech. and M. Tech. (Dual Degree)",
       "duration": 5,
       "icon": "mdi:power-plug-outline",
-      "colorIcon": "fluent-emoji:electric-plug"
+      "colorIcon": "openmoji:charge-plug"
     }
   ],
   "Electronics_and_Communication_Engineering": [
@@ -64,33 +64,33 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Engineering_Physics": [
     {
       "degree": "Bachelor of Technology",
       "duration": 4,
-      "icon": "fluent-emoji:atom-symbol",
-      "colorIcon": "fluent-emoji:atom-symbol"
+      "icon": "openmoji:atom-symbol",
+      "colorIcon": "openmoji:atom-symbol"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
-      "icon": "fluent-emoji:atom-symbol",
-      "colorIcon": "fluent-emoji:atom-symbol"
+      "icon": "openmoji:atom-symbol",
+      "colorIcon": "openmoji:atom-symbol"
     }
   ],
   "Mechanical_Engineering": [
@@ -98,13 +98,13 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:gear",
-      "colorIcon": "fluent-emoji:gear"
+      "colorIcon": "openmoji:gear"
     },
     {
       "degree": "Bachelor and Master of Technology",
       "duration": 5,
       "icon": "mdi:gear",
-      "colorIcon": "fluent-emoji:gear"
+      "colorIcon": "openmoji:gear"
     }
   ],
   "Metallurgical_and_Materials_Engineering": [
@@ -112,19 +112,19 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     },
     {
       "degree": "Integrated B. Tech. and M. Tech. (Dual Degree)",
       "duration": 5,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     }
   ],
   "Aerospace_Engineering": [
@@ -132,13 +132,13 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:airplane-departure",
-      "colorIcon": "fluent-emoji:airplane-departure"
+      "colorIcon": "openmoji:airplane"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:airplane-departure",
-      "colorIcon": "fluent-emoji:airplane-departure"
+      "colorIcon": "openmoji:airplane"
     }
   ],
   "Mathematics": [
@@ -146,13 +146,13 @@
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     },
     {
       "degree": "Integrated Master of Science",
       "duration": 5,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     }
   ],
   "Chemical_Engineering": [
@@ -160,19 +160,19 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     },
     {
       "degree": "Integrated Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     }
   ],
   "Chemistry": [
@@ -180,19 +180,19 @@
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     },
     {
       "degree": "Bachelor of Science and Master of Science (Dual Degree)",
       "duration": 5,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     },
     {
       "degree": "Integrated Master of Science",
       "duration": 5,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     }
   ],
   "Economics": [
@@ -200,13 +200,13 @@
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:attach-money",
-      "colorIcon": "fluent-emoji:money-with-wings"
+      "colorIcon": "openmoji:money-bag"
     },
     {
       "degree": "Bachelor of Science and Master of Science (Dual Degree)",
       "duration": 5,
       "icon": "mdi:attach-money",
-      "colorIcon": "fluent-emoji:money-with-wings"
+      "colorIcon": "openmoji:money-bag"
     }
   ],
   "Energy_Engineering": [
@@ -214,7 +214,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Environmental_Science_and_Engineering": [
@@ -222,7 +222,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:tree-outline",
-      "colorIcon": "fluent-emoji:palm-tree"
+      "colorIcon": "openmoji:deciduous-tree"
     }
   ],
   "Industrial_Engineering_and_Operations_Research": [
@@ -230,7 +230,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:factory",
-      "colorIcon": "fluent-emoji:factory"
+      "colorIcon": "openmoji:factory"
     }
   ],
   "Metallurgical_Engineering_and_Materials_Science": [
@@ -238,7 +238,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     }
   ],
   "General_Engineering": [
@@ -246,7 +246,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Materials_Science_and_Engineering": [
@@ -254,13 +254,13 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     },
     {
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     }
   ],
   "Mathematics_and_Computing": [
@@ -268,31 +268,31 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     },
     {
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     },
     {
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     },
     {
       "degree": "Integrated Master of Science (Dual Degree)",
       "duration": 5,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     }
   ],
   "Microelectronics_and_VLSI": [
@@ -300,7 +300,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Bio_Engineering": [
@@ -308,7 +308,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Chemical_Sciences": [
@@ -316,13 +316,13 @@
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     },
     {
       "degree": "Bachelor of Science and Master of Science (Dual Degree)",
       "duration": 5,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     }
   ],
   "Data_Science_and_Engineering": [
@@ -330,7 +330,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Civil_Engineering_with_Specialization_in_Construction_Technology_and_Management": [
@@ -338,7 +338,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:bridge-at-night"
+      "colorIcon": "openmoji:bridge-at-night"
     }
   ],
   "Electronics_and_Communication_Engineering_(Internet_of_Things)": [
@@ -346,7 +346,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Computer_Science_and_Engineering_(Artificial_Intelligence)": [
@@ -354,7 +354,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Computer_Science_and_Engineering_(Cyber_Physical_System)": [
@@ -362,7 +362,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Computer_Science_Engineering_(Artificial_Intelligence)": [
@@ -370,7 +370,7 @@
       "degree": "B. Tech (Hons.)",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Computer_Science_Engineering_(Data_Science)": [
@@ -378,7 +378,7 @@
       "degree": "B. Tech (Hons.)",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Electronics_Engineering_(VLSI_Design_and_Technology)": [
@@ -386,7 +386,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Computer_Science_and_Engineering_with_specialization_in_Cyber_Security": [
@@ -394,13 +394,13 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     },
     {
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Electronics_and_Communication_Engineering_(Avionics)": [
@@ -408,7 +408,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Artificial_Intelligenece_and_Data_Science_(Transportation_and_Logistics)": [
@@ -416,7 +416,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Civil_Engineering_(Rail_Engineering)": [
@@ -424,7 +424,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:bridge",
-      "colorIcon": "fluent-emoji:bridge-at-night"
+      "colorIcon": "openmoji:bridge-at-night"
     }
   ],
   "Electrical_Engineering_(_Rail_Engineering)": [
@@ -432,7 +432,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:power-plug-outline",
-      "colorIcon": "fluent-emoji:electric-plug"
+      "colorIcon": "openmoji:charge-plug"
     }
   ],
   "Electronics_and_Communication_Engineering_(Rail_Engineering)": [
@@ -440,7 +440,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Mechanical_Engineering_(Rail_Engineering)": [
@@ -448,7 +448,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:gear",
-      "colorIcon": "fluent-emoji:gear"
+      "colorIcon": "openmoji:gear"
     }
   ],
   "Biotechnology_and_Biochemical_Engineering": [
@@ -456,7 +456,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:dna",
-      "colorIcon": "fluent-emoji:dna"
+      "colorIcon": "openmoji:dna"
     }
   ],
   "Electrical_Engineering_(Power_and_Automation)": [
@@ -464,7 +464,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:power-plug-outline",
-      "colorIcon": "fluent-emoji:electric-plug"
+      "colorIcon": "openmoji:charge-plug"
     }
   ],
   "Engineering_and_Computational_Mechanics": [
@@ -472,7 +472,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Materials_Engineering": [
@@ -480,13 +480,13 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     },
     {
       "degree": "Integrated Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     }
   ],
   "Production_and_Industrial_Engineering": [
@@ -494,7 +494,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:factory",
-      "colorIcon": "fluent-emoji:factory"
+      "colorIcon": "openmoji:factory"
     }
   ],
   "Textile_Technology": [
@@ -502,7 +502,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Space_Sciences_and_Engineering": [
@@ -510,7 +510,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Agricultural_and_Food_Engineering": [
@@ -518,7 +518,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:agriculture",
-      "colorIcon": "fluent-emoji:tractor"
+      "colorIcon": "openmoji:tractor"
     }
   ],
   "Applied_Geology": [
@@ -526,13 +526,13 @@
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     },
     {
       "degree": "Integrated Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Architecture": [
@@ -540,7 +540,7 @@
       "degree": "Bachelor of Architecture",
       "duration": 5,
       "icon": "mdi:eiffel-tower",
-      "colorIcon": "fluent-emoji:tokyo-tower"
+      "colorIcon": "openmoji:eiffel-tower"
     }
   ],
   "Artificial_Intelligence": [
@@ -548,13 +548,13 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:robot",
-      "colorIcon": "fluent-emoji:robot"
+      "colorIcon": "openmoji:robot"
     },
     {
       "degree": "Integrated B. Tech. and M. Tech. (Dual Degree)",
       "duration": 5,
       "icon": "mdi:robot",
-      "colorIcon": "fluent-emoji:robot"
+      "colorIcon": "openmoji:robot"
     }
   ],
   "Electronics_and_Electrical_Communication_Engineering": [
@@ -562,7 +562,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Exploration_Geophysics": [
@@ -570,7 +570,7 @@
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Industrial_and_Systems_Engineering": [
@@ -578,7 +578,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:factory",
-      "colorIcon": "fluent-emoji:factory"
+      "colorIcon": "openmoji:factory"
     }
   ],
   "Instrumentation_Engineering": [
@@ -586,7 +586,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Manufacturing_Science_and_Engineering": [
@@ -594,7 +594,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Mining_Engineering": [
@@ -602,13 +602,13 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Ocean_Engineering_and_Naval_Architecture": [
@@ -616,7 +616,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:eiffel-tower",
-      "colorIcon": "fluent-emoji:tokyo-tower"
+      "colorIcon": "openmoji:eiffel-tower"
     }
   ],
   "Physics": [
@@ -624,19 +624,19 @@
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     },
     {
       "degree": "Bachelor of Science and Master of Science (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     },
     {
       "degree": "Integrated Master of Science",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Biomedical_Engineering": [
@@ -644,7 +644,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Biotechnology_and_Bioinformatics": [
@@ -652,7 +652,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:dna",
-      "colorIcon": "fluent-emoji:dna"
+      "colorIcon": "openmoji:dna"
     }
   ],
   "Computational_Engineering": [
@@ -660,7 +660,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Electrical_Engineering_(IC_Design_and_Technology)": [
@@ -668,7 +668,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:power-plug-outline",
-      "colorIcon": "fluent-emoji:electric-plug"
+      "colorIcon": "openmoji:charge-plug"
     }
   ],
   "Engineering_Science": [
@@ -676,7 +676,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Industrial_Chemistry": [
@@ -684,13 +684,13 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:factory",
-      "colorIcon": "fluent-emoji:factory"
+      "colorIcon": "openmoji:factory"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:factory",
-      "colorIcon": "fluent-emoji:factory"
+      "colorIcon": "openmoji:factory"
     }
   ],
   "Materials_Science_and_Metallurgical_Engineering": [
@@ -698,7 +698,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     }
   ],
   "Artificial_Intelligence_and_Data_Science": [
@@ -706,7 +706,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:robot",
-      "colorIcon": "fluent-emoji:robot"
+      "colorIcon": "openmoji:robot"
     }
   ],
   "Chemistry_with_Specialization": [
@@ -714,7 +714,7 @@
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     }
   ],
   "Civil_and_Infrastructure_Engineering": [
@@ -722,7 +722,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:bridge",
-      "colorIcon": "fluent-emoji:bridge-at-night"
+      "colorIcon": "openmoji:bridge-at-night"
     }
   ],
   "Physics_with_Specialization": [
@@ -730,7 +730,7 @@
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Biological_Sciences_and_Bioengineering": [
@@ -738,7 +738,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Earth_Sciences": [
@@ -746,7 +746,7 @@
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Mathematics_and_Scientific_Computing": [
@@ -754,13 +754,13 @@
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     },
     {
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     }
   ],
   "Statistics_and_Data_Science": [
@@ -768,7 +768,7 @@
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Artificial_Intelligence_and_Data_Analytics": [
@@ -776,7 +776,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:robot",
-      "colorIcon": "fluent-emoji:robot"
+      "colorIcon": "openmoji:robot"
     }
   ],
   "Biological_Engineering": [
@@ -784,7 +784,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Biological_Science": [
@@ -792,7 +792,7 @@
       "degree": "Bachelor of Science",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Engineering_Design": [
@@ -800,7 +800,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Naval_Architecture_and_Ocean_Engineering": [
@@ -808,7 +808,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:eiffel-tower",
-      "colorIcon": "fluent-emoji:tokyo-tower"
+      "colorIcon": "openmoji:eiffel-tower"
     }
   ],
   "Integrated_Circuit_Design_and_Technology": [
@@ -816,7 +816,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Geotechnical_Engineering": [
@@ -824,7 +824,7 @@
       "degree": "B.Tech. + M.Tech./MS (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Structural_Engineering": [
@@ -832,7 +832,7 @@
       "degree": "B.Tech. + M.Tech./MS (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "CSE": [
@@ -840,7 +840,7 @@
       "degree": "B.Tech. + M.Tech./MS (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "B._Tech._(ECE)_-M._Tech._in_VLSI": [
@@ -848,7 +848,7 @@
       "degree": "B.Tech. + M.Tech./MS (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "B._Tech._(EEE)-M._Tech._in_(Power_and_._Control)": [
@@ -856,7 +856,7 @@
       "degree": "B.Tech. + M.Tech./MS (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "B._Tech._M._Tech._in_(5_Years B.Tech._+_M.Tech./MS_(Dual_Degree))": [
@@ -864,7 +864,7 @@
       "degree": "B.Tech. + M.Tech./MS (Dual Degree)",
       "duration": 5,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     }
   ],
   "B._Tech._-_M._Tech._in_Mechatronics_(5_Years B.Tech._+_M.Tech./MS_(Dual_Degree))": [
@@ -872,7 +872,7 @@
       "degree": "B.Tech. + M.Tech./MS (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "B.Tech_(Artificial_Intelligence_and_Data_Science)_-_MBA_in_Digital_Business_Management_(IIM_Bodh_Gaya)": [
@@ -880,7 +880,7 @@
       "degree": "Bachelor of Technology + MBA (Dual Degree)",
       "duration": 5,
       "icon": "mdi:robot",
-      "colorIcon": "fluent-emoji:robot"
+      "colorIcon": "openmoji:robot"
     }
   ],
   "B.Tech_(Chemical_Engineering)_-_MBA_in_Hospital_and_Health_Care_Management_(IIM_Bodh_Gaya)": [
@@ -888,7 +888,7 @@
       "degree": "Bachelor of Technology + MBA (Dual Degree)",
       "duration": 5,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     }
   ],
   "B.Tech_(Chemical_Science_and_Technology)_-_MBA_in_Hospital_and_Health_Care_Management_(IIM_Bodh_Gaya)": [
@@ -896,7 +896,7 @@
       "degree": "Bachelor of Technology + MBA (Dual Degree)",
       "duration": 5,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     }
   ],
   "B.Tech_(Civil_Engineering)_-_MBA_(IIM_Bodh_Gaya)": [
@@ -904,7 +904,7 @@
       "degree": "Bachelor of Technology + MBA (Dual Degree)",
       "duration": 5,
       "icon": "mdi:bridge",
-      "colorIcon": "fluent-emoji:bridge-at-night"
+      "colorIcon": "openmoji:bridge-at-night"
     }
   ],
   "B.Tech_(Computer_Science_and_Engineering)_-_MBA_in_Digital_Business_Management_(IIM_Bodh_Gaya)": [
@@ -912,7 +912,7 @@
       "degree": "Bachelor of Technology + MBA (Dual Degree)",
       "duration": 5,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "B.Tech_(Electrical_and_Electronics_Engineering)_-_MBA_(IIM_Bodh_Gaya)": [
@@ -920,7 +920,7 @@
       "degree": "Bachelor of Technology + MBA (Dual Degree)",
       "duration": 5,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "B.Tech_(Electronics_and_Communication_Engineering)_-_MBA_in_Hospital_and_Healthcare_Management_(IIM_Bodh_Gaya)": [
@@ -928,15 +928,15 @@
       "degree": "Bachelor of Technology + MBA (Dual Degree)",
       "duration": 5,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "B.Tech_(Engineering_Physics)_-_MBA_(IIM_Bodh_Gaya)": [
     {
       "degree": "Bachelor of Technology + MBA (Dual Degree)",
       "duration": 5,
-      "icon": "fluent-emoji:atom-symbol",
-      "colorIcon": "fluent-emoji:atom-symbol"
+      "icon": "openmoji:atom-symbol",
+      "colorIcon": "openmoji:atom-symbol"
     }
   ],
   "B.Tech_(Mathematics_and_Computing)_-_MBA_in_Digital_Business_Management_(IIM_Bodh_Gaya)": [
@@ -944,7 +944,7 @@
       "degree": "Bachelor of Technology + MBA (Dual Degree)",
       "duration": 5,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     }
   ],
   "B.Tech_(Mechanical_Engineering)_-_MBA_(IIM_Mumbai)": [
@@ -952,7 +952,7 @@
       "degree": "Bachelor of Technology + MBA (Dual Degree)",
       "duration": 5,
       "icon": "mdi:gear",
-      "colorIcon": "fluent-emoji:gear"
+      "colorIcon": "openmoji:gear"
     }
   ],
   "B.Tech_(Metallurgical_and_Materials_Engineering)_-_MBA_(IIM_Bodh_Gaya)": [
@@ -960,7 +960,7 @@
       "degree": "Bachelor of Technology + MBA (Dual Degree)",
       "duration": 5,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     }
   ],
   "BS_in_Economics_with_MBA_(IIM_Bodh_Gaya": [
@@ -968,7 +968,7 @@
       "degree": "Bachelor of Technology + MBA (Dual Degree)",
       "duration": 5,
       "icon": "mdi:attach-money",
-      "colorIcon": "fluent-emoji:money-with-wings"
+      "colorIcon": "openmoji:money-bag"
     }
   ],
   "Chemical_Science_and_Technology": [
@@ -976,7 +976,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     }
   ],
   "Electrical_and_Electronics_Engineering": [
@@ -984,7 +984,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Biosciences_and_Bioengineering": [
@@ -992,7 +992,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Data_Science_and_Artificial_Intelligence": [
@@ -1000,7 +1000,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:robot",
-      "colorIcon": "fluent-emoji:robot"
+      "colorIcon": "openmoji:robot"
     }
   ],
   "Geological_Technology": [
@@ -1008,7 +1008,7 @@
       "degree": "Integrated Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Geophysical_Technology": [
@@ -1016,7 +1016,7 @@
       "degree": "Integrated Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Mathematics_and_Computing_)": [
@@ -1024,7 +1024,7 @@
       "degree": "Bachelor of Science and Master of Science (Dual Degree)",
       "duration": 5,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     }
   ],
   "Applied_Geophysics": [
@@ -1032,7 +1032,7 @@
       "degree": "Integrated Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Environmental_Engineering": [
@@ -1040,7 +1040,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:tree-outline",
-      "colorIcon": "fluent-emoji:palm-tree"
+      "colorIcon": "openmoji:deciduous-tree"
     }
   ],
   "Mineral_and_Metallurgical_Engineering": [
@@ -1048,7 +1048,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     }
   ],
   "Mining_Machinery_Engineering": [
@@ -1056,7 +1056,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Petroleum_Engineering": [
@@ -1064,7 +1064,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Artificial_Intelligence_and_Data_Engineering": [
@@ -1072,7 +1072,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:robot",
-      "colorIcon": "fluent-emoji:robot"
+      "colorIcon": "openmoji:robot"
     }
   ],
   "Biochemical_Engineering_with_M.Tech._in_Biochemical_Engineering_and_Biotechnology": [
@@ -1080,7 +1080,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     }
   ],
   "Bioengineering_with_M.Tech_in_Biomedical_Technology": [
@@ -1088,7 +1088,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Ceramic_Engineering": [
@@ -1096,13 +1096,13 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Electrical_Engineering_with_M.Tech._in_Power_Electronics": [
@@ -1110,7 +1110,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Electronics_Engineering": [
@@ -1118,7 +1118,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Materials_Science_and_Technology": [
@@ -1126,7 +1126,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     }
   ],
   "Metallurgical_Engineering": [
@@ -1134,13 +1134,13 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     },
     {
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     }
   ],
   "Pharmaceutical_Engineering_and_Technology": [
@@ -1148,7 +1148,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Pharmaceutical_Engineering_and_Technology_)": [
@@ -1156,7 +1156,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Electronics_and_Electrical_Engineering": [
@@ -1164,7 +1164,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Mechatronics_Engineering": [
@@ -1172,7 +1172,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Chemical_and_Biochemical_Engineering": [
@@ -1180,7 +1180,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     }
   ],
   "Interdisciplinary_Sciences": [
@@ -1188,7 +1188,7 @@
       "degree": "Bachelor of Science and Master of Science (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Bio_Technology": [
@@ -1196,7 +1196,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Electronics_and_VLSI_Engineering": [
@@ -1204,7 +1204,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Industrial_and_Production_Engineering": [
@@ -1212,7 +1212,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:factory",
-      "colorIcon": "fluent-emoji:factory"
+      "colorIcon": "openmoji:factory"
     }
   ],
   "Information_Technology": [
@@ -1220,7 +1220,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Instrumentation_and_Control_Engineering": [
@@ -1228,7 +1228,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Mathematics_and_Data_Science": [
@@ -1236,7 +1236,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     }
   ],
   "Planning": [
@@ -1244,7 +1244,7 @@
       "degree": "Bachelor of Planning",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Computational_Mathematics": [
@@ -1252,7 +1252,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     }
   ],
   "Electronics_and_Instrumentation_Engineering": [
@@ -1260,7 +1260,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Production_Engineering": [
@@ -1268,7 +1268,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "VLSI_Design_and_Technology": [
@@ -1276,7 +1276,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Biotechnology": [
@@ -1284,7 +1284,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:dna",
-      "colorIcon": "fluent-emoji:dna"
+      "colorIcon": "openmoji:dna"
     }
   ],
   "Computational_and_Data_Science": [
@@ -1292,7 +1292,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Chemical_Technology": [
@@ -1300,7 +1300,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:flask",
-      "colorIcon": "fluent-emoji:man-scientist"
+      "colorIcon": "openmoji:test-tube"
     }
   ],
   "Computer_Science_and_Engineering_with_Specialization_in_Cyber_Security": [
@@ -1308,7 +1308,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Computer_Science_and_Engineering_with_Specialization_in_Data_Science": [
@@ -1316,7 +1316,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Electrical_Engineering_with_Specialization_In_Power_System_Engineering": [
@@ -1324,7 +1324,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:power-plug-outline",
-      "colorIcon": "fluent-emoji:electric-plug"
+      "colorIcon": "openmoji:charge-plug"
     }
   ],
   "Electronics_and_Communication_Engineering_with_Specialization_in_Microelectronics_and_VLSI_System_Design": [
@@ -1332,7 +1332,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Material_Science_and_Engineering": [
@@ -1340,7 +1340,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Mathematics_and_Computing_Technology": [
@@ -1348,7 +1348,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:123",
-      "colorIcon": "fluent-emoji:input-numbers"
+      "colorIcon": "openmoji:input-numbers"
     }
   ],
   "Mechanical_Engineering_with_Specialization_in_Manufacturing_and_Industrial_Engineering": [
@@ -1356,7 +1356,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:gear",
-      "colorIcon": "fluent-emoji:gear"
+      "colorIcon": "openmoji:gear"
     }
   ],
   "Mechatronics_and_Automation_Engineering": [
@@ -1364,7 +1364,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Bio_Medical_Engineering": [
@@ -1372,7 +1372,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Artificial_Intelligence_and_Machine_Learning": [
@@ -1380,7 +1380,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:robot",
-      "colorIcon": "fluent-emoji:robot"
+      "colorIcon": "openmoji:robot"
     }
   ],
   "Architecture_and_Planning": [
@@ -1388,7 +1388,7 @@
       "degree": "Bachelor of Architecture",
       "duration": 5,
       "icon": "mdi:eiffel-tower",
-      "colorIcon": "fluent-emoji:tokyo-tower"
+      "colorIcon": "openmoji:eiffel-tower"
     }
   ],
   "Industrial_Internet_of_Things": [
@@ -1396,7 +1396,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:factory",
-      "colorIcon": "fluent-emoji:factory"
+      "colorIcon": "openmoji:factory"
     }
   ],
   "Microelectronics_and_VLSI_Engineering": [
@@ -1404,7 +1404,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "ROBOTICS_and_AUTOMATION": [
@@ -1412,7 +1412,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "SUSTAINABLE_ENERGY_TECHNOLOGIES": [
@@ -1420,7 +1420,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Ceramic_Engineering_and_M.Tech_Industrial_Ceramic": [
@@ -1428,7 +1428,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Food_Process_Engineering": [
@@ -1436,7 +1436,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Industrial_Design": [
@@ -1444,7 +1444,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:factory",
-      "colorIcon": "fluent-emoji:factory"
+      "colorIcon": "openmoji:factory"
     }
   ],
   "Life_Science": [
@@ -1452,7 +1452,7 @@
       "degree": "Integrated Master of Science",
       "duration": 5,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Computer_Science_and_Engineering_(_Artificial_Intelligence_and_Data_Science)": [
@@ -1460,7 +1460,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Electronics_and_Communication_Engineering_(4_Years Bachelor_of_Technology)": [
@@ -1468,7 +1468,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Electronics_and_Telecommunication_Engineering": [
@@ -1476,7 +1476,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Metallurgy_and_Materials_Engineering": [
@@ -1484,7 +1484,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:crystal-ball",
-      "colorIcon": "fluent-emoji:crystal-ball"
+      "colorIcon": "openmoji:crystal-ball"
     }
   ],
   "IT": [
@@ -1492,13 +1492,13 @@
       "degree": "Integrated B. Tech. and M. Tech. (Dual Degree)",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     },
     {
       "degree": "B.tech + MBA (Dual Degree)",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "CSE_(_Data_Science_and_Analytics)": [
@@ -1506,7 +1506,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Computer_Science_and_Engineering_(Cyber_Security)": [
@@ -1514,7 +1514,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Computer_Science_and_Engineering_(Data_Science)": [
@@ -1522,7 +1522,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Information_Technology-Business_Informatics": [
@@ -1530,7 +1530,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "B.Tech_in_Mechanical_Engineering_and_M.Tech_in_AI_and_Robotics": [
@@ -1538,7 +1538,7 @@
       "degree": "B.Tech. + M.Tech./MS (Dual Degree)",
       "duration": 5,
       "icon": "mdi:gear",
-      "colorIcon": "fluent-emoji:gear"
+      "colorIcon": "openmoji:gear"
     }
   ],
   "B.Tech._in_Electronics_and_Communication_Engineering_and_M.Tech._in_VLSI_Design": [
@@ -1546,7 +1546,7 @@
       "degree": "Bachelor and Master of Technology (Dual Degree)",
       "duration": 5,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Computer_Science_and_Engineering_with_Major_in_Artificial_Intelligence": [
@@ -1554,7 +1554,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Smart_Manufacturing": [
@@ -1562,7 +1562,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Computer_Science_and_Engineering_with_specialization_in_Artificial_Intelligence_and_Data_Science": [
@@ -1570,7 +1570,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Electronics_and_Communication_Engineering_with_specialization_in_VLSI_and_Embedded_Systems": [
@@ -1578,7 +1578,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Computer_Science": [
@@ -1586,7 +1586,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Computer_Science_and_Artificial_Intelligence": [
@@ -1594,7 +1594,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Computer_Science_and_Business": [
@@ -1602,7 +1602,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Electronics_and_Communication_Engineering_with_specialization_in_Design_and_Manufacturing": [
@@ -1610,7 +1610,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Mechanical_Engineering_with_specialization_in_Design_and_Manufacturing": [
@@ -1618,7 +1618,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:gear",
-      "colorIcon": "fluent-emoji:gear"
+      "colorIcon": "openmoji:gear"
     }
   ],
   "Computer_Science_and_Engineering_(4_Years B._Tech_/_B._Tech_(Hons.))": [
@@ -1626,7 +1626,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Electronics_and_Communication_Engineering_(with_Specialization_of_Embedded_Systems_and_Internet_of_Things)": [
@@ -1634,7 +1634,7 @@
       "degree": "B. Tech (Hons.)",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Computer_Science_Engineering_(Artificial_lntelligence_and_Machine_Learning)": [
@@ -1642,7 +1642,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Computer_Science_Engineering_(Data_Science_and_Analytics)": [
@@ -1650,7 +1650,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Computer_Science_Engineering_(Human_Computer_lnteraction_and_Gaming_Technology)": [
@@ -1658,7 +1658,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:desktop-classic",
-      "colorIcon": "fluent-emoji:desktop-computer"
+      "colorIcon": "openmoji:desktop-computer"
     }
   ],
   "Agricultural_Engineering": [
@@ -1666,7 +1666,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:agriculture",
-      "colorIcon": "fluent-emoji:tractor"
+      "colorIcon": "openmoji:tractor"
     }
   ],
   "Food_Engineering_and_Technology": [
@@ -1674,7 +1674,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:agriculture",
-      "colorIcon": "fluent-emoji:tractor"
+      "colorIcon": "openmoji:tractor"
     }
   ],
   "Quantitative_Economics_and_Data_Science": [
@@ -1682,7 +1682,7 @@
       "degree": "Integrated Master of Science (Dual Degree)",
       "duration": 5,
       "icon": "mdi:attach-money",
-      "colorIcon": "fluent-emoji:money-with-wings"
+      "colorIcon": "openmoji:money-bag"
     }
   ],
   "Carpet_and_Textile_Technology": [
@@ -1690,7 +1690,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Computer_Engineering": [
@@ -1698,7 +1698,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Electronic_Engineering": [
@@ -1706,7 +1706,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:satellite-uplink",
-      "colorIcon": "fluent-emoji:satellite-antenna"
+      "colorIcon": "openmoji:satellite"
     }
   ],
   "Food_Technology": [
@@ -1714,7 +1714,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Bachelor_of_Design": [
@@ -1722,7 +1722,7 @@
       "degree": "Bachelor of Design",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Civil_and_Environmental_Engineering": [
@@ -1730,7 +1730,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:bridge",
-      "colorIcon": "fluent-emoji:bridge-at-night"
+      "colorIcon": "openmoji:bridge-at-night"
     }
   ],
   "Food_Technology_and_Management": [
@@ -1738,7 +1738,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Handloom_and_Textile_Technology": [
@@ -1746,7 +1746,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Aeronautical_Engineering": [
@@ -1754,7 +1754,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Dairy_Engineering": [
@@ -1762,7 +1762,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Fashion_and_Apparel_Engineering": [
@@ -1770,7 +1770,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "Printing_and_Packaging_Technology": [
@@ -1778,7 +1778,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ],
   "B.Tech_in_Aviation_Engineering": [
@@ -1786,7 +1786,7 @@
       "degree": "Bachelor of Technology",
       "duration": 4,
       "icon": "mdi:school",
-      "colorIcon": "fluent-emoji:graduation-cap"
+      "colorIcon": "openmoji:graduation-cap"
     }
   ]
 }

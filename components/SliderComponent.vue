@@ -35,11 +35,12 @@
                 justify-center text-center items-center bg-gray-100
               "
             >
-              <v-icon
+              <Icon
               v-if="icon"
-               size="80px" style="width: 100px" class="text-gray-800">
-                {{ item.icon }}
-              </v-icon>
+              :name="item.icon"
+               size="80px" style="width: 100px">
+    
+        </Icon>
 
               <img
                 

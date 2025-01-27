@@ -50,34 +50,29 @@ export default defineComponent({
      }
     ]
     const course = [
+    {
+        name: "Chemical Engineering",
+        icon: "openmoji:test-tube",
+        link: "courses/Chemical_Engineering",
+      },
+      {
+        name: "ECE",
+        icon: "openmoji:satellite",
+        link: "courses/Electronics_and_Communication_Engineering",
+      },
       {
         name: "Mechanical engineering",
-        icon: "mdi-cogs",
+        icon: "openmoji:gear",
         link: "courses/Mechanical_Engineering",
       },
       {
         name: "Computer Science",
-        icon: "mdi-desktop-classic",
+        icon: "openmoji:desktop-computer",
         link: "courses/Computer_Science_and_Engineering",
       },
       {
-        name: "Chemical Engineering",
-        icon: "mdi-flask",
-        link: "courses/Chemical_Engineering",
-      },
-      {
-        name: "Engineering Physics",
-        icon: "mdi-atom",
-        link: "courses/Engineering_Physics",
-      },
-      {
-        name: "ECE",
-        icon: "mdi-satellite-variant",
-        link: "courses/Electronics_and_Communication_Engineering",
-      },
-      {
         name: "Civil Engineering",
-        icon: "mdi-bridge",
+        icon: "openmoji:bridge-at-night",
         link: "courses/Civil_Engineering",
       },
     ];
