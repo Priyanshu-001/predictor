@@ -1,0 +1,7 @@
+{
+  "prefetch": {
+    "allow": true,
+    "max-links": null,
+    "exclude-patterns": []
+  }
+}
