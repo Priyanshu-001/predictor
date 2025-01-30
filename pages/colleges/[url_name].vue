@@ -117,6 +117,6 @@
     
     useSeoMeta({
         title:()=> (college_info.value?.nick_names[0] ? `${college_info.value?.nick_names[0]} | ` : '' ) + `${college_info.value?.institute} JEE ${college_info.value?.exam} closing and opening ranks latest cutoff 2024 ` ,
-        description:()=>`View cutoff for ${ college_info.value?.institute} cutoff`
+        description:()=>`View cutoff for ${ college_info.value?.institute} college_info.value?.exam} closing and opening ranks for  the year 2024`
    })
 </script>
