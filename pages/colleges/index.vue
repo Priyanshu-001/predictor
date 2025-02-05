@@ -46,7 +46,12 @@ export default {
   name: "CoursesPage",
   setup() {
     useHead({
-      title: 'All Colleges in DB'
+      title: 'All JOSAA colleges our in DB',
+      meta:[
+        {
+          name:'description',content:'Check all IITs cutoffs, NITs cutoffs, GFTIs cutoffs and other colleges 2024 cutoffs  in our DB ',
+        }
+      ]
     })
 
     const search = ref('')

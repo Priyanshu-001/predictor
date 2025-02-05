@@ -116,7 +116,21 @@
     
     
     useSeoMeta({
-        title:()=> (college_info.value?.nick_names[0] ? `${college_info.value?.nick_names[0]} | ` : '' ) + `${college_info.value?.institute} JEE ${college_info.value?.exam} closing and opening ranks latest cutoff 2024 ` ,
-        description:()=>`View cutoff for ${ college_info.value?.institute} college_info.value?.exam} closing and opening ranks for  the year 2024`
-   })
+  title: () => {
+    const nickName = college_info.value?.nick_names?.[0] || '';
+    const institute = college_info.value?.institute;
+    const exam = college_info.value?.exam;
+
+    return `${nickName ? nickName + ' | ' : ''}  aka ${institute} JEE-${exam} Cutoff 2024`;
+  },
+
+  description: () => {
+    const nickName = college_info.value?.nick_names?.[0] || '';
+    const institute = college_info.value?.institute || 'this college';
+    const exam = college_info.value?.exam || 'JEE';
+
+    return `Check JEE-${exam} 2024 cutoff for ${nickName ? nickName + ', also known as ' : ''}${institute}. View closing and opening ranks for various courses in 2024.`;
+  }
+});
+
 </script>
