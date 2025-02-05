@@ -17,34 +17,34 @@ export default defineComponent({
     })
     const colleges = [
     {
-        name: "NIT Durgapur",
+        name: "NIT Durgapur cutoff",
         img: "/college_icons/NIT_DURGAPUR.png",
         link: "colleges/National_Institute_of_Technology_Durgapur",
       },
      {
-        name: "IIT Kanpur",
+        name: "IIT Kanpur cutoff",
         img: "/college_icons/IIT_KANPUR.png",
         link: "colleges/Indian_Institute_of_Technology_Kanpur",
      }, 
      {
-      name: "NIT Hamirpur",
+      name: "NIT Hamirpur cutoff",
         img: "/college_icons/NIT_HAMIRPUR.png",
         link: "colleges/National_Institute_of_Technology_Hamirpur",
      },
      {
-        name: "IIT Madras",
+        name: "IIT Madras cutoff",
         img: "/college_icons/IIT_Madras.png",
         link: "colleges/Indian_Institute_of_Technology_Madras",
      },
      {
         
-        name: "NIT Tirchy",
+        name: "NIT Tirchy cutoff",
         img: "/college_icons/NIT_TIRCHY.png",
         link: "colleges/National_Institute_of_Technology_Tiruchirappalli",
      },
      {
         
-        name: "IIT Delhi",
+        name: "IIT Delhi cutoff",
         img: "/college_icons/IIT_DELHI.png",
         link: "colleges/Indian_Institute_of_Technology_Delhi",
      }
@@ -148,8 +148,8 @@ export default defineComponent({
     </div>
     <v-container>
       <sliderComponent
-        title="Discover Colleges"
-        description="Discover colleges"
+        title="Check top IITs and NIT cutoffs (2024)"
+        description="Check Jee-Main and Jee-Advanced cutoffs for josaa colleges including NITs, IITs"
         img
         allLink="/colleges"
         :list="colleges"
@@ -159,7 +159,7 @@ export default defineComponent({
     <v-container>
       <sliderComponent
         title="Discover Courses"
-        description="Find engineering courses and top colleges offering them"
+        description="Check engineering courses cutoffs and top colleges offering them"
         icon
         allLink="/courses"
         :list="course"
