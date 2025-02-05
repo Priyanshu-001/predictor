@@ -134,14 +134,15 @@ export default defineComponent({
             mr-8
           "
         >
-          Check latest(2024) cutoffs for IIT, NIT and some IIITs. Predict what college you will be getting on basis of
-          <strong class="font-weight-bold">2024 cuttoffs</strong>
+          Check JEE mains and JEE advanced cutoffs for IIT, NIT and some IIITs. Predict what college you will be getting on basis of
+          <strong class="font-weight-bold">2024 cutoffs</strong>
           <em> for free, no signup needed</em>.
           <br />
 
           <u>
          Please also 
           crosscheck with an offcial source.</u>
+This is a side project
           <br />
         </p>
       </div>
