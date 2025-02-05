@@ -148,8 +148,8 @@ export default defineComponent({
     </div>
     <v-container>
       <sliderComponent
-        title="Check top IITs and NIT cutoffs (2024)"
-        description="Check Jee-Main and Jee-Advanced cutoffs for josaa colleges including NITs, IITs"
+        title="Check IITs and NIT cutoffs (2024)"
+        description="Check Jee Main and Jee Advanced cutoffs for JOSAA colleges"
         img
         allLink="/colleges"
         :list="colleges"
