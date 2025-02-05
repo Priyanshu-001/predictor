@@ -5,10 +5,10 @@ import colleges from "~/server/api/colleges";
 export default defineComponent({
   setup() {
     useHead({
-      title: 'Predictor JEE - Free JOSAA college predictor 2024 latest data',
+      title: 'Predictor JEE - Free JOSAA College Predictor 2024 | JEE Mains & Advanced Cutoffs',
       meta:[
         {
-          name:'description',content:'Free JOSAA College predictor based on 2024 ranks, no signup required',
+          name:'description',content:'Free JOSAA, IIT, and NIT Predictor to check your college options for JEE Mains & Advanced 2024 ranks. Check cutoffs for IITs, NITs, & GFTIs – No signup required!',
         },
         {
           name:'keywords', content:'Free JOSAA College Predictor, JEE cutoffs, IIT/NIT/IIIT cutoffs, IIT cutoff, IIT cutoff 2024, IIT college predictor'
