@@ -5,10 +5,10 @@ import colleges from "~/server/api/colleges";
 export default defineComponent({
   setup() {
     useHead({
-      title: 'Predictor JEE - Free JOSAA college predictor 2024 latest data',
+      title: 'Predictor JEE - Free JOSAA College Predictor 2024 | JEE Mains & Advanced Cutoffs',
       meta:[
         {
-          name:'description',content:'Free JOSAA College predictor based on 2024 ranks, no signup required',
+          name:'description',content:'Free JOSAA, IIT, and NIT Predictor to check your college options for JEE Mains & Advanced 2024 ranks. Check cutoffs for IITs, NITs, & GFTIs – No signup required!',
         },
         {
           name:'keywords', content:'Free JOSAA College Predictor, JEE cutoffs, IIT/NIT/IIIT cutoffs, IIT cutoff, IIT cutoff 2024, IIT college predictor'
@@ -17,34 +17,34 @@ export default defineComponent({
     })
     const colleges = [
     {
-        name: "NIT Durgapur",
+        name: "NIT Durgapur cutoff",
         img: "/college_icons/NIT_DURGAPUR.png",
         link: "colleges/National_Institute_of_Technology_Durgapur",
       },
      {
-        name: "IIT Kanpur",
+        name: "IIT Kanpur cutoff",
         img: "/college_icons/IIT_KANPUR.png",
         link: "colleges/Indian_Institute_of_Technology_Kanpur",
      }, 
      {
-      name: "NIT Hamirpur",
+      name: "NIT Hamirpur cutoff",
         img: "/college_icons/NIT_HAMIRPUR.png",
         link: "colleges/National_Institute_of_Technology_Hamirpur",
      },
      {
-        name: "IIT Madras",
+        name: "IIT Madras cutoff",
         img: "/college_icons/IIT_Madras.png",
         link: "colleges/Indian_Institute_of_Technology_Madras",
      },
      {
         
-        name: "NIT Tirchy",
+        name: "NIT Tirchy cutoff",
         img: "/college_icons/NIT_TIRCHY.png",
         link: "colleges/National_Institute_of_Technology_Tiruchirappalli",
      },
      {
         
-        name: "IIT Delhi",
+        name: "IIT Delhi cutoff",
         img: "/college_icons/IIT_DELHI.png",
         link: "colleges/Indian_Institute_of_Technology_Delhi",
      }
@@ -134,22 +134,23 @@ export default defineComponent({
             mr-8
           "
         >
-          Check latest(2024) cutoffs for IIT, NIT and some IIITs. Predict what college you will be getting on basis of
-          <strong class="font-weight-bold">2024 cuttoffs</strong>
+          Check JEE mains and JEE advanced cutoffs for IIT, NIT and some IIITs. Predict what college you will be getting on basis of
+          <strong class="font-weight-bold">2024 cutoffs</strong>
           <em> for free, no signup needed</em>.
           <br />
 
           <u>
          Please also 
           crosscheck with an offcial source.</u>
+This is a side project
           <br />
         </p>
       </div>
     </div>
     <v-container>
       <sliderComponent
-        title="Discover Colleges"
-        description="Discover colleges"
+        title="Check IITs and NIT cutoffs (2024)"
+        description="Check Jee Main and Jee Advanced cutoffs for JOSAA colleges"
         img
         allLink="/colleges"
         :list="colleges"
@@ -159,7 +160,7 @@ export default defineComponent({
     <v-container>
       <sliderComponent
         title="Discover Courses"
-        description="Find engineering courses and top colleges offering them"
+        description="Check engineering courses cutoffs and top colleges offering them"
         icon
         allLink="/courses"
         :list="course"
