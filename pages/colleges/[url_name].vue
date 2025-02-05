@@ -121,7 +121,7 @@
     const institute = college_info.value?.institute;
     const exam = college_info.value?.exam;
 
-    return `${nickName ? nickName + ' | ' : ''}  aka ${institute} JEE-${exam} Cutoff 2024`;
+    return `${nickName ? nickName + ' aka ' : ''}${institute} JEE-${exam} Cutoff 2024`;
   },
 
   description: () => {
