@@ -1,6 +1,6 @@
 <template>
 
-<div  class="
+<v-card  class="
          c1   
       p-4
       justify-center
@@ -35,7 +35,7 @@
     
 
 
-</div>
+</v-card>
 
 </template>
 
