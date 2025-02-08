@@ -4,7 +4,7 @@ export default defineEventHandler((event)=>{
     }
     const TRACK_COOKIE_NAME = "invocationCount";
     const ONE_HOUR = 60 * 60 * 1000
-    const hoursToExpiry = 8
+    const hoursToExpiry = 4
     const now = Date.now();
 
     let count = parseInt(getCookie(event, TRACK_COOKIE_NAME) || "0") + 1;
