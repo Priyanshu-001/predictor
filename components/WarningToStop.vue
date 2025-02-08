@@ -1,21 +1,21 @@
 <template>
 
-<v-card  class="
-     c1   
+<div  class="
+         c1   
       p-4
       justify-center
       flex
       flex-col
       text-gray-700
-      font-semibold
+      font-medium
       rounded-7xl
     "  elevation="20">
-    <v-card-title>
-        <h2 class="text-blue-700 font-bold text-2xl"> {{ item.title }}</h2>
-    </v-card-title>
-    <v-card-subtitle>
+       
+    <h2 class="text-blue-700 font-bold text-xl mt-0"> {{ item.title }}</h2>
+
+    <p>
         Thanks for using my project—just don’t overthink it!
-    </v-card-subtitle>
+    </p>
     <br/>
     <div style="display: grid;     justify-items: center">
     <img :src="item.img" style="max-height: 300px;"/>
@@ -35,8 +35,7 @@
     
 
 
-</v-card>
-
+</div>
 
 </template>
 
@@ -55,8 +54,12 @@
 
 <style lang="css" scoped>
 .c1 {
+    overflow-y: auto;
   min-width: min(350px, 100%);
   max-width: 500px;
-  padding: 1rem !important;
+  max-height: 100vh;
+  padding: 1rem;
+  background: white;
+  box-sizing: border-box;
 }
 </style>
