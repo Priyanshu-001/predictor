@@ -79,8 +79,8 @@
             </v-dialog>
         </LazyClientOnly>
         <ClientOnly>
-            <v-dialog v-model="data.warn"   width="fit-content">
-       <WarningToStop @close="data.warn=false"/>
+            <v-dialog v-model="shouldWarn"   width="fit-content">
+       <WarningToStop @close="shouldWarn=false"/>
     </v-dialog>
     </ClientOnly>
     </v-container>
@@ -97,13 +97,14 @@
     
     const dialog = ref(false)
     const userInfo = useUserInfo()
-    let route = useRoute()
+    
     const {data:metaData,pending:metaDataPending} =  useLazyFetch('/api/possibilities',
                                                     {query:userInfo},)
     const queryBuilder =   useQueryBuilder()
     const predictUrl = computed(()=>queryBuilder('/api/predict',{courses,degrees}))
     const  { data  , pending}  =   useLazyFetch(()=>predictUrl.value ,{query:userInfo}) 
-    console.log(data.value)
+    const shouldWarn = ref(false)
+    watch(data, ()=>shouldWarn.value = !!data?.value?.warn)
     useSeoMeta({
     title:()=>`colleges under rank ${userInfo.value.rank} ${userInfo.value.category} category year 2024, latest cutoff` ,
     description:()=>`Searching for JOSSA colleges under rank ${userInfo.value.rank} ${userInfo.value.category} category`
