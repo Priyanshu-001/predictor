@@ -25,6 +25,7 @@
         You can continue if you want, but let’s not overdo it.
          If it matters, I didn’t clear JEE Main either 😆
          If this showed up too soon,  <a href ="mailto:jeecollegepredictor+toosoonwarn@gmail.com">let me know </a>
+         This resets in few hours.
     </p>
     <br/>
 </div>

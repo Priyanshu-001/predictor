@@ -22,7 +22,7 @@ export default defineEventHandler((event)=>{
     
     setCookie(event, TRACK_COOKIE_NAME, count.toString(), { 
         expires: new Date(expiryTime), 
-        httpOnly: false 
+        httpOnly: true 
     });
 
     if(count > 8) {
