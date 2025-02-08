@@ -22,6 +22,8 @@
       height="5" 
       v-if="pending || metaDataPending"
     />
+    
+    
     <v-container>
         <!-- TODO:add FLoating button for mobile -->
         <v-row>
@@ -44,7 +46,7 @@
                     </div>
                     <!-- TODO: add skeleton for meta-para -->
                     <template v-if="!pending"> 
-                        <predict-item v-for="(college,index) in data" 
+                        <predict-item v-for="(college,index) in data.result" 
                         :key="index"
                         :result="college"
                         />
@@ -76,6 +78,11 @@
                 <select-card  dialog demo @close="dialog=false"></select-card>
             </v-dialog>
         </LazyClientOnly>
+        <ClientOnly>
+            <v-dialog v-model="shouldWarn"   width="fit-content">
+       <WarningToStop @close="shouldWarn=false"/>
+    </v-dialog>
+    </ClientOnly>
     </v-container>
 </div>
 </template>
@@ -90,13 +97,14 @@
     
     const dialog = ref(false)
     const userInfo = useUserInfo()
-    let route = useRoute()
+    
     const {data:metaData,pending:metaDataPending} =  useLazyFetch('/api/possibilities',
                                                     {query:userInfo},)
     const queryBuilder =   useQueryBuilder()
     const predictUrl = computed(()=>queryBuilder('/api/predict',{courses,degrees}))
-    const  {data,pending}  =   useLazyFetch(()=>predictUrl.value ,{query:userInfo}) 
-
+    const  { data  , pending}  =   useLazyFetch(()=>predictUrl.value ,{query:userInfo}) 
+    const shouldWarn = ref(false)
+    watch(data, ()=>shouldWarn.value = !!data?.value?.warn)
     useSeoMeta({
     title:()=>`colleges under rank ${userInfo.value.rank} ${userInfo.value.category} category year 2024, latest cutoff` ,
     description:()=>`Searching for JOSSA colleges under rank ${userInfo.value.rank} ${userInfo.value.category} category`

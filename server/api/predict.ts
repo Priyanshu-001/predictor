@@ -13,5 +13,5 @@ export default defineEventHandler(async event=>{
 
 
     const result = await predict(userinfo,{_degree,_courses,_limit,_offset})
-    return [...result]
+    return {result: [...result], warn : !!event.context.tooMuchCalls && event.context.tooMuchCalls}
 })

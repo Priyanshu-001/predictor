@@ -159,8 +159,8 @@ This is a side project
     
     <v-container>
       <sliderComponent
-        title="Discover Courses"
-        description="Check engineering courses cutoffs and top colleges offering them"
+        title="Check course wise cutoffs"
+        description="Check engineering courses cutoffs  and top colleges offering them"
         icon
         allLink="/courses"
         :list="course"
