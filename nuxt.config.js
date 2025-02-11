@@ -1,18 +1,26 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import vuetify from 'vite-plugin-vuetify'
+import vuetify from 'vite-plugin-vuetify';
+
 export default defineNuxtConfig({
+  ssr: true, // Enable SSR for hybrid rendering
   sourcemap: process.env.NODE_ENV === 'development',
+
   colorMode: {
-    preference: 'light'
+    preference: 'light',
   },
-  target: 'server',
-  css: ['~/assets/css/main.css', 'vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
+
+  css: [
+    '~/assets/css/main.css',
+    'vuetify/lib/styles/main.sass',
+    '@mdi/font/css/materialdesignicons.min.css'
+  ],
+
   build: {
-    transpile: ['vuetify', '@nuxt/postcss8'],
-    extractCSS: true,
+    transpile: ['vuetify'],
     analyze: true,
   },
+
   vite: {
+    plugins: [vuetify()],
     define: {
       'process.env.DEBUG': false,
     },
@@ -22,23 +30,19 @@ export default defineNuxtConfig({
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
-
     },
   },
+
   typescript: {
-    shim: false
+    shim: false,
   },
+
   modules: [
     '@nuxtjs/google-fonts',
     '@nuxt/ui',
     '@nuxt/icon',
-    async (options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
-        vuetify()
-      ))
-    },
-
   ],
+
   googleFonts: {
     families: {
       Roboto: [100, 300, 400, 500, 700, 900]
@@ -46,10 +50,12 @@ export default defineNuxtConfig({
     display: 'swap',
     prefetch: true,
     preload: true,
+    preconnect: true,
   },
+
   icon: {
-   serverBundle: 'remote',
-clientBundle: {
+    serverBundle: 'remote',
+    clientBundle: {
       icons: [
         "openmoji:bridge-at-night",
         "openmoji:desktop-computer",
@@ -69,7 +75,17 @@ clientBundle: {
         "openmoji:tractor",
         "openmoji:eiffel-tower",
         "openmoji:robot"
-    ]
+      ]
     }
-  }
-})
+  },
+
+  nitro: {
+    prerender: {
+      routes: [
+        '/', // Homepage
+        '/colleges', // Matches /colleges (on your Netlify setup)
+        '/courses', // Matches /courses
+      ],
+    },
+  },
+});
