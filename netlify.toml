@@ -1,0 +1,14 @@
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"
+
+[[headers]]
+  for = "/colleges"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"
+
+[[headers]]
+  for = "/courses"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"
